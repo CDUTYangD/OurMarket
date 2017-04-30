@@ -77,7 +77,7 @@ public class UserDAO {
 	public void update(User transientInstance) {
 		log.debug("updateing User instance");
 		try {
-			getCurrentSession().delete(transientInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);

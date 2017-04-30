@@ -80,7 +80,7 @@ public class GoodsDAO {
 	public void update(Goods transientInstance) {
 		log.debug("updateing Goods instance");
 		try {
-			getCurrentSession().delete(transientInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);

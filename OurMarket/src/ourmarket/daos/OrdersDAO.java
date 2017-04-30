@@ -77,7 +77,7 @@ public class OrdersDAO {
 	public void update(Orders transientInstance) {
 		log.debug("updateing Orders instance");
 		try {
-			getCurrentSession().delete(transientInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
