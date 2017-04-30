@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.Collection;
 import ourmarket.models.GoodsReturn;
 
 /**
@@ -55,17 +54,6 @@ public class GoodsReturnDAO {
 			log.debug("save successful");
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
-			throw re;
-		}
-	}
-	
-	public void update(GoodsReturn persistentInstance) {
-		log.debug("updating User instance");
-		try {
-			getCurrentSession().update(persistentInstance);
-			log.debug("update successful");
-		} catch (RuntimeException re) {
-			log.error("update failed", re);
 			throw re;
 		}
 	}

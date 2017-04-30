@@ -65,17 +65,6 @@ public class GoodsDAO {
 			throw re;
 		}
 	}
-	
-	public void update(Goods persistentInstance) {
-		log.debug("updating User instance");
-		try {
-			getCurrentSession().update(persistentInstance);
-			log.debug("update successful");
-		} catch (RuntimeException re) {
-			log.error("update failed", re);
-			throw re;
-		}
-	}
 
 	public void delete(Goods persistentInstance) {
 		log.debug("deleting Goods instance");
@@ -88,6 +77,17 @@ public class GoodsDAO {
 		}
 	}
 
+	public void update(Goods transientInstance) {
+		log.debug("updateing Album instance");
+		try {
+			getCurrentSession().update(transientInstance);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
+			throw re;
+		}
+	}
+	
 	public Goods findById(java.lang.Long id) {
 		log.debug("getting Goods instance with id: " + id);
 		try {

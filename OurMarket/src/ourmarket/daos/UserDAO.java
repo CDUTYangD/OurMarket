@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
+import ourmarket.models.Orders;
 import ourmarket.models.User;
 
 /**
@@ -72,16 +73,18 @@ public class UserDAO {
 			throw re;
 		}
 	}
-	public void update(User persistentInstance) {
-		log.debug("updating User instance");
+	
+	public void update(User transientInstance) {
+		log.debug("updateing Album instance");
 		try {
-			getCurrentSession().update(persistentInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
+
 	public User findById(java.lang.Integer id) {
 		log.debug("getting User instance with id: " + id);
 		try {

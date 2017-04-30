@@ -28,5 +28,10 @@
         <property name="onum" type="java.lang.Integer">
             <column name="oNum" not-null="true" />
         </property>
+        <property name="ono" type="java.lang.String">
+            <column name="oNo" length="50" not-null="true">
+                <comment>订单号（由order+时间戳组成）</comment>
+            </column>
+        </property>
     </class>
 </hibernate-mapping>

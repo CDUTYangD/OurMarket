@@ -17,6 +17,7 @@ public class Orders implements java.io.Serializable {
 	private Float omoney;
 	private Short ostate;
 	private Integer onum;
+	private String ono;
 
 	// Constructors
 
@@ -25,21 +26,23 @@ public class Orders implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Orders(Timestamp otime, Float omoney, Short ostate, Integer onum) {
+	public Orders(Timestamp otime, Float omoney, Short ostate, Integer onum, String ono) {
 		this.otime = otime;
 		this.omoney = omoney;
 		this.ostate = ostate;
 		this.onum = onum;
+		this.ono = ono;
 	}
 
 	/** full constructor */
-	public Orders(Integer uid, Long gid, Timestamp otime, Float omoney, Short ostate, Integer onum) {
+	public Orders(Integer uid, Long gid, Timestamp otime, Float omoney, Short ostate, Integer onum, String ono) {
 		this.uid = uid;
 		this.gid = gid;
 		this.otime = otime;
 		this.omoney = omoney;
 		this.ostate = ostate;
 		this.onum = onum;
+		this.ono = ono;
 	}
 
 	// Property accessors
@@ -98,6 +101,14 @@ public class Orders implements java.io.Serializable {
 
 	public void setOnum(Integer onum) {
 		this.onum = onum;
+	}
+
+	public String getOno() {
+		return this.ono;
+	}
+
+	public void setOno(String ono) {
+		this.ono = ono;
 	}
 
 }

@@ -5,6 +5,7 @@ import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import ourmarket.models.Adress;
-import ourmarket.models.User;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -68,16 +68,18 @@ public class AdressDAO {
 			throw re;
 		}
 	}
-	public void update(Adress persistentInstance) {
-		log.debug("updating User instance");
+
+	public void update(Adress transientInstance) {
+		log.debug("updateing Album instance");
 		try {
-			getCurrentSession().update(persistentInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
+	
 	public Adress findById(java.lang.Long id) {
 		log.debug("getting Adress instance with id: " + id);
 		try {

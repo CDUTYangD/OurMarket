@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.GoodsReturn;
+import ourmarket.models.Goods;
 import ourmarket.models.Orders;
 
 /**
@@ -35,6 +35,7 @@ public class OrdersDAO {
 	public static final String OMONEY = "omoney";
 	public static final String OSTATE = "ostate";
 	public static final String ONUM = "onum";
+	public static final String ONO = "ono";
 
 	private SessionFactory sessionFactory;
 
@@ -71,18 +72,18 @@ public class OrdersDAO {
 			throw re;
 		}
 	}
-
-	public void update(Orders persistentInstance) {
-		log.debug("updating User instance");
+	
+	public void update(Orders transientInstance) {
+		log.debug("updateing Album instance");
 		try {
-			getCurrentSession().update(persistentInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
-	
+
 	public Orders findById(java.lang.Integer id) {
 		log.debug("getting Orders instance with id: " + id);
 		try {
@@ -138,6 +139,10 @@ public class OrdersDAO {
 
 	public List findByOnum(Object onum) {
 		return findByProperty(ONUM, onum);
+	}
+
+	public List findByOno(Object ono) {
+		return findByProperty(ONO, ono);
 	}
 
 	public List findAll() {

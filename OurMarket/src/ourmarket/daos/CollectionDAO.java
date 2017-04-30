@@ -69,17 +69,17 @@ public class CollectionDAO {
 		}
 	}
 	
-	public void update(Collection persistentInstance) {
-		log.debug("updating User instance");
+	public void update(Collection transientInstance) {
+		log.debug("updateing Album instance");
 		try {
-			getCurrentSession().update(persistentInstance);
+			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
-	
+
 	public Collection findById(java.lang.Integer id) {
 		log.debug("getting Collection instance with id: " + id);
 		try {
