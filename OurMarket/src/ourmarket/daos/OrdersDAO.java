@@ -33,9 +33,10 @@ public class OrdersDAO {
 	public static final String UID = "uid";
 	public static final String GID = "gid";
 	public static final String OMONEY = "omoney";
-	public static final String OSTATE = "ostate";
+	public static final String OPAY_STATE = "opayState";
 	public static final String ONUM = "onum";
 	public static final String ONO = "ono";
+	public static final String OSEND_STATE = "osendState";
 
 	private SessionFactory sessionFactory;
 
@@ -74,9 +75,9 @@ public class OrdersDAO {
 	}
 	
 	public void update(Orders transientInstance) {
-		log.debug("updateing Album instance");
+		log.debug("updateing Orders instance");
 		try {
-			getCurrentSession().update(transientInstance);
+			getCurrentSession().delete(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
@@ -133,8 +134,8 @@ public class OrdersDAO {
 		return findByProperty(OMONEY, omoney);
 	}
 
-	public List findByOstate(Object ostate) {
-		return findByProperty(OSTATE, ostate);
+	public List findByOpayState(Object opayState) {
+		return findByProperty(OPAY_STATE, opayState);
 	}
 
 	public List findByOnum(Object onum) {
@@ -143,6 +144,10 @@ public class OrdersDAO {
 
 	public List findByOno(Object ono) {
 		return findByProperty(ONO, ono);
+	}
+
+	public List findByOsendState(Object osendState) {
+		return findByProperty(OSEND_STATE, osendState);
 	}
 
 	public List findAll() {

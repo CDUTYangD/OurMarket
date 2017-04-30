@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.Adress;
 import ourmarket.models.Collection;
 
 /**
@@ -65,17 +64,6 @@ public class CollectionDAO {
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
-			throw re;
-		}
-	}
-	
-	public void update(Collection transientInstance) {
-		log.debug("updateing Album instance");
-		try {
-			getCurrentSession().update(transientInstance);
-			log.debug("update successful");
-		} catch (RuntimeException re) {
-			log.error("update failed", re);
 			throw re;
 		}
 	}

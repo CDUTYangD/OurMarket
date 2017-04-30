@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.Collection;
+import ourmarket.models.Adress;
 import ourmarket.models.Goods;
 
 /**
@@ -76,18 +76,18 @@ public class GoodsDAO {
 			throw re;
 		}
 	}
-
+	
 	public void update(Goods transientInstance) {
-		log.debug("updateing Album instance");
+		log.debug("updateing Goods instance");
 		try {
-			getCurrentSession().update(transientInstance);
+			getCurrentSession().delete(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
-	
+
 	public Goods findById(java.lang.Long id) {
 		log.debug("getting Goods instance with id: " + id);
 		try {

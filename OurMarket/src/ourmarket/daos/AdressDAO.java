@@ -68,18 +68,18 @@ public class AdressDAO {
 			throw re;
 		}
 	}
-
+	
 	public void update(Adress transientInstance) {
-		log.debug("updateing Album instance");
+		log.debug("updateing Adress instance");
 		try {
-			getCurrentSession().update(transientInstance);
+			getCurrentSession().delete(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
-	
+
 	public Adress findById(java.lang.Long id) {
 		log.debug("getting Adress instance with id: " + id);
 		try {

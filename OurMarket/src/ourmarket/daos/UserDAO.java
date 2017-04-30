@@ -75,15 +75,16 @@ public class UserDAO {
 	}
 	
 	public void update(User transientInstance) {
-		log.debug("updateing Album instance");
+		log.debug("updateing User instance");
 		try {
-			getCurrentSession().update(transientInstance);
+			getCurrentSession().delete(transientInstance);
 			log.debug("update successful");
 		} catch (RuntimeException re) {
 			log.error("update failed", re);
 			throw re;
 		}
 	}
+
 
 	public User findById(java.lang.Integer id) {
 		log.debug("getting User instance with id: " + id);

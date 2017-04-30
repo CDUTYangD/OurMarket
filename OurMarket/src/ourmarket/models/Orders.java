@@ -15,9 +15,10 @@ public class Orders implements java.io.Serializable {
 	private Long gid;
 	private Timestamp otime;
 	private Float omoney;
-	private Short ostate;
+	private Short opayState;
 	private Integer onum;
 	private String ono;
+	private Short osendState;
 
 	// Constructors
 
@@ -26,23 +27,26 @@ public class Orders implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Orders(Timestamp otime, Float omoney, Short ostate, Integer onum, String ono) {
+	public Orders(Timestamp otime, Float omoney, Short opayState, Integer onum, String ono, Short osendState) {
 		this.otime = otime;
 		this.omoney = omoney;
-		this.ostate = ostate;
+		this.opayState = opayState;
 		this.onum = onum;
 		this.ono = ono;
+		this.osendState = osendState;
 	}
 
 	/** full constructor */
-	public Orders(Integer uid, Long gid, Timestamp otime, Float omoney, Short ostate, Integer onum, String ono) {
+	public Orders(Integer uid, Long gid, Timestamp otime, Float omoney, Short opayState, Integer onum, String ono,
+			Short osendState) {
 		this.uid = uid;
 		this.gid = gid;
 		this.otime = otime;
 		this.omoney = omoney;
-		this.ostate = ostate;
+		this.opayState = opayState;
 		this.onum = onum;
 		this.ono = ono;
+		this.osendState = osendState;
 	}
 
 	// Property accessors
@@ -87,12 +91,12 @@ public class Orders implements java.io.Serializable {
 		this.omoney = omoney;
 	}
 
-	public Short getOstate() {
-		return this.ostate;
+	public Short getOpayState() {
+		return this.opayState;
 	}
 
-	public void setOstate(Short ostate) {
-		this.ostate = ostate;
+	public void setOpayState(Short opayState) {
+		this.opayState = opayState;
 	}
 
 	public Integer getOnum() {
@@ -109,6 +113,14 @@ public class Orders implements java.io.Serializable {
 
 	public void setOno(String ono) {
 		this.ono = ono;
+	}
+
+	public Short getOsendState() {
+		return this.osendState;
+	}
+
+	public void setOsendState(Short osendState) {
+		this.osendState = osendState;
 	}
 
 }
