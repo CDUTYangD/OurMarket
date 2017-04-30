@@ -55,7 +55,7 @@ public class UserServiceClassTest {
 
 	@Test
 	public void testUpdateUser() {
-		/*User user=userservice.findUserById(7);
+		/*User user=userservice.findUserById(25);
 		user.setUnickName("³Â³¬");
 		userservice.updateUser(user);*/
 	}
