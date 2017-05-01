@@ -11,10 +11,10 @@ public class SayHelloTest {
 @Autowired ISayHello sayHello;
 	@Test
 	public void testSayhello() throws InterruptedException{
-		System.out.println("µÚÒ»´Îµ÷ÓÃ£º" + sayHello.getTimestamp("param"));
+		System.out.println("ç¬¬ä¸€æ¬¡è°ƒç”¨ï¼š" + sayHello.getTimestamp("param"));
         Thread.sleep(2000);
-        System.out.println("2ÃëÖ®ºóµ÷ÓÃ£º" + sayHello.getTimestamp("param"));
+        System.out.println("2ç§’åï¼š" + sayHello.getTimestamp("param"));
         Thread.sleep(11000);
-        System.out.println("ÔÙ¹ı11ÃëÖ®ºóµ÷ÓÃ£º" + sayHello.getTimestamp("param"));
+        System.out.println("11ç§’åï¼š" + sayHello.getTimestamp("param"));
 	}
 }

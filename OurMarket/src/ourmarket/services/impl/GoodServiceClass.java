@@ -36,7 +36,7 @@ public class GoodServiceClass implements IGoodService{
 		// TODO Auto-generated method stub
 		goodsDAO.update(good);
 	}
-	//��������
+	//启动缓存
 	@Cacheable(value="cacheTest")
 	@SuppressWarnings("unchecked")
 	@Override
