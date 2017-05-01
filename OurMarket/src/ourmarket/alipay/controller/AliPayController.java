@@ -1,4 +1,4 @@
-package com.alipay.controller;
+package ourmarket.alipay.controller;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.alipay.config.AlipayConfig;
-import com.alipay.util.AlipayNotify;
-import com.alipay.util.AlipaySubmit;
+import ourmarket.alipay.config.AlipayConfig;
+import ourmarket.alipay.util.AlipayNotify;
+import ourmarket.alipay.util.AlipaySubmit;
 /**
  * 
  * @author Admin_YangD

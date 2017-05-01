@@ -1,4 +1,4 @@
-package com.alipay.sign;
+package ourmarket.alipay.sign;
 
 import java.io.UnsupportedEncodingException;
 import java.security.SignatureException;

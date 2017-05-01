@@ -1,4 +1,4 @@
-package com.alipay.util;
+package ourmarket.alipay.util;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -12,8 +12,8 @@ import org.dom4j.DocumentException;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
-import com.alipay.config.AlipayConfig;
-import com.alipay.sign.MD5;
+import ourmarket.alipay.config.AlipayConfig;
+import ourmarket.alipay.sign.MD5;
 
 /* *
  *类名：AlipaySubmit

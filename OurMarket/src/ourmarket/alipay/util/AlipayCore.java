@@ -1,4 +1,4 @@
-package com.alipay.util;
+package ourmarket.alipay.util;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,7 +12,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.httpclient.methods.multipart.FilePartSource;
 import org.apache.commons.httpclient.methods.multipart.PartSource;
 
-import com.alipay.config.AlipayConfig;
+import ourmarket.alipay.config.AlipayConfig;
 
 /* *
  *类名：AlipayFunction

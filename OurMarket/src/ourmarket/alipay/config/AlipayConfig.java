@@ -1,4 +1,4 @@
-package com.alipay.config;
+package ourmarket.alipay.config;
 
 /* *
  *类名：AlipayConfig
