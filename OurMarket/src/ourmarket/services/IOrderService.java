@@ -18,6 +18,6 @@ public interface IOrderService {
 	Orders findOrderById(int orderId);
 	//查询所有
 	List<Orders> findAllOrders();
-	//改״̬
+	//改
 	void updateOrder(Orders order);
 }
