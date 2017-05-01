@@ -13,6 +13,7 @@ import ourmarket.services.IGoodService;
  * 
  * @author Admin_YangD
  * @date  2017年4月28日
+ * 商品服务类
  */
 @Service
 public class GoodServiceClass implements IGoodService{

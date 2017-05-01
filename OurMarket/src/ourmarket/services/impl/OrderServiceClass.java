@@ -13,6 +13,7 @@ import ourmarket.services.IOrderService;
  * 
  * @author Admin_YangD
  * @date  2017年4月28日
+ * 订单服务类
  */
 @Service
 public class OrderServiceClass implements IOrderService {

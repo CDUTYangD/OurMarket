@@ -12,6 +12,7 @@ import ourmarket.services.ICollectionService;
  * 
  * @author Admin_YangD
  * @date  2017年4月28日
+ * 收藏服务类
  */
 @Service
 public class CollectionServiceClass implements ICollectionService {

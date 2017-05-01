@@ -12,6 +12,7 @@ import ourmarket.services.IUserService;
  * 
  * @author Admin_YangD
  * @date  2017年4月28日
+ * 用户服务类
  */
 @Service
 public class UserServiceClass implements IUserService {

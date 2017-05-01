@@ -12,6 +12,7 @@ import ourmarket.services.IAdressService;
  * 
  * @author Admin_YangD
  * @date  2017年4月28日
+ * 地址服务类
  */
 public class AdressServiceClass implements IAdressService{
 
