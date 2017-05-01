@@ -12,8 +12,7 @@ import ourmarket.services.IOrderService;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
- * ¶©µ¥·şÎñÀà
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 @Service
 public class OrderServiceClass implements IOrderService {

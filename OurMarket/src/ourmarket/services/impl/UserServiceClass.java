@@ -11,8 +11,7 @@ import ourmarket.services.IUserService;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
- * ÓÃ»§·şÎñÀà
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 @Service
 public class UserServiceClass implements IUserService {

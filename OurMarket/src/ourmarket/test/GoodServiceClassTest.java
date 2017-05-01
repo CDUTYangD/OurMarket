@@ -20,12 +20,12 @@ public class GoodServiceClassTest {
 	public void testCreateGood() {
 		Goods goods=new Goods();
 		goods.setGid((long) 0);
-		goods.setGname("益达");
+		goods.setGname("鐩婅揪");
 		goods.setGnum(10);
 		java.util.Date  date=new java.util.Date();
 		java.sql.Timestamp d=new java.sql.Timestamp(date.getTime());
 		goods.setGproductTime(d);
-		goods.setGtitle("二手，打折");
+		goods.setGtitle("渚垮疁");
 		goods.setGprice((float) 12.5);
 		goods.setGtype((short) 4);
 		goods.setGstate((short) 0);

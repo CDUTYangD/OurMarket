@@ -11,8 +11,7 @@ import ourmarket.services.IAdressService;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
- * µØÖ··şÎñÀà
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public class AdressServiceClass implements IAdressService{
 

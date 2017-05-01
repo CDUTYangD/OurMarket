@@ -11,8 +11,7 @@ import ourmarket.services.ICollectionService;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
- * ÊÕ²Ø·şÎñÀà
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 @Service
 public class CollectionServiceClass implements ICollectionService {

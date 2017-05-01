@@ -7,13 +7,13 @@ import ourmarket.models.Collection;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public interface ICollectionService {
-	//Ôö
+	//å¢ž
 	void createCollection(Collection conllection);
-	//É¾
+	//åˆ 
 	void deleteCollection(Collection conllection);
-	//²é
+	//æŸ¥
 	List<Collection> findAllCollection();
 }

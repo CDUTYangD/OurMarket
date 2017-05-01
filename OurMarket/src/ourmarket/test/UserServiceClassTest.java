@@ -13,9 +13,9 @@ import ourmarket.services.IUserService;
 @RunWith(SpringJUnit4ClassRunner.class)  
 @ContextConfiguration({"classpath:applicationContext.xml"}) 
 /**
- * ÓÃ»§²âÊÔÀà
+ * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public class UserServiceClassTest {
 
@@ -39,7 +39,7 @@ public class UserServiceClassTest {
 		user.setUid(0);
 		user.setRid(1);
 		user.setImageListId((long) 1);
-		user.setUnickName("ÌÆÀÚ");
+		user.setUnickName("å”ç£Š");
 		user.setUpassword("123");
 		user.setUphone("18780895336");
 		user.setUemial("135964852@qq.com");
@@ -56,7 +56,7 @@ public class UserServiceClassTest {
 	@Test
 	public void testUpdateUser() {
 		/*User user=userservice.findUserById(25);
-		user.setUnickName("³Â³¬");
+		user.setUnickName("é™ˆè¶…");
 		userservice.updateUser(user);*/
 	}
 

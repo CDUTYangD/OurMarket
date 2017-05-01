@@ -7,15 +7,15 @@ import ourmarket.models.Adress;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public interface IAdressService {
-	//Ôö
+	//å¢
 	void createAdress(Adress adress);
-	//É¾
+	//åˆ 
 	void deleteAdress(Adress adress);
-	//ĞŞ
+	//æ”¹
 	void updateAdres(Adress adress);
-	//²é
+	//æŸ¥
 	List<Adress>findAllAdresses();
 }

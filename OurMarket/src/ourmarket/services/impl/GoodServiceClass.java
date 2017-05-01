@@ -12,8 +12,7 @@ import ourmarket.services.IGoodService;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
- * ÉÌÆ··þÎñÀà
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 @Service
 public class GoodServiceClass implements IGoodService{
@@ -37,7 +36,7 @@ public class GoodServiceClass implements IGoodService{
 		// TODO Auto-generated method stub
 		goodsDAO.update(good);
 	}
-	//Æô¶¯»º´æ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Cacheable(value="cacheTest")
 	@SuppressWarnings("unchecked")
 	@Override

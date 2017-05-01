@@ -7,15 +7,15 @@ import ourmarket.models.Goods;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public interface IGoodService {
-	//Ôö
+	//å¢ž
 	void createGood(Goods good);
-	//É¾
+	//åˆ 
 	void deleteGood(Goods good);
-	//¸Ä
+	//æ”¹
 	void updateGood(Goods good);
-	//²é
+	//æŸ¥
 	List<Goods> findAllGoods();
 }

@@ -7,17 +7,17 @@ import ourmarket.models.Orders;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public interface IOrderService {
-	//Ôö¼Ó¶©µ¥
+	//å¢
 	void createOrder(Orders order);
-	//É¾³ı¶©µ¥
+	//åˆ 
 	void deleteOrder(Orders order);
-	//Í¨¹ıid²éÑ¯¶©µ¥
+	//é€šè¿‡idæŸ¥
 	Orders findOrderById(int orderId);
-	//²éÑ¯ËùÓĞ¶©µ¥
+	//æŸ¥è¯¢æ‰€æœ‰
 	List<Orders> findAllOrders();
-	//ĞŞ¸Ä¶©µ¥×´Ì¬
+	//æ”¹×´Ì¬
 	void updateOrder(Orders order);
 }

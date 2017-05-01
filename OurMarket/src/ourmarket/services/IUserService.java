@@ -6,19 +6,19 @@ import ourmarket.models.User;
 /**
  * 
  * @author Admin_YangD
- * @date  2017Äê4ÔÂ28ÈÕ
+ * @date  2017å¹´4æœˆ28æ—¥
  */
 public interface IUserService {
-		//²éÕÒËùÓĞÓÃ»§
+		//æŸ¥è¯¢æ‰€æœ‰
 		List<User>findAllUsers();
-		//°´id²éÕÒÓÃ»§
+		//é€šè¿‡idæŸ¥
 		User findUserById(int userId);
-		//´´½¨ÓÃ»§
+		//å¢
 		void createUser(User user);
-		//É¾³ıÓÃ»§
+		//åˆ 
 		void deleteUser(User user);
-		//Í¨¹ıidÉ¾³ıÓÃ»§
+		//Í¨é€šè¿‡idåˆ é™¤
 		void deleteUserById(int userId);
-		//ĞŞ¸ÄÓÃ»§
+		//æ”¹
 		void updateUser(User user);
 }
