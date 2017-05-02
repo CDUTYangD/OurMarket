@@ -31,7 +31,7 @@ public class AdressServiceClass implements IAdressService{
 	}
 
 	@Override
-	public void updateAdres(Adress adress) {
+	public void updateAdress(Adress adress) {
 		// TODO Auto-generated method stub
 		adressDAO.update(adress);
 	}

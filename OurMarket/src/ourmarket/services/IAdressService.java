@@ -15,7 +15,7 @@ public interface IAdressService {
 	//删
 	void deleteAdress(Adress adress);
 	//改
-	void updateAdres(Adress adress);
+	void updateAdress(Adress adress);
 	//查
 	List<Adress>findAllAdresses();
 }
