@@ -26,7 +26,7 @@ public class UserServiceClassTest {
 		@SuppressWarnings("unused")
 		List<User> users=userservice.findAllUsers();
 	}
-
+//查找测试
 	@Test
 	public void testFindUserById() {
 		@SuppressWarnings("unused")
