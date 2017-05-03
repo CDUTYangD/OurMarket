@@ -174,6 +174,26 @@ $(function() {
 			}
 		});
 	});
+	
+	var countdown=60;//短信验证码60S倒计时专用
+	//60秒到计时
+	function settime(obj) {
+		if (countdown == 0) {
+			obj.attr("disabled", false);
+			obj.val("获取验证码");
+			countdown = 60;
+			return;
+		} else {
+			obj.attr("disabled", true);
+			obj.val("重新发送(" + countdown + ")");
+			countdown--;
+		}
+		setTimeout(function() {
+			settime(obj)
+		}, 1000)
+	}
+
+	
 	$("#querySecurityCodeBtn").on("click", function() {
 		$.post("/OurMarket/API/Account/SendSecurityCode", {
 			phoneNumber : $("#register_phone").val()
@@ -183,7 +203,7 @@ $(function() {
 					icon : 1,
 					time : 1000
 				});
-				$("#querySecurityCodeBtn").attr("disabled", true);
+				settime($("#querySecurityCodeBtn"));
 			} else {
 				layer.msg('短信验证码发送失败', {
 					icon : 5,
