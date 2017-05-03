@@ -1,4 +1,4 @@
-﻿1 /// <reference path="jquery-1.10.2.min.js" />
+﻿/// <reference path="jquery-1.10.2.min.js" />
 /// <reference path="jquery.validate.min.js" />
 
 
