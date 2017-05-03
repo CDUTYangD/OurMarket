@@ -12,16 +12,16 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<script src="/OurMarkets/JS/Common/jquery-1.10.2.min.js"></script>
-<script src="/OurMarkets/JS/Common/jquery.cookie.js"></script>
-<script src="/OurMarkets/Resources/layer/layer.js"></script>
-<script src="/OurMarkets/JS/Common/jquery.validate.min.js"></script>
-<script src="/OurMarkets/JS/Common/bootstrapValidator.min.js"></script>
-<script src="/OurMarkets/JS/Account/Account.js"></script>
-<link href="/OurMarkets/Resources/layer/skin/default/layer.css" rel="stylesheet" />
-<link href="/OurMarkets/CSS/Account/Account.css" rel="stylesheet" />
-<link href="/OurMarkets/Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<link href="/OurMarkets/CSS/Common/bootstrapValidator.min.css" rel="stylesheet" />
+<script src="/OurMarket/JS/Common/jquery-1.10.2.min.js"></script>
+<script src="/OurMarket/JS/Common/jquery.cookie.js"></script>
+<script src="/OurMarket/Resources/layer/layer.js"></script>
+<script src="/OurMarket/JS/Common/jquery.validate.min.js"></script>
+<script src="/OurMarket/JS/Common/bootstrapValidator.min.js"></script>
+<script src="/OurMarket/JS/Account/Account.js"></script>
+<link href="/OurMarket/Resources/layer/skin/default/layer.css" rel="stylesheet" />
+<link href="/OurMarket/CSS/Account/Account.css" rel="stylesheet" />
+<link href="/OurMarket/Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/OurMarket/CSS/Common/bootstrapValidator.min.css" rel="stylesheet" />
 
 </head>
 

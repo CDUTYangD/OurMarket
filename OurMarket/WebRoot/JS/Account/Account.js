@@ -55,7 +55,7 @@ $(function() {
 //					},
 					threshold : 4, //有4字符以上才发送ajax请求，（input中输入一个字符，插件会向服务器发送一次，设置限制，4字符以上才开始）
 					remote : { //ajax验证。server result:{"valid",true or false} 向服务发送当前input name值，获得一个json数据。例表示正确：{"valid",true}  
-						url : '/OurMarkets/API/Account/CheckuNickNameIsExist', //验证地址
+						url : '/OurMarket/API/Account/CheckuNickNameIsExist', //验证地址
 						message : '用户已存在', //提示消息
 						delay : 2000, //每输入一个字符，就发ajax请求，服务器压力还是太大，设置2秒发送一次ajax（默认输入一个字符，提交一次，服务器压力太大）
 						type : 'POST', //请求方式
@@ -121,7 +121,7 @@ $(function() {
 					},
 					threshold : 5,
 					remote : {
-						url : '/OurMarkets/API/Account/CheckSecurityCode', //验证地址
+						url : '/OurMarket/API/Account/CheckSecurityCode', //验证地址
 						message : '短信验证码不正确', //提示消息
 						delay : 2000, //每输入一个字符，就发ajax请求，服务器压力还是太大，设置2秒发送一次ajax（默认输入一个字符，提交一次，服务器压力太大）
 						type : 'POST', //请求方式
@@ -175,7 +175,7 @@ $(function() {
 		});
 	});
 	$("#querySecurityCodeBtn").on("click", function() {
-		$.post("/OurMarkets/API/Account/SendSecurityCode", {
+		$.post("/OurMarket/API/Account/SendSecurityCode", {
 			phoneNumber : $("#register_phone").val()
 		}, function(data) {
 			if (data.msg == "success") {
@@ -195,7 +195,7 @@ $(function() {
 	$("#loginBtn").on("click", function() {
 		if ($("#login-from").valid()) {
 			//如果验证成功
-			$.post("/OurMarkets/API/Account/Login"
+			$.post("/OurMarket/API/Account/Login"
 				, {
 					uNickName : $.trim($("#login_username").val()),
 					uPassword : $('#login_password').val()
@@ -224,7 +224,7 @@ $(function() {
 	$("#registerBtn").on("click", function() {
 		if ($("#register-from").valid()) {
 			//如果验证成功
-			$.post("/OurMarkets/API/Account/Register",
+			$.post("/OurMarket/API/Account/Register",
 				{
 					uNickName : $.trim($("#register_username").val()),
 					uPassword : $("#register_password").val(),
