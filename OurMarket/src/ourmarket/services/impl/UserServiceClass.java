@@ -139,7 +139,7 @@ public class UserServiceClass implements IUserService {
 	@Override
 	public User getUserByuNickName(String uNickName) {
 		if (checkuNickNameIsExist(uNickName)) {
-			return (User) userdao.findByUnickName(uNickName).get(0);
+			return (User) userDao.findByUnickName(uNickName).get(0);
 		} else {
 			return null;
 		}

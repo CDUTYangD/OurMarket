@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ourmarket.controllers;
+package ourmarket.daos;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
