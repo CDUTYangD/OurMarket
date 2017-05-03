@@ -141,7 +141,6 @@ $(function() {
 		layer.open({
 			type : 1, //此处以iframe举例
 			id : 'Layer_Login', //设定一个id，防止重复弹出
-			area: ['500px', '320px'],
 			title : '登陆',
 			shade : 0.6, //遮罩透明度
 			anim : 1, //0-6的动画形式，-1不开启
