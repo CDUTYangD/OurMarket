@@ -1,4 +1,4 @@
-﻿1 /// <reference path="jquery-1.10.2.min.js" />
+﻿/// <reference path="jquery-1.10.2.min.js" />
 /// <reference path="jquery.validate.min.js" />
 
 
@@ -141,7 +141,7 @@ $(function() {
 		layer.open({
 			type : 1, //此处以iframe举例
 			id : 'Layer_Login', //设定一个id，防止重复弹出
-			//area: ['500px', '320px'],
+			area: ['500px', '320px'],
 			title : '登陆',
 			shade : 0.6, //遮罩透明度
 			anim : 1, //0-6的动画形式，-1不开启
@@ -230,6 +230,8 @@ $(function() {
 						//如果记住账户密码被选中 就将登录信息存到Cookie中
 						if ($("#login_rememberme").is(':checked')) {
 							CookieUserInfo();
+						}else{
+							ClearCookie();
 						}
 					} else {
 						layer.msg('身份验证失败', {
@@ -285,5 +287,12 @@ $(function() {
 			expires : 7
 		}); // 存储一个带7天期限的 cookie   
 	}
+	
+
+	//清楚用户信息
+		function ClearCookie() {
+			$.cookie('username', '', { expires: -1 });
+			$.cookie('password', '', { expires: -1 });
+		}
 
 });
