@@ -12,8 +12,12 @@ import ourmarket.services.IUserService;
 
 /**
  * 
- * @author Admin_YangD
- * @date 2017年4月28日 用户服务类
+ * Title:UserServiceClass
+ *
+ * Description:
+ * 
+ * @author SGang
+ * @date 2017年5月4日下午12:30:20
  */
 @Service
 public class UserServiceClass implements IUserService {
@@ -143,5 +147,23 @@ public class UserServiceClass implements IUserService {
 		} else {
 			return null;
 		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * ourmarket.services.IUserService#getRoleByuNickNameAnduPassword(java.lang.
+	 * String, java.lang.String)
+	 * 
+	 * 更加用户名密码查看角色
+	 */
+	@Override
+	public String getRoleByuNickNameAnduPassword(String uNickName, String uPassword) {
+		User user = identifyLoginInfo(uNickName, uPassword);
+		if (user != null) {
+			return user.getRid() == 0 ? "ROLE_USER" : "ROLE_ADMIN";
+		}
+		return null;
 	}
 }

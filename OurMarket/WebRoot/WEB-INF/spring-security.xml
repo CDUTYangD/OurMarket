@@ -9,11 +9,11 @@
 <!-- 配置相关资源的访问权限 -->
 	<security:http auto-config="true"  use-expressions="true">
 		<!-- 配置相关地址的访问权限 -->
-		<security:intercept-url pattern="/Login"
+		<security:intercept-url pattern="/Test/Login"
 			access="hasRole('ROLE_USER')" />
 		<!-- 配置登录页面和登录成功页面 如果不配置将会使用Spring Security自带的页面 -->
 		<security:form-login login-page="/Home/Index"
-			authentication-failure-url="/Other" default-target-url="/Index"
+			authentication-failure-url="/Test/Other" default-target-url="/Test/Index"
 			always-use-default-target="true" />
 		<!--我们自己配置登录成功的代理 所以这个属性不需要了default-target-url="/index" -->
 
@@ -38,10 +38,6 @@
         </security:authentication-provider>
    </security:authentication-manager>
 
-<!-- 	<security:jdbc-user-service id="userService"   data-source-ref="dataSource" -->
-<!-- 　　　　　　users-by-username="select username,password, true from user where username=?" -->
-<!-- 　　　　　　authories-by-username-query="select username,role from user_role where username=?" >   -->
-<!-- 	</security:jdbc-user-service> -->
 
 	
 
