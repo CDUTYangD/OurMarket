@@ -12,23 +12,23 @@ $(function() {
 	//让当前表单调用validate方法，实现表单验证功能
 	//这里使用jQuery .validate
 	var validator_login = $("#login-from").validate({
-		debug : true, //debug，如果这个参数为true，那么表单不会提交，只进行检查，调试时十分方便
+		//debug : true, //debug，如果这个参数为true，那么表单不会提交，只进行检查，调试时十分方便
 		onkeyup : null, //当丢失焦点时才触发验证请求
 		rules : {
 			//配置验证规则，key就是被验证的dom对象，value就是调用验证的方法(也是json格式)
-			username : {
+			j_username : {
 				required : true //必填。如果验证方法不需要参数，则配置为true
 			},
-			password : {
+			j_password : {
 				required : true,
 				rangelength : [ 6, 16 ]
 			}
 		},
 		messages : {
-			username : {
+			j_username : {
 				required : "请输入用户名"
 			},
-			password : {
+			j_password : {
 				required : "请输入密码",
 				rangelength : $.validator.format("密码长度为{0}-{1}个字符")
 			}
@@ -232,6 +232,7 @@ $(function() {
 						}else{
 							ClearCookie();
 						}
+						$("#login-from").submit();
 					} else {
 						layer.msg('身份验证失败', {
 							icon : 5,

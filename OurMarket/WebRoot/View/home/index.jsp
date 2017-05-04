@@ -37,17 +37,17 @@
 	<!--登陆界面-->
 	<div id="login" class="floatDiv">
 		<div class="well">
-			<form id="login-from" method="post" class="form-horizontal" action="">
+			<form id="login-from" method="post" class="form-horizontal" action="/OurMarket/j_spring_security_check">
 				<div class="input-group ">
 					<span class="input-group-addon"><i
 						class="glyphicon glyphicon-user"></i></span> <input id="login_username"
-						type="text" name="username" class="form-control "
+						type="text" name="j_username" class="form-control "
 						placeholder="请输入用户名" />
 				</div>
 				<div class="input-group " style="margin-top:10px;">
 					<span class="input-group-addon"><i
 						class="glyphicon glyphicon-lock"></i></span> <input id="login_password"
-						type="password" name="password" class="form-control "
+						type="password" name="j_password" class="form-control "
 						placeholder="请输入密码" />
 				</div>
 				<div class="checkbox  mycheckbox">
