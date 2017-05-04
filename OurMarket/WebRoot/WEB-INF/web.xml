@@ -11,7 +11,7 @@
   </welcome-file-list>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:applicationContext.xml</param-value>
+    <param-value>classpath:applicationContext.xml,/WEB-INF/spring-security.xml</param-value>
   </context-param>
   <context-param>
     <param-name>log4jConfigLocation</param-name>
