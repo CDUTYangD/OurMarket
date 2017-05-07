@@ -3,6 +3,25 @@
 
 
 $(function() {
+	//地图初始化
+	function init_map() {
+			var mapObj;
+			//创建AMap的地图
+			mapObj = new AMap.Map("iCenter", {
+				rotateEnable : true,
+				dragEnable : true,
+				zoomEnable : true,
+				//二维地图显示视口
+				view : new AMap.View2D({
+					center : new AMap.LngLat(106.404, 37.915), //地图中心点
+					zoom : 4, //地图显示的缩放级别
+					crs : "'EPSG4326"
+				})
+			});
+			//设置地图语言类型，设置后底图重新加载，形成中英文对照图
+			mapObj.setLang("zh_en");
+		}
+			init_map();
 	/**
 	      * 下面是进行插件初始化
 	      * 你只需传入相应的键值对
@@ -294,5 +313,11 @@ $(function() {
 			$.cookie('username', '', { expires: -1 });
 			$.cookie('password', '', { expires: -1 });
 		}
+
+		//菜单显示
+		$(".toggle-btn").on("click",function() {
+			$("#leftMeun").toggleClass("show");
+			$("#rightContent").toggleClass("pd0px");
+		})
 
 });
