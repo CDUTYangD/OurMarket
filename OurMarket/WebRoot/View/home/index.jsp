@@ -18,15 +18,15 @@
 <script src="/OurMarket/JS/Common/jquery.validate.min.js"></script>
 <script src="/OurMarket/JS/Common/bootstrapValidator.min.js"></script>
 <script src="/OurMarket/JS/Account/Account.js"></script>
+<script src="/OurMarket/JS/Account/MyCanvas.js"></script>
 <link href="/OurMarket/Resources/layer/skin/default/layer.css" rel="stylesheet" />
 <link href="/OurMarket/CSS/Account/Account.css" rel="stylesheet" />
 <link href="/OurMarket/Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="/OurMarket/CSS/Common/bootstrapValidator.min.css" rel="stylesheet" />
 
 </head>
-
 <body>
-	<div >
+    <div >
 		<ul class="nav navbar-nav navbar-right">
 			<li><a class="a_register" href="javascript:;"><span
 					class="glyphicon glyphicon-user"></span> 注册</a></li>
@@ -34,6 +34,7 @@
 					class="glyphicon glyphicon-log-in"></span> 登录</a></li>
 		</ul>
 	</div>
+	
 	<!--登陆界面-->
 	<div id="login" class="floatDiv">
 		<div class="well">
