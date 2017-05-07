@@ -27,6 +27,8 @@
 <link href="/OurMarket/Resources/layer/skin/default/layer.css"
 	rel="stylesheet" />
 <link href="/OurMarket/CSS/Account/Account.css" rel="stylesheet" />
+<link href="/OurMarket/Resources/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" />
 <link href="/OurMarket/CSS/Common/bootstrapValidator.min.css"
 	rel="stylesheet" />
 
