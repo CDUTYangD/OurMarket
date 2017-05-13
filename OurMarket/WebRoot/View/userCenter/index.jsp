@@ -26,14 +26,21 @@
 	<div class="container-fluid">
 		<!--流动的容器-->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+			<button type="button" class="navbar-toggle collapsed" style="float:left;margin-left:15px;"
+				data-toggle="collapse" data-target="#navbar-left" aria-expanded="false"
 				aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
 			<!--这是按钮  缩放按钮-->
+			<button type="button" class="navbar-toggle collapsed" 
+				data-toggle="collapse" data-target="#navbar-right" aria-expanded="false"
+				aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
 			<a class="navbar-brand" href="#"> <!--<img src="img/th.jpg" style="height: 100%;width: 100%;"/>-->
 				这是文字/图片logo <!--条件：图片要控制宽度，文字也要控制长度，不然会溢出-->
 			</a>
@@ -41,7 +48,7 @@
 		</div>
 
 		<!--这是向右对齐的列表-->
-		<div id="navbar" class="navbar-collapse collapse">
+		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">首页</a></li>
@@ -65,7 +72,7 @@
 		<!--流动的容器-->
 		<div class="row">
 			<!--这是CSS的自定义样式-->
-			<div class="col-sm-3 col-md-2 sidebar">
+			<div id="navbar-left" class="col-sm-3 col-md-2 sidebar">
 				<!--sidebar  边栏-->
 				<ul class="nav nav-sidebar">
 					<!--这是列表组-->
