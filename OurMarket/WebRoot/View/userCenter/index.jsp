@@ -17,6 +17,21 @@
 	href="/OurMarket/css/dashboard.css" />
 <link rel="stylesheet" type="text/css"
 	href="/OurMarket/css/carousel.css" />
+<script type="text/javascript">
+	$(function() {
+		$("#button_show_right,#button_show_left").click(function() {
+			if ($(this).attr('id').indexOf("right") > 0) {
+				if ($("#button_show_left").attr("aria-expanded") == "true") {
+					$("#button_show_left").trigger('click');
+				}
+			} else {
+				if ($("#button_show_right").attr("aria-expanded") == "true") {
+					$("#button_show_right").trigger('click');
+				}
+			}
+		});
+	})
+</script>
 </head>
 
 <body>
@@ -26,7 +41,7 @@
 	<div class="container-fluid">
 		<!--流动的容器-->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" style="float:left;margin-left:15px;"
+			<button id="button_show_left" type="button" class="navbar-toggle collapsed" style="float:left;margin-left:15px;"
 				data-toggle="collapse" data-target="#navbar-left" aria-expanded="false"
 				aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span> <span
@@ -34,7 +49,7 @@
 					class="icon-bar"></span>
 			</button>
 			<!--这是按钮  缩放按钮-->
-			<button type="button" class="navbar-toggle collapsed" 
+			<button id="button_show_right" type="button" class="navbar-toggle collapsed" 
 				data-toggle="collapse" data-target="#navbar-right" aria-expanded="false"
 				aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span> <span
