@@ -1,5 +1,6 @@
 package ourmarket.daos;
 
+import java.sql.Timestamp;
 import java.util.List;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
@@ -12,25 +13,27 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import ourmarket.models.Adress;
+import ourmarket.models.CircleInfo;
 
 /**
  * A data access object (DAO) providing persistence and search support for
- * Adress entities. Transaction control of the save(), update() and delete()
+ * CircleInfo entities. Transaction control of the save(), update() and delete()
  * operations can directly support Spring container-managed transactions or they
  * can be augmented to handle user-managed Spring transactions. Each of these
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see ourmarket.models.Adress
+ * @see ourmarket.models.CircleInfo
  * @author MyEclipse Persistence Tools
  */
 @Transactional
-public class AdressDAO {
-	private static final Logger log = LoggerFactory.getLogger(AdressDAO.class);
+public class CircleInfoDAO {
+	private static final Logger log = LoggerFactory.getLogger(CircleInfoDAO.class);
 	// property constants
-	public static final String UID = "uid";
-	public static final String AINFO = "ainfo";
-	public static final String ASTATE = "astate";
+	public static final String CIRCLE_X = "circleX";
+	public static final String CIRCLE_Y = "circleY";
+	public static final String CIRCLE_R = "circleR";
+	public static final String CIRCLE_DES = "circleDes";
 
 	private SessionFactory sessionFactory;
 
@@ -46,8 +49,8 @@ public class AdressDAO {
 		// do nothing
 	}
 
-	public void save(Adress transientInstance) {
-		log.debug("saving Adress instance");
+	public void save(CircleInfo transientInstance) {
+		log.debug("saving CircleInfo instance");
 		try {
 			getCurrentSession().save(transientInstance);
 			log.debug("save successful");
@@ -57,8 +60,8 @@ public class AdressDAO {
 		}
 	}
 
-	public void delete(Adress persistentInstance) {
-		log.debug("deleting Adress instance");
+	public void delete(CircleInfo persistentInstance) {
+		log.debug("deleting CircleInfo instance");
 		try {
 			getCurrentSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -67,9 +70,9 @@ public class AdressDAO {
 			throw re;
 		}
 	}
-
-	public void update(Adress transientInstance) {
-		log.debug("updateing Adress instance");
+	
+	public void update(CircleInfo transientInstance) {
+		log.debug("updateing CircleInfo instance");
 		try {
 			getCurrentSession().update(transientInstance);
 			log.debug("update successful");
@@ -78,11 +81,11 @@ public class AdressDAO {
 			throw re;
 		}
 	}
-	
-	public Adress findById(java.lang.Long id) {
-		log.debug("getting Adress instance with id: " + id);
+
+	public CircleInfo findById(java.lang.Short id) {
+		log.debug("getting CircleInfo instance with id: " + id);
 		try {
-			Adress instance = (Adress) getCurrentSession().get("ourmarket.models.Adress", id);
+			CircleInfo instance = (CircleInfo) getCurrentSession().get("ourmarket.models.CircleInfo", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -90,11 +93,11 @@ public class AdressDAO {
 		}
 	}
 
-	public List findByExample(Adress instance) {
-		log.debug("finding Adress instance by example");
+	public List findByExample(CircleInfo instance) {
+		log.debug("finding CircleInfo instance by example");
 		try {
-			List results = getCurrentSession().createCriteria("ourmarket.models.Adress").add(Example.create(instance))
-					.list();
+			List results = getCurrentSession().createCriteria("ourmarket.models.CircleInfo")
+					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: " + results.size());
 			return results;
 		} catch (RuntimeException re) {
@@ -104,9 +107,9 @@ public class AdressDAO {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding Adress instance with property: " + propertyName + ", value: " + value);
+		log.debug("finding CircleInfo instance with property: " + propertyName + ", value: " + value);
 		try {
-			String queryString = "from Adress as model where model." + propertyName + "= ?";
+			String queryString = "from CircleInfo as model where model." + propertyName + "= ?";
 			Query queryObject = getCurrentSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
 			return queryObject.list();
@@ -116,22 +119,26 @@ public class AdressDAO {
 		}
 	}
 
-	public List findByUid(Object uid) {
-		return findByProperty(UID, uid);
+	public List findByCircleX(Object circleX) {
+		return findByProperty(CIRCLE_X, circleX);
 	}
 
-	public List findByAinfo(Object ainfo) {
-		return findByProperty(AINFO, ainfo);
+	public List findByCircleY(Object circleY) {
+		return findByProperty(CIRCLE_Y, circleY);
 	}
 
-	public List findByAstate(Object astate) {
-		return findByProperty(ASTATE, astate);
+	public List findByCircleR(Object circleR) {
+		return findByProperty(CIRCLE_R, circleR);
+	}
+
+	public List findByCircleDes(Object circleDes) {
+		return findByProperty(CIRCLE_DES, circleDes);
 	}
 
 	public List findAll() {
-		log.debug("finding all Adress instances");
+		log.debug("finding all CircleInfo instances");
 		try {
-			String queryString = "from Adress";
+			String queryString = "from CircleInfo";
 			Query queryObject = getCurrentSession().createQuery(queryString);
 			return queryObject.list();
 		} catch (RuntimeException re) {
@@ -140,10 +147,10 @@ public class AdressDAO {
 		}
 	}
 
-	public Adress merge(Adress detachedInstance) {
-		log.debug("merging Adress instance");
+	public CircleInfo merge(CircleInfo detachedInstance) {
+		log.debug("merging CircleInfo instance");
 		try {
-			Adress result = (Adress) getCurrentSession().merge(detachedInstance);
+			CircleInfo result = (CircleInfo) getCurrentSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -152,8 +159,8 @@ public class AdressDAO {
 		}
 	}
 
-	public void attachDirty(Adress instance) {
-		log.debug("attaching dirty Adress instance");
+	public void attachDirty(CircleInfo instance) {
+		log.debug("attaching dirty CircleInfo instance");
 		try {
 			getCurrentSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -163,8 +170,8 @@ public class AdressDAO {
 		}
 	}
 
-	public void attachClean(Adress instance) {
-		log.debug("attaching clean Adress instance");
+	public void attachClean(CircleInfo instance) {
+		log.debug("attaching clean CircleInfo instance");
 		try {
 			getCurrentSession().buildLockRequest(LockOptions.NONE).lock(instance);
 			log.debug("attach successful");
@@ -174,7 +181,7 @@ public class AdressDAO {
 		}
 	}
 
-	public static AdressDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (AdressDAO) ctx.getBean("AdressDAO");
+	public static CircleInfoDAO getFromApplicationContext(ApplicationContext ctx) {
+		return (CircleInfoDAO) ctx.getBean("CircleInfoDAO");
 	}
 }

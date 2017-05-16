@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.Goods;
 import ourmarket.models.Orders;
+import ourmarket.models.User;
 
 /**
  * A data access object (DAO) providing persistence and search support for

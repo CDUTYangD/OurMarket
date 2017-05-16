@@ -73,7 +73,8 @@
 				<value>ourmarket/models/User.hbm.xml</value>
 				<value>ourmarket/models/Goods.hbm.xml</value>
 				<value>ourmarket/models/GoodsReturn.hbm.xml</value>
-				<value>ourmarket/models/Complaints.hbm.xml</value></list>
+				<value>ourmarket/models/Complaints.hbm.xml</value>
+				<value>ourmarket/models/CircleInfo.hbm.xml</value></list>
 		</property>
 	</bean>
 	<bean id="transactionManager"
@@ -148,6 +149,11 @@
 		</property>
 	</bean>
 	<bean id="ComplaintsDAO" class="ourmarket.daos.ComplaintsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CircleInfoDAO" class="ourmarket.daos.CircleInfoDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

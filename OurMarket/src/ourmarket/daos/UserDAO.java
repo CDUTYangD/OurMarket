@@ -1,7 +1,6 @@
 package ourmarket.daos;
 
 import java.util.List;
-
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -12,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
+import ourmarket.models.Goods;
 import ourmarket.models.User;
 
 /**
@@ -57,11 +57,11 @@ public class UserDAO {
 		try {
 			getCurrentSession().save(transientInstance);
 			log.debug("save successful");
-			return transientInstance;
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;
 		}
+		return transientInstance;
 	}
 
 	public void delete(User persistentInstance) {
@@ -74,7 +74,7 @@ public class UserDAO {
 			throw re;
 		}
 	}
-
+	
 	public void update(User transientInstance) {
 		log.debug("updateing User instance");
 		try {
@@ -85,6 +85,7 @@ public class UserDAO {
 			throw re;
 		}
 	}
+
 
 	public User findById(java.lang.Integer id) {
 		log.debug("getting User instance with id: " + id);

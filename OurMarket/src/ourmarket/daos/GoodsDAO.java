@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import ourmarket.models.Adress;
+import ourmarket.models.Collection;
 import ourmarket.models.Goods;
 
 /**

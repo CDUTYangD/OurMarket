@@ -10,7 +10,7 @@
             <column name="ImageID" />
             <generator class="native" />
         </id>
-        <property name="imageListId" type="java.lang.Integer">
+        <property name="imageListId" type="java.lang.Long">
             <column name="ImageListID" />
         </property>
         <property name="imageSrc" type="java.lang.String">
