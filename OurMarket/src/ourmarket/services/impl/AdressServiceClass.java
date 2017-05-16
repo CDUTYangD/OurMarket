@@ -3,6 +3,7 @@ package ourmarket.services.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import ourmarket.daos.AdressDAO;
 import ourmarket.models.Adress;
@@ -14,6 +15,7 @@ import ourmarket.services.IAdressService;
  * @date  2017年4月28日
  * 地址服务类
  */
+@Service
 public class AdressServiceClass implements IAdressService{
 
 	@Autowired AdressDAO adressDAO;
