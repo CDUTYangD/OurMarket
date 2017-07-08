@@ -67,7 +67,7 @@
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">首页</a></li>
-				<li><a href="#">客服</a></li>
+				
 				<li><a href="#">消息</a></li>
 				<li><a href="#">个人中心</a></li>
 				<li><a href="#">客服</a></li>
