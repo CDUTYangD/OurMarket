@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </center>
             <!-- 地图 -->
-            <div style="width: 100%;padding: 5px 0;">
+            <div style="width: 100%;padding: 5px 0;"> 
                 <div id="iCenter" style="height:100% "></div>
             </div>
         </div>

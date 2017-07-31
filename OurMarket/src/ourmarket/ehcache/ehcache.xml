@@ -7,7 +7,7 @@
 	       timeToIdleSeconds="10"
 	       timeToLiveSeconds="10"
 	       overflowToDisk="false"/>
-	<cache name="myCache"
+	<cache name="goods"
 	       maxElementsOnDisk="20000"
 	       maxElementsInMemory="2000"
 	       eternal="false"

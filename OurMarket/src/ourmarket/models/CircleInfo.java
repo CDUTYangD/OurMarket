@@ -11,8 +11,8 @@ public class CircleInfo implements java.io.Serializable {
 	// Fields
 
 	private Short circleId;
-	private Float circleX;
-	private Float circleY;
+	private Double circleX;
+	private Double circleY;
 	private Double circleR;
 	private String circleDes;
 	private Timestamp circleTime;
@@ -24,7 +24,7 @@ public class CircleInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public CircleInfo(Float circleX, Float circleY, Double circleR, Timestamp circleTime) {
+	public CircleInfo(Double circleX, Double circleY, Double circleR, Timestamp circleTime) {
 		this.circleX = circleX;
 		this.circleY = circleY;
 		this.circleR = circleR;
@@ -32,7 +32,7 @@ public class CircleInfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public CircleInfo(Float circleX, Float circleY, Double circleR, String circleDes, Timestamp circleTime) {
+	public CircleInfo(Double circleX, Double circleY, Double circleR, String circleDes, Timestamp circleTime) {
 		this.circleX = circleX;
 		this.circleY = circleY;
 		this.circleR = circleR;
@@ -50,19 +50,19 @@ public class CircleInfo implements java.io.Serializable {
 		this.circleId = circleId;
 	}
 
-	public Float getCircleX() {
+	public Double getCircleX() {
 		return this.circleX;
 	}
 
-	public void setCircleX(Float circleX) {
+	public void setCircleX(Double circleX) {
 		this.circleX = circleX;
 	}
 
-	public Float getCircleY() {
+	public Double getCircleY() {
 		return this.circleY;
 	}
 
-	public void setCircleY(Float circleY) {
+	public void setCircleY(Double circleY) {
 		this.circleY = circleY;
 	}
 

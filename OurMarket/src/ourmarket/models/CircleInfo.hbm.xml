@@ -10,10 +10,10 @@
             <column name="circleID" />
             <generator class="native" />
         </id>
-        <property name="circleX" type="java.lang.Float">
+        <property name="circleX" type="java.lang.Double">
             <column name="circleX" precision="12" scale="0" not-null="true" />
         </property>
-        <property name="circleY" type="java.lang.Float">
+        <property name="circleY" type="java.lang.Double">
             <column name="circleY" precision="12" scale="0" not-null="true" />
         </property>
         <property name="circleR" type="java.lang.Double">
