@@ -1,0 +1,15 @@
+.content-reply-box{height: 400px;overflow-y: scroll;overflow-x: hidden;background-color: #E5E5E5;}
+.content-reply-box li{width:100%;overflow:hidden;margin-bottom:2em;}
+.content-reply-box li.odd .user{float:left;margin-right:10px;}
+.content-reply-box li.even .user{float:right;margin-left:10px;}
+.content-reply-box li.odd .reply-content-box{margin-left:60px;}
+.content-reply-box li.even .reply-content-box{margin-right:60px;}
+.user-name{color:#999;margin-top:5px;display:block;text-align:center;width:50px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;}
+.reply-time{color:darkseagreen;font-size:.85em;display:inline-block;width:100%;}
+.content-reply-box li.odd .reply-time{text-align:left;}
+.content-reply-box li.even .reply-time{text-align:right;}
+.reply-content{border:1px solid #fcfcfc;padding:.6em;background-color:#fcfcfc;border-radius:4px;box-shadow:0 0 5px #ccc;}
+.content-reply-box li.odd .arrow{width:0;height:0;line-height:0;font-size:0;border-color:transparent #fff transparent transparent;border-width:6px;border-style:dashed solid dashed dashed;display:block;position:absolute;top:8px;left:-12px;z-index:999;}
+.content-reply-box li.even .arrow{width:0;height:0;line-height:0;font-size:0;border-color:transparent transparent transparent #fff;border-width:6px;border-style:dashed dashed dashed solid;display:block;position:absolute;top:8px;right:-12px;z-index:999;}
+.mg10 {margin:10px 0;}
+.avatar_{border-radius:50%;margin-top:15px;opacity:1;filter:alpha(opacity=100);transition:all 0.3s ease-in 0s;-moz-transition:all 0.3s ease-in 0s;-webkit-transition:all 0.3s ease-in 0s;-o-transition:all 0.3s ease-in 0s;}

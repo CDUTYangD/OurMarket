@@ -1,0 +1,24 @@
+.goods{
+	height: 200px;
+}
+
+.price{
+	color: orangered;
+	font-size: larger;
+}
+
+.dealcount{
+	float: right;
+	font-size: xx-small;
+	color: darkgrey;
+}
+.shop{
+	color: darkgrey;
+	text-decoration: underline;
+}
+
+.location{
+	float: right;
+	font-size: smaller;
+	color: darkgrey;
+}

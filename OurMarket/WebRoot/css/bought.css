@@ -1,0 +1,14 @@
+.pic{
+	height: 80px;margin-right: 0px;float: left;font-size: 15px;font-family: verdana;font-size: 18px;
+}
+.quantity{
+	font-weight: 600;
+}
+.price{
+	color: orangered;
+	font-size: 20px;
+	
+}
+.center{
+	text-align: center
+}
