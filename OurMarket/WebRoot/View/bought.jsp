@@ -75,12 +75,10 @@ $(function() {
 					<li><a href="personalzoom.html">个人中心</a></li>
 					<li><a href="Service.html">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
-					
 				</ul>
 				<form class="navbar-form navbar-right">
 					<input type="text" class="form-control" placeholder="Search...">
 				</form>
-			
 			</div>
 		</div>
 		</nav>
