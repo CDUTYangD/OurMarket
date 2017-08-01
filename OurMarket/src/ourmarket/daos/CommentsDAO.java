@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
+import ourmarket.models.CircleInfo;
 import ourmarket.models.Comments;
 
 /**
@@ -66,6 +67,17 @@ public class CommentsDAO {
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
+			throw re;
+		}
+	}
+	
+	public void update(Comments transientInstance) {
+		log.debug("updateing Comments instance");
+		try {
+			getCurrentSession().update(transientInstance);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
 			throw re;
 		}
 	}

@@ -45,5 +45,10 @@ public class OrderServiceClass implements IOrderService {
 		// TODO Auto-generated method stub
 		return ordersDAO.findAll();
 	}
+	@Override
+	public List<Orders> findOrdersByUid(int uid) {
+		// TODO Auto-generated method stub
+		return ordersDAO.findByUid(uid);
+	}
 
 }

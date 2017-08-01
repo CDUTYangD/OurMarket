@@ -25,5 +25,8 @@
         <property name="commentTime" type="java.sql.Timestamp">
             <column name="commentTime" length="19" not-null="true" />
         </property>
+        <property name="commentState" type="java.lang.Short">
+            <column name="commentState" />
+        </property>
     </class>
 </hibernate-mapping>

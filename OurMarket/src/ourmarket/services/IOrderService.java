@@ -18,6 +18,7 @@ public interface IOrderService {
 	Orders findOrderById(int orderId);
 	//查询所有
 	List<Orders> findAllOrders();
+	List<Orders>findOrdersByUid(int uid);
 	//改
 	void updateOrder(Orders order);
 }

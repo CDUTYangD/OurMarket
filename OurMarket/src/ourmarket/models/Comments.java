@@ -10,12 +10,17 @@ public class Comments implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer commentId;
 	private Integer uid;
 	private Long imageListId;
 	private Long gid;
 	private String comments;
 	private Timestamp commentTime;
+	private Short commentState;
 
 	// Constructors
 
@@ -30,12 +35,13 @@ public class Comments implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Comments(Integer uid, Long imageListId, Long gid, String comments, Timestamp commentTime) {
+	public Comments(Integer uid, Long imageListId, Long gid, String comments, Timestamp commentTime,Short commentState) {
 		this.uid = uid;
 		this.imageListId = imageListId;
 		this.gid = gid;
 		this.comments = comments;
 		this.commentTime = commentTime;
+		this.commentState=commentState;
 	}
 
 	// Property accessors
@@ -86,6 +92,14 @@ public class Comments implements java.io.Serializable {
 
 	public void setCommentTime(Timestamp commentTime) {
 		this.commentTime = commentTime;
+	}
+
+	public Short getCommentState() {
+		return commentState;
+	}
+
+	public void setCommentState(Short commentState) {
+		this.commentState = commentState;
 	}
 
 }
