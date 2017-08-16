@@ -40,11 +40,13 @@ public class OrderServiceClass implements IOrderService {
 		// TODO Auto-generated method stub
 		return ordersDAO.findById(orderId);
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Orders> findAllOrders() {
 		// TODO Auto-generated method stub
 		return ordersDAO.findAll();
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Orders> findOrdersByUid(int uid) {
 		// TODO Auto-generated method stub

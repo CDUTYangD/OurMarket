@@ -36,12 +36,14 @@ public class CommentServiceClass implements ICommentService{
 		commentDAO.update(comments);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Comments> findAllComents() {
 		// TODO Auto-generated method stub
 		return commentDAO.findAll();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Comments> findCommentsByUid(int uid) {
 		// TODO Auto-generated method stub
