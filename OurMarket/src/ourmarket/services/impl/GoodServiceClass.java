@@ -46,4 +46,10 @@ public class GoodServiceClass implements IGoodService{
 		return goodsDAO.findAll();
 	}
 
+	@Override
+	public Goods findGoodByGid(int gid) {
+		// TODO Auto-generated method stub
+		return goodsDAO.findById(gid);
+	}
+
 }

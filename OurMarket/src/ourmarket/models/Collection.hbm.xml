@@ -13,7 +13,7 @@
         <property name="uid" type="java.lang.Integer">
             <column name="uID" />
         </property>
-        <property name="gid" type="java.lang.Long">
+        <property name="gid" type="java.lang.Integer">
             <column name="gID" />
         </property>
         <property name="ctime" type="java.sql.Timestamp">

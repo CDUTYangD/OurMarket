@@ -12,7 +12,7 @@ public class Orders implements java.io.Serializable {
 
 	private Integer oid;
 	private Integer uid;
-	private Long gid;
+	private Integer gid;
 	private Timestamp otime;
 	private Float omoney;
 	private Short opayState;
@@ -37,7 +37,7 @@ public class Orders implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Orders(Integer uid, Long gid, Timestamp otime, Float omoney, Short opayState, Integer onum, String ono,
+	public Orders(Integer uid, Integer gid, Timestamp otime, Float omoney, Short opayState, Integer onum, String ono,
 			Short osendState) {
 		this.uid = uid;
 		this.gid = gid;
@@ -67,11 +67,11 @@ public class Orders implements java.io.Serializable {
 		this.uid = uid;
 	}
 
-	public Long getGid() {
+	public Integer getGid() {
 		return this.gid;
 	}
 
-	public void setGid(Long gid) {
+	public void setGid(Integer gid) {
 		this.gid = gid;
 	}
 

@@ -16,7 +16,7 @@
         <property name="imageListId" type="java.lang.Long">
             <column name="ImageListID" />
         </property>
-        <property name="gid" type="java.lang.Long">
+        <property name="gid" type="java.lang.Integer">
             <column name="gID" />
         </property>
         <property name="comments" type="java.lang.String">
@@ -27,6 +27,9 @@
         </property>
         <property name="commentState" type="java.lang.Short">
             <column name="commentState" />
+        </property>
+        <property name="oid" type="java.lang.Integer">
+            <column name="oID" />
         </property>
     </class>
 </hibernate-mapping>

@@ -88,7 +88,7 @@ public class GoodsDAO {
 		}
 	}
 
-	public Goods findById(java.lang.Long id) {
+	public Goods findById(java.lang.Integer id) {
 		log.debug("getting Goods instance with id: " + id);
 		try {
 			Goods instance = (Goods) getCurrentSession().get("ourmarket.models.Goods", id);

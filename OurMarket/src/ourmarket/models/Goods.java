@@ -10,7 +10,7 @@ public class Goods implements java.io.Serializable {
 
 	// Fields
 
-	private Long gid;
+	private Integer gid;
 	private Integer uid;
 	private Long imageListId;
 	private String gname;
@@ -59,11 +59,11 @@ public class Goods implements java.io.Serializable {
 
 	// Property accessors
 
-	public Long getGid() {
+	public Integer getGid() {
 		return this.gid;
 	}
 
-	public void setGid(Long gid) {
+	public void setGid(Integer gid) {
 		this.gid = gid;
 	}
 

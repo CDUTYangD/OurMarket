@@ -18,4 +18,5 @@ public interface IGoodService {
 	void updateGood(Goods good);
 	//查
 	List<Goods> findAllGoods();
+	Goods findGoodByGid(int gid);
 }

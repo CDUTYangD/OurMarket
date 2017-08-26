@@ -19,7 +19,7 @@ public class GoodServiceClassTest {
 	@Test
 	public void testCreateGood() {
 		Goods goods=new Goods();
-		goods.setGid((long) 0);
+		goods.setGid((int) 0);
 		goods.setGname("益达");
 		goods.setGnum(10);
 		java.util.Date  date=new java.util.Date();

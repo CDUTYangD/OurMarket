@@ -12,7 +12,7 @@ public class Collection implements java.io.Serializable {
 
 	private Integer cid;
 	private Integer uid;
-	private Long gid;
+	private Integer gid;
 	private Timestamp ctime;
 
 	// Constructors
@@ -27,7 +27,7 @@ public class Collection implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Collection(Integer uid, Long gid, Timestamp ctime) {
+	public Collection(Integer uid, Integer gid, Timestamp ctime) {
 		this.uid = uid;
 		this.gid = gid;
 		this.ctime = ctime;
@@ -51,11 +51,11 @@ public class Collection implements java.io.Serializable {
 		this.uid = uid;
 	}
 
-	public Long getGid() {
+	public Integer getGid() {
 		return this.gid;
 	}
 
-	public void setGid(Long gid) {
+	public void setGid(Integer gid) {
 		this.gid = gid;
 	}
 
