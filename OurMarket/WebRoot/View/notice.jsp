@@ -77,8 +77,8 @@ $(function() {
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="homepage.html">首页</a></li>
-			<li><a href="Message.html">消息</a></li>
+			<li><a href="http://localhost:8080/OurMarket/home.jsp">首页</a></li>
+			<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
 			<li><a href="personalzoom.html">个人中心</a></li>
 			<li><a href="Service.html">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
