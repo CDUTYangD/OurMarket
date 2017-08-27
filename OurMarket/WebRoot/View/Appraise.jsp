@@ -70,10 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="homepage.html">首页</a></li>
-			<li><a href="Message.html">消息</a></li>
-			<li><a href="personalzoom.html">个人中心</a></li>
-			<li><a href="Service.html">客服</a></li>
+			<li><a href="http://localhost:8080/OurMarket/home.jsp">首页</a></li>
+			<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+			<li><a href="http://localhost:8080/OurMarket/View/personalZoom.jsp">个人中心</a></li>
+			<li><a href="http://localhost:8080/OurMarket/View/service.jsp">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -91,19 +91,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<!--sidebar  边栏-->
 			<ul class="nav nav-sidebar">
 				<!--这是列表组-->
-				<li ><a href="bought.html">已买到宝贝</a></li>
+				<li ><a href="http://localhost:8080/OurMarket/View/bought.jsp">已买到宝贝</a></li>
 				<li><a href="uncollected.html">未收款宝贝</a></li>
-				<li><a href="shelved.html">已上架宝贝</a></li>
-				<li><a href="footmark.html">足迹宝贝</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/shelvedGoods.jsp">已上架宝贝</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/footmark.jsp">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="refundmanage.html">退款管理</a></li>
-				<li><a href="GOODmanages.html">物品管理</a></li>
-				<li><a href="ordermanage.html">订单管理</a></li>
-				<li class="active"><a href="Appraise.html">我的评价</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/refundManage.jsp">退款管理</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/goodsManages.jsp">物品管理</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/orderManage.jsp">订单管理</a></li>
+				<li class="active"><a href="http://localhost:8080/OurMarket/View/Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="propertycenter.html">资产中心</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/propertyCenter.jsp">资产中心</a></li>
 			</ul>
 			</div>
 		</div>
