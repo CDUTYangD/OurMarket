@@ -1,8 +1,13 @@
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>支付宝即时到账交易接口</title>
+    <title>æ¯ä»å®å³æ¶å°è´¦äº¤ææ¥å£</title>
 </head>
 
 <style>
@@ -12,7 +17,7 @@
         height:auto;
         padding:0;
         margin:0;
-        font-family:"微软雅黑";
+        font-family:"å¾®è½¯éé»";
         background-color:#242736
     }
     .header {
@@ -238,10 +243,10 @@
                         <div class="guanzhuqr">
                             <img src="img/guanzhu_qrcode.png" width="80">
                             <div class="shmsg" style="margin-top:5px;">
-                            	请扫码关注
+                            	è¯·æ«ç å³æ³¨
                             </div>
                             <div class="shmsg" style="margin-bottom:5px;">
-                               	 接收重要信息
+                               	 æ¥æ¶éè¦ä¿¡æ¯
                             </div>
                         </div>
                     </div>
@@ -252,65 +257,65 @@
             <div class="nav">
                 <a href="https://www.alipay.com/" class="logo"><img src="img/alipay_logo.png" height="30px"></a>
                 <span class="divier"></span>
-                <a href="http://open.alipay.com/platform/home.htm" class="open" target="_blank">开放平台</a>
+                <a href="http://open.alipay.com/platform/home.htm" class="open" target="_blank">å¼æ¾å¹³å°</a>
                 <ul class="navbar">
-                    <li><a href="https://doc.open.alipay.com/doc2/detail?treeId=62&articleId=103566&docType=1" target="_blank">在线文档</a></li>
-                    <li><a href="https://cschannel.alipay.com/portal.htm?sourceId=213" target="_blank">技术支持</a></li>
+                    <li><a href="https://doc.open.alipay.com/doc2/detail?treeId=62&articleId=103566&docType=1" target="_blank">å¨çº¿ææ¡£</a></li>
+                    <li><a href="https://cschannel.alipay.com/portal.htm?sourceId=213" target="_blank">ææ¯æ¯æ</a></li>
                 </ul>
             </div>
         </div>
         <div class="container blue">
-            <div class="title">支付宝即时到账(create_direct_pay_by_user)</div>
+            <div class="title">æ¯ä»å®å³æ¶å°è´¦(create_direct_pay_by_user)</div>
         </div>
     </div>
     <div class="content">
         <form action="alipayapi.jsp" class="alipayform" method="POST" target="_blank">
             <div class="element" style="margin-top:60px;">
-                <div class="legend">支付宝即时到账交易接口快速通道 </div>
+                <div class="legend">æ¯ä»å®å³æ¶å°è´¦äº¤ææ¥å£å¿«ééé </div>
             </div>
             <div class="element">
-                <div class="etitle">商户订单号:</div>
+                <div class="etitle">åæ·è®¢åå·:</div>
                 <div class="einput"><input type="text" name="WIDout_trade_no" id="out_trade_no"></div>
                 <br>
-                <div class="mark">注意：商户订单号(out_trade_no).必填(建议是英文字母和数字,不能含有特殊字符)</div>
+                <div class="mark">æ³¨æï¼åæ·è®¢åå·(out_trade_no).å¿å¡«(å»ºè®®æ¯è±æå­æ¯åæ°å­,ä¸è½å«æç¹æ®å­ç¬¦)</div>
             </div>
             
             <div class="element">
-                <div class="etitle">商品名称:</div>
-                <div class="einput"><input type="text" name="WIDsubject" value="test商品123"></div>
+                <div class="etitle">åååç§°:</div>
+                <div class="einput"><input type="text" name="WIDsubject" value="teståå123"></div>
                 <br>
-                <div class="mark">注意：产品名称(subject)，必填(建议中文，英文，数字，不能含有特殊字符)</div>
+                <div class="mark">æ³¨æï¼äº§ååç§°(subject)ï¼å¿å¡«(å»ºè®®ä¸­æï¼è±æï¼æ°å­ï¼ä¸è½å«æç¹æ®å­ç¬¦)</div>
             </div>
             <div class="element">
-                <div class="etitle">付款金额:</div>
+                <div class="etitle">ä»æ¬¾éé¢:</div>
                 <div class="einput"><input type="text" name="WIDtotal_fee" value="0.01"></div>
                 <br>
-                <div class="mark">注意：付款金额(total_fee)，必填(格式如：1.00,请精确到分)</div>
+                <div class="mark">æ³¨æï¼ä»æ¬¾éé¢(total_fee)ï¼å¿å¡«(æ ¼å¼å¦ï¼1.00,è¯·ç²¾ç¡®å°å)</div>
             </div>
 			<div class="element">
-                <div class="etitle">商品描述:</div>
-                <div class="einput"><input type="text" name="WIDbody" value="即时到账测试"></div>
+                <div class="etitle">ååæè¿°:</div>
+                <div class="einput"><input type="text" name="WIDbody" value="å³æ¶å°è´¦æµè¯"></div>
                 <br>
-                <div class="mark">注意：商品描述(body)，选填(建议中文，英文，数字，不能含有特殊字符)</div>
+                <div class="mark">æ³¨æï¼ååæè¿°(body)ï¼éå¡«(å»ºè®®ä¸­æï¼è±æï¼æ°å­ï¼ä¸è½å«æç¹æ®å­ç¬¦)</div>
             </div>
             <div class="element">
-                <input type="submit" class="alisubmit" value ="确认支付">
+                <input type="submit" class="alisubmit" value ="ç¡®è®¤æ¯ä»">
             </div>
         </form>
     </div>
     <div id="returnAli"> </div>
     <div class="footer">
         <p class="footer-sub">
-            <a href="http://ab.alipay.com/i/index.htm" target="_blank">关于支付宝</a><span>|</span>
-            <a href="https://e.alipay.com/index.htm" target="_blank">商家中心</a><span>|</span>
-            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank">诚征英才</a><span>|</span>
-            <a href="http://ab.alipay.com/i/lianxi.htm" target="_blank">联系我们</a><span>|</span>
+            <a href="http://ab.alipay.com/i/index.htm" target="_blank">å³äºæ¯ä»å®</a><span>|</span>
+            <a href="https://e.alipay.com/index.htm" target="_blank">åå®¶ä¸­å¿</a><span>|</span>
+            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank">è¯å¾è±æ</a><span>|</span>
+            <a href="http://ab.alipay.com/i/lianxi.htm" target="_blank">èç³»æä»¬</a><span>|</span>
             <a href="#" id="international" target="_blank">International&nbsp;Business</a><span>|</span>
             <a href="http://ab.alipay.com/i/jieshao.htm#en" target="_blank">About Alipay</a>
             <br>
-             <span>支付宝版权所有</span>
+             <span>æ¯ä»å®çæææ</span>
             <span class="footer-date">2004-2016</span>
-            <span><a href="http://fun.alipay.com/certificate/jyxkz.htm" target="_blank">ICP证：沪B2-20150087</a></span>
+            <span><a href="http://fun.alipay.com/certificate/jyxkz.htm" target="_blank">ICPè¯ï¼æ²ªB2-20150087</a></span>
         </p>
     </div>
 </body>
@@ -348,7 +353,7 @@
          
          var out_trade_no = document.getElementById("out_trade_no");
 
-         //设定时间格式化函数
+         //è®¾å®æ¶é´æ ¼å¼åå½æ°
          Date.prototype.format = function (format) {
                var args = {
                    "M+": this.getMonth() + 1,

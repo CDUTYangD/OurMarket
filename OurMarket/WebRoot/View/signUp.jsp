@@ -17,10 +17,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="js/bootstrap.min.js"></script>
 <script src="js/drag.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/carousel.css" />
-<link rel="stylesheet" href="css/dashboard.css" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/carousel.css" />
+<link rel="stylesheet" href="../css/dashboard.css" />
 
 <link href="css/drag.css" rel="stylesheet" type="text/css"/>
 <style>

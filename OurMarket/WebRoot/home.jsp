@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <script language="javascript" src="http://webapi.amap.com/maps?v=1.3&key=168484ce0ca0e0fb381b1dd319ad121e"></script>
-    <style href="css/login.css"></style>
+    <style href="../css/login.css"></style>
 </head>
 <body onload="init()">
 <div id="wrapper">

@@ -7,23 +7,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Message</title>
+<meta charset="UTF-8">
+<title>通知</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/Logout.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/Logout.js"></script>
 
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="css/carousel.css" />
-<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="css/Message.css" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
 
-	<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../css/Message.css" />
+
+<script type="text/javascript">
 $(function() {
 	$("#button_show_right,#button_show_left").click(function() {
 		if ($(this).attr('id').indexOf("right") > 0) {
@@ -38,6 +40,10 @@ $(function() {
 	});
 })
 </script>
+
+<style>
+	
+</style>
 </head>
 
 <body>
@@ -107,58 +113,77 @@ $(function() {
 					<li><a href="propertycenter.html">资产中心</a></li>
 				</ul>
 			</div>
-		
+		</div>
 			<div  class="col-sm-3 col-md-3 "></div>
 			<!--中间导航栏-->
-			<div  id="navbar-middle" class="col-sm-3 col-md-2 hidden-sm " >
-				<br><br>
-				<ul >
-					<li ><a href="#"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
-					<li class="active"><a href="#" ><i class="fa fa-envelope-o fa-lg "></i>私信</a></li>
-					<li><a  href="#"><i class="fa fa-bell fa-lg"></i>通知</a></li>
-					<li><a href="#"><i class="fa fa-cog fa-lg"></i>消息设置</a></li>
-					<img src="img/erhuo.png" width="150px" height="300px" class="hidden-xs"/>
+			<div  id="navbar-middle" class="col-sm-3 col-md-2  " >
+				
+				<ul class="list-unstyled" style="border:1px solid #96c2f1;background:#eff7ff; margin-top: 5px;">
+					<li class="active"><a href="Message.html"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
+					<li ><a href="PrivateMessage.html"><i class="fa fa-envelope-o fa-lg "></i>私信</a></li>
+					<li><a  href="Notice.html"><i class="fa fa-bell fa-lg"></i>通知</a></li>
+					<li><a href="MessageSettings.html"><i class="fa fa-cog fa-lg"></i>消息设置</a></li>
+					<img src="../img/erhuo.png" width="150px" height="300px" class="hidden-xs"/>
 				</ul>
 			</div>
-			<!--聊天窗口-->
-		<div   class="col-sm-5 col-md-6 " >
-			<ul class="content-reply-box mg " id="chatlog" >
-				<li class="odd">
-				<a class="user" href="#"><img class="img-responsive avatar_" src="img/avatar.png" alt=""><span class="user-name">Lee</span></a>
-				<div class="reply-content-box">
-					<span class="reply-time" id="chat-time">03-08 15：00</span>
-					<div class="reply-content pr">
-						<span class="arrow">&nbsp;</span>
-						你好！
+
+		<div class="col-sm-5 col-md-7 " style="margin-top: 10px;padding: 0px;">
+			<!--<div class="col-md-4">
+				<h4  style="font-weight: 600;margin-top: 20px;">有人给我发了私信</h4>	
+			</div>-->
+			
+			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
+				<form action="" method="get" >
+					<h3>有人给我发了私信</h3>
+					<div class="col-md-offset-3">
+					<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;不接受私信</label>
+					<label ><input name="setting" type="radio" value="" />&nbsp;允许陌生人给我发私信</label>
+					<label><input name="setting" type="radio" value="" />&nbsp;禁止陌生人给我发私信</label>
 					</div>
-				</div>
-			   </li>
-	            <li class="even">
-	                <a class="user" href="#"><img class="img-responsive avatar_" src="img/avatar.png" alt=""><span class="user-name">Catherine</span></a>
-						<div class="reply-content-box">
-							<span class="reply-time">03-08 15：10</span>
-							<div class="reply-content pr">
-								<span class="arrow">&nbsp;</span>
-								吃饭了吗？
-							</div>
-	                </div>
-	            </li>
-				</ul>
-		<!--发送框-->
-			<div > 
-			    <form > 
-			        <textarea style="width: 100%;" class="span4" id="new_message" name="new_message"></textarea> 
+					
 				</form>
-				<button class="btn btn-info" id="send-message" onclick="send_message()">发送</button>
-			</div> 
+			</div>	
+			
+			<!--<div class="col-md-4">
+				<h4  style="font-weight: 600;margin-top: 20px;">关注的买卖家的动态</h4>	
+			</div>
+			
+			<div class="col-md-6" style="line-height: 40px;margin-top: 10px;">
+				<form action="" method="get">
+					<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;不通知</label>
+					<label ><input name="setting" type="radio" value="" />&nbsp;通知</label>
+				</form>
+			</div>	-->
+			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
+				<form action="" method="get" >
+					<h3>关注的买卖家的动态</h3>
+					<div class="col-md-offset-3">
+						<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;不通知</label>
+						<label ><input name="setting" type="radio" value="" />&nbsp;通知</label>
+					</div>
+				</form>
+			</div>	
+			
+			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
+				<form action="" method="get" >
+					<h3>是否通知系统消息</h3>
+					<div class="col-md-offset-3">
+						<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;通知</label>
+						<label ><input name="setting" type="radio" value="" />&nbsp;不通知</label>
+					</div>
+				</form>
+			</div>	
+			
+			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
+				<form action="" method="get" >
+					<h3>附近的最新活动</h3>
+					<div class="col-md-offset-3">
+						<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;通知</label>
+						<label ><input name="setting" type="radio" value="" />&nbsp;不通知</label>
+					</div>
+				</form>
+			</div>	
 		</div>
-		</div>
-		<div  class="col-sm-3 col-md-2"></div>
 </div>
-
-
-
-
-<script src="js/webSocket.js" type="text/javascript"></script>
 </body>
 </html>
