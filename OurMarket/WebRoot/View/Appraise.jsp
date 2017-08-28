@@ -17,6 +17,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/Logout.js"></script>
 	
+	
+	
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
 	<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
