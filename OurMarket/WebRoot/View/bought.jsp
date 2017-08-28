@@ -98,9 +98,9 @@ $(function() {
 							<li><a href="http://localhost:8080/OurMarket/View/footmark.jsp">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="refundmanage.jsp">退款管理</a></li>
-							<li><a href="GOODmanages.jsp">物品管理</a></li>
-							<li><a href="ordermanage.jsp">订单管理</a></li>
+							<li><a href="refundManage.jsp">退款管理</a></li>
+							<li><a href="goodsManages.jsp">物品管理</a></li>
+							<li><a href="orderManage.jsp">订单管理</a></li>
 							<li><a href="Appraise.jsp">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">

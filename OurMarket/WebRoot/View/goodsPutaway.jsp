@@ -49,10 +49,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="homepage.jsp">首页</a></li>
+					<li><a href="../home.jsp">首页</a></li>
 					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalzoom.jsp">个人中心</a></li>
-					<li><a href="Service.jsp">客服</a></li>
+					<li><a href="personalZoom.jsp">个人中心</a></li>
+					<li><a href="service.jsp">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 					
 				</ul>
