@@ -92,8 +92,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div><br >
   						</form>
   					<div class="col-sm-8 col-md-8 col-lg-8" style="background-color: ;text-align: left;">
-      				<img src="img/1.png" />
-      				<img src="img/1.png" />
+      				<img src="../img/1.png" />
+      				<img src="../img/1.png" />
   					</div>
   					<div class="col-sm-4 col-md-4 col-lg-4" style="background-color: ;text-align: left;">
   						
@@ -107,7 +107,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       			</div>
       			     	<!--右边的logo-->
       			<div class="col-sm-4 col-md-4 col-lg-4 hidden-xs" style="background-color: ;">
-					 <img src="img/erhuo.png" />
+					 <img src="../img/erhuo.png" />
       			</div>
       		</div>
       		<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 " >
@@ -119,8 +119,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	
 </body>
-<script type="text/javascript">
-	
-</script>
 
 </html>
