@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="container-fluid">
 		<!--流动的容器-->
 		<div class="navbar-header">
-		
+		<!-- 测试 -->
 			<!--这是按钮  缩放按钮-->
 			<button id="button_show_right" type="button" class="navbar-toggle collapsed" 
 				data-toggle="collapse" data-target="#navbar-right" aria-expanded="false"
