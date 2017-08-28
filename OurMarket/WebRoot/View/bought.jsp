@@ -13,9 +13,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/Logout.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/Logout.js"></script>
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
@@ -98,10 +98,10 @@ $(function() {
 							<li><a href="http://localhost:8080/OurMarket/View/footmark.jsp">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="refundmanage.html">退款管理</a></li>
-							<li><a href="GOODmanages.html">物品管理</a></li>
-							<li><a href="ordermanage.html">订单管理</a></li>
-							<li><a href="Appraise.html">我的评价</a></li>
+							<li><a href="refundmanage.jsp">退款管理</a></li>
+							<li><a href="GOODmanages.jsp">物品管理</a></li>
+							<li><a href="ordermanage.jsp">订单管理</a></li>
+							<li><a href="Appraise.jsp">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
 							<li><a href="propertycenter.html">资产中心</a></li>
