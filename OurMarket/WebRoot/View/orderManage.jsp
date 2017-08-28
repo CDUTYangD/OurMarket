@@ -95,13 +95,13 @@ $(function() {
 						<li><a href="footmark.jsp">足迹宝贝</a></li>
 					</ul>
 					<ul class="nav nav-sidebar">
-						<li><a href="refundmanage.jsp">退款管理</a></li>
-						<li><a href="GOODmanages.jsp">物品管理</a></li>
+						<li><a href="refundManage.jsp">退款管理</a></li>
+						<li><a href="goodsManages.jsp">物品管理</a></li>
 						<li class="active"><a href="ordermanage.jsp">订单管理</a></li>
 						<li><a href="Appraise.jsp">我的评价</a></li>
 					</ul>
 					<ul class="nav nav-sidebar">
-						<li><a href="propertycenter.jsp">资产中心</a></li>
+						<li><a href="propertyCenter.jsp">资产中心</a></li>
 					</ul>
 					</div>
 				</div>
