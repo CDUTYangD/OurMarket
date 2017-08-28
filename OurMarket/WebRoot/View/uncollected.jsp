@@ -72,7 +72,7 @@ $(function() {
 			<div id="navbar-right" class="navbar-collapse collapse">
 				<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="homepage.html">首页</a></li>
+					<li><a href="homepage.jsp">首页</a></li>
 					<li><a href="Message.html">消息</a></li>
 					<li><a href="personalzoom.html">个人中心</a></li>
 					<li><a href="Service.html">客服</a></li>
@@ -94,7 +94,7 @@ $(function() {
 					<div id="navbar-left" class="col-sm-2 col-md-2 sidebar">
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
-							<li><a href="bought.html">已买到宝贝</a></li>
+							<li><a href="bought.jsp">已买到宝贝</a></li>
 							<li class="active"><a href="uncollected.html">未收款宝贝</a></li>
 							<li><a href="shelved.html">已上架宝贝</a></li>
 							<li><a href="footmark.html">足迹宝贝</a></li>
