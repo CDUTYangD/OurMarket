@@ -120,7 +120,7 @@ $(function() {
 			  </div>  
 	          <div class="row img-responsive">
 	            <div class="col-xs-6 col-lg-4" style="">
-	              <img src="img/5900049bN90cf8936.jpg" style="width: 200px;height=200px"/>
+	              <img src="../img/5900049bN90cf8936.jpg" style="width: 200px;height=200px"/>
 	              <div style=";">
 		              <p class="goodsname">华硕笔记本zx50</p>
 		              <p class="goodsprice">价格：5000.00RMB</p>
@@ -130,7 +130,7 @@ $(function() {
 	              </div>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="img/huaweip10.jpg" style="width: 200px;height=200px"/>
+	              <img src="../img/huaweip10.jpg" style="width: 200px;height=200px"/>
 	              <p class="goodsname">华为手机P10</p>
 	              <p class="goodsprice">价格：2700.00RMB</p>
 	              <p class="goodsnum">余量：10</p>
@@ -138,7 +138,7 @@ $(function() {
 	               <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	            <img src="img/oppor11.jpg" style="width: 200px;height=200px"/>  
+	            <img src="../img/oppor11.jpg" style="width: 200px;height=200px"/>  
 	           	  <p class="goodsname">OPPO手机R11</p>
 	              <p class="goodsprice">价格：1500.00RMB</p>
 	              <p class="goodsnum">余量：10</p>
@@ -146,7 +146,7 @@ $(function() {
 	               <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="img/desk.jpg" style="width: 200px;height=200px"/>
+	              <img src="../img/desk.jpg" style="width: 200px;height=200px"/>
 					<p class="goodsname">书桌</p>
 					<p class="goodsprice">价格:100RMB</p>
 					<p class="goodsnum">余量:20</p>
@@ -154,7 +154,7 @@ $(function() {
 					 <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="img/backpack.jpg" style="width: 200px;height=200px"/>
+	              <img src="../img/backpack.jpg" style="width: 200px;height=200px"/>
 	              <p class="goodsname">书包</p>
 					<p class="goodsprice">价格:80RMB</p>
 					<p class="goodsnum">余量:20</p>
@@ -162,7 +162,7 @@ $(function() {
 					 <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="img/shoes.jpg" style="width: 200px;height=200px"/>
+	              <img src="../img/shoes.jpg" style="width: 200px;height=200px"/>
 	                <p class="goodsname">耐克鞋</p>
 					<p class="goodsprice">价格:350RMB</p>
 					<p class="goodsnum">余量:20</p>

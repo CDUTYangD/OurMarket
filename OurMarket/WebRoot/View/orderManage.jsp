@@ -113,7 +113,7 @@ $(function() {
    					 margin-right: 0px;margin-bottom: 20px;margin-left: 0px;border-bottom: 1px solid #eee">物品信息</h3>
 					<div id="picture1" style="float: left;width: 50%;background-color: ;">
 						<br />
-						<img src="img/desk.jpg"  style="float: right;width: 300px;height: 250px;border: 3px dashed black;"/>
+						<img src="../img/desk.jpg"  style="float: right;width: 300px;height: 250px;border: 3px dashed black;"/>
 					</div>
 					<div id="text1" style="float: right;width: 47%;background-color: ;">
 						<div id="text1style" style="font-size: x-large;font-family: 楷体;font-weight: bold;">

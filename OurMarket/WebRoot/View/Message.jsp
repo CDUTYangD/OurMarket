@@ -100,20 +100,16 @@ $(function() {
 					<li><a href="bought.jsp">已买到宝贝</a></li>
 					<li><a href="uncollected.jsp">未收款宝贝</a></li>
 					<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-
-					<li class=""><a href="footmark.jsp">足迹宝贝</a></li>
-
 					<li><a href="footmark.jsp">足迹宝贝</a></li>
-
 				</ul>
 				<ul class="nav nav-sidebar">
 					<li><a href="refundManage.jsp">退款管理</a></li>
 					<li><a href="goodsManages.jsp">物品管理</a></li>
-					<li><a href="orderManage.jsp">订单管理</a></li>
+					<li><a href="ordermanage.jsp">订单管理</a></li>
 					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="propertyCenter.html">资产中心</a></li>
+					<li><a href="propertycenter.jsp">资产中心</a></li>
 				</ul>
 			</div>
 		
@@ -122,7 +118,7 @@ $(function() {
 			<div  id="navbar-middle" class="col-sm-3 col-md-2  " >
 				
 				<ul class="list-unstyled" style="border:1px solid #96c2f1;background:#eff7ff; margin-top: 5px;">
-					<li class="active"><a href="http://localhost:8080/OurMarket/View/Message.jsp"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
+					<li class="active"><a href="Message.jsp"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
 					<li ><a href="privateMessage.jsp"><i class="fa fa-envelope-o fa-lg "></i>私信</a></li>
 					<li><a  href="notice.jsp"><i class="fa fa-bell fa-lg"></i>通知</a></li>
 					<li><a href="messageSettings.jsp"><i class="fa fa-cog fa-lg"></i>消息设置</a></li>

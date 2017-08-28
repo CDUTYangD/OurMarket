@@ -110,7 +110,7 @@ $(function() {
 					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="propertycenter.html">资产中心</a></li>
+					<li><a href="propertycenter.jsp">资产中心</a></li>
 				</ul>
 			</div>
 		</div>

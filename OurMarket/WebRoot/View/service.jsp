@@ -37,7 +37,7 @@ $(function() {
 })
 </script>
 </head>
-	<body style="background: url(img/ser.jpg);">
+	<body style="background: url(../img/ser.jpg);">
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!--navbar-inverse 表示带反色（黑色背景，白色文字）的导航栏，navbar-fixed-top 表示 一直停留在顶部  添加 role="navigation"，有助于增加可访问性-->
 		<div class="container-fluid">

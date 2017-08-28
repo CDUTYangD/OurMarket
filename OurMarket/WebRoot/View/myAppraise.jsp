@@ -111,7 +111,7 @@ $(function() {
 				<!--大屏设备显示-->
 				<div style="background-color: ;overflow: hidden;" class="hidden-xs">
 					<div style="float: left;width: 40%;background-color: ;">
-						<img src="img/huaweip10.jpg" style="width: 80%;"/>
+						<img src="../img/huaweip10.jpg" style="width: 80%;"/>
 					</div>
 					
 					<div style="float: right;width: 50%;background-color: ;">

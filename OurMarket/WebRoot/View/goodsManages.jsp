@@ -75,37 +75,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	</div>
 </nav>
-<div  class="img-responsive hidden-sm hidden-xs  "style="background-image: url(img/service.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
+<div  class="img-responsive hidden-sm hidden-xs  "style="background-image: url(../img/service.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputaway.html"><button id="botton1" class="btn-success btn-lg"style="width: 140px;">我要上架</button></a>
+		<a href="goodsPutaway.jsp"><button id="botton1" class="btn-success btn-lg"style="width: 140px;">我要上架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputoff.html"><button id="botton2" class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
+		<a href="goodsPutoff.jsp"><button id="botton2" class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputaway.html"><button id="botton3" class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
+		<a href="goodsPutaway.jsp"><button id="botton3" class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
 	</div>
 	<br><br><br><br><br><br><br><br><br>
 </div>
 
 <!--当设备屏幕小的时候-->
-<div  class="img-responsive hidden-md hidden-lg "style="background-image: url(img/servicem.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
+<div  class="img-responsive hidden-md hidden-lg "style="background-image: url(../img/servicem.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputaway.html"><button class="btn-success btn-lg" style="width: 140px;">我要上架</button></a>
+		<a href="goodsPutaway.jsp"><button class="btn-success btn-lg" style="width: 140px;">我要上架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputoff.html"><button class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
+		<a href="goodsPutoff.jsp"><button class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsputaway.html"><button class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
+		<a href="goodsPutaway.jsp"><button class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
 	</div>
 	<br><br><br><br><br><br><br><br><br> 
 </div>

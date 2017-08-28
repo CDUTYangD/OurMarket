@@ -104,7 +104,7 @@ $(function() {
 							<li><a href="Appraise.jsp">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="propertycenter.html">资产中心</a></li>
+							<li><a href="propertycenter.jsp">资产中心</a></li>
 						</ul>
 					</div>
 				</div>
@@ -145,7 +145,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -176,7 +176,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
@@ -223,7 +223,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -254,7 +254,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
@@ -301,7 +301,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -332,7 +332,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
