@@ -21,7 +21,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
 <link rel="stylesheet" type="text/css" href="../css/carousel.css" />
-
 <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="../css/Message.css" />
 
@@ -77,10 +76,10 @@ $(function() {
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="homepage.html">首页</a></li>
-			<li><a href="Message.html">消息</a></li>
-			<li><a href="personalzoom.html">个人中心</a></li>
-			<li><a href="Service.html">客服</a></li>
+			<li><a href="homepage.jsp">首页</a></li>
+			<li><a href="Message.jsp">消息</a></li>
+			<li><a href="personalzoom.jsp">个人中心</a></li>
+			<li><a href="Service.jsp">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -98,16 +97,16 @@ $(function() {
 			<div id="navbar" class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<!--这是列表组-->
-					<li ><a href="bought.html">已买到宝贝</a></li>
-					<li><a href="uncollected.html">未收款宝贝</a></li>
-					<li><a href="shelved.html">已上架宝贝</a></li>
-					<li><a href="footmark.html">足迹宝贝</a></li>
+					<li><a href="bought.jsp">已买到宝贝</a></li>
+					<li><a href="uncollected.jsp">未收款宝贝</a></li>
+					<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
+					<li class="active"><a href="footmark.jsp">足迹宝贝</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="refundmanage.html">退款管理</a></li>
-					<li><a href="GOODmanages.html">物品管理</a></li>
-					<li><a href="ordermanage.html">订单管理</a></li>
-					<li><a href="Appraise.html">我的评价</a></li>
+					<li><a href="refundmanage.jsp">退款管理</a></li>
+					<li><a href="GOODmanages.jsp">物品管理</a></li>
+					<li><a href="ordermanage.jsp">订单管理</a></li>
+					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
 					<li><a href="propertycenter.html">资产中心</a></li>

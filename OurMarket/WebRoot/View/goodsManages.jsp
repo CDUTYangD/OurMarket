@@ -12,9 +12,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/Logout.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/Logout.js"></script>
 
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
@@ -60,14 +60,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!--这是向右对齐的列表-->
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="homepage.html">首页</a></li>
-				<li><a href="Message.html">消息</a></li>
-				<li><a href="personalzoom.html">个人中心</a></li>
-				<li><a href="Service.html">客服</a></li>
-				<li><a onclick="Logout()" >登出</a></li>
-			
-			</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="homepage.jsp">首页</a></li>
+					<li><a href="Message.jsp">消息</a></li>
+					<li><a href="personalzoom.jsp">个人中心</a></li>
+					<li><a href="Service.jsp">客服</a></li>
+					<li><a onclick="Logout()" >登出</a></li>
+					
+				</ul>
 			<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search...">
 			</form>
