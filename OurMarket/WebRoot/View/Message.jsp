@@ -100,7 +100,7 @@ $(function() {
 					<li><a href="bought.jsp">已买到宝贝</a></li>
 					<li><a href="uncollected.jsp">未收款宝贝</a></li>
 					<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-					<li class="active"><a href="footmark.jsp">足迹宝贝</a></li>
+					<li class=""><a href="footmark.jsp">足迹宝贝</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
 					<li><a href="refundmanage.jsp">退款管理</a></li>
