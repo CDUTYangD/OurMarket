@@ -77,10 +77,10 @@ $(function() {
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="homepage.jsp">首页</a></li>
+			<li><a href="../home.jsp">首页</a></li>
 			<li><a href="Message.jsp">消息</a></li>
-			<li><a href="personalzoom.jsp">个人中心</a></li>
-			<li><a href="Service.jsp">客服</a></li>
+			<li><a href="personalZoom.jsp">个人中心</a></li>
+			<li><a href="service.jsp">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -104,9 +104,9 @@ $(function() {
 					<li class=""><a href="footmark.jsp">足迹宝贝</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="refundmanage.jsp">退款管理</a></li>
-					<li><a href="GOODmanages.jsp">物品管理</a></li>
-					<li><a href="ordermanage.jsp">订单管理</a></li>
+					<li><a href="refundManage.jsp">退款管理</a></li>
+					<li><a href="goodsManages.jsp">物品管理</a></li>
+					<li><a href="orderManage.jsp">订单管理</a></li>
 					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
@@ -119,10 +119,10 @@ $(function() {
 			<div  id="navbar-middle" class="col-sm-3 col-md-2  " >
 				
 				<ul class="list-unstyled" style="border:1px solid #96c2f1;background:#eff7ff; margin-top: 5px;">
-					<li class="active"><a href="Message.html"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
-					<li ><a href="PrivateMessage.html"><i class="fa fa-envelope-o fa-lg "></i>私信</a></li>
-					<li><a  href="Notice.html"><i class="fa fa-bell fa-lg"></i>通知</a></li>
-					<li><a href="MessageSettings.html"><i class="fa fa-cog fa-lg"></i>消息设置</a></li>
+					<li class="active"><a href="http://localhost:8080/OurMarket/View/Message.jsp"><i class="fa fa-comment fa-lg"></i>系统消息</a></li>
+					<li ><a href="privateMessage.jsp"><i class="fa fa-envelope-o fa-lg "></i>私信</a></li>
+					<li><a  href="notice.jsp"><i class="fa fa-bell fa-lg"></i>通知</a></li>
+					<li><a href="messageSettings.jsp"><i class="fa fa-cog fa-lg"></i>消息设置</a></li>
 					<img src="../img/erhuo.png" width="150px" height="300px" class="hidden-xs"/>
 				</ul>
 			</div>
