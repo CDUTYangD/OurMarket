@@ -290,9 +290,37 @@ $(function() {
 			<div class="col-sm-1 col-lg-1"> 
 			</div>
 		</div>
-		<button type="button" class="btn btn-primary"  data-toggle="button" style="position: fixed;right: 0px;
+		<button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="position: fixed;right: 0px;
 			top:50%;transform: translate(0,-50%);display: block;"> 统<br />计<br />查<br />询
 		</button>
+		
+		<!-- 模态框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+        	<!-- 文本标题 -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">下面是您的统计结果</h4>
+            </div>
+            <!-- 文本内容 -->
+            <div class="modal-body">
+            		在此期间，您已收款<u>xx</u>元。</br>
+            		在此期间，您已退款<u>xx</u>元。</br>
+            		在此期间，您已付款<u>xx</u>元。</br>
+            		在此期间，您未到账<u>xx</u>元。</br>
+            
+            </div>
+            
+            <!-- 按钮 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
 </body>
 
 </html>

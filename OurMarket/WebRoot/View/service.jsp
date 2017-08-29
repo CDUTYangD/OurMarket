@@ -78,9 +78,51 @@ $(function() {
 			</div>
 		</div>
 		</nav>
-		<div style="position: absolute;bottom: 0px;left: 45%;font-size: 25px;color:black;font: '';">
-			联系方式：XX<br>
-			联系地址：成都理工大学
+		
+		<!-- 大屏屏幕显示 -->
+		<div class="hidden-sm hidden-xs">
+		<div id="textbox" style="position:absolute;top:30%;left:25%;right:25%;">
+			<form role="form">
+			<div class="form-group">
+				<label for="name" style=""><h4 style="background-color:yellow;">如有不满，请多见谅。希望您提出您的宝贵意见：</h4></label>
+				<textarea class="form-control" rows="8"></textarea>
+			</div>
+			<button type="button" class="btn btn-primary" 
+    			data-toggle="button" style="position:absolute;right:0px;"> 提交
+			</button>
+			</form>	
+		</div>
+		
+		<div style="position:absolute;top:90%;right:25%;background-color:;">
+		<h4>
+		负责联系人：王先生
+		</br>
+		电子邮箱：www.1291753596@qq.com
+		</h4>
+		</div>
+		</div>
+		
+		<!-- 小屏屏幕显示 -->
+		<div class="hidden-lg hidden-md">
+		<div id="textbox" style="position:absolute;top:20%;left:2%;right:2%;">
+			<form role="form">
+			<div class="form-group">
+				<label for="name" style=""><h4 style="background-color:yellow;">如有不满，请多见谅。希望您提出您的宝贵意见：</h4></label>
+				<textarea class="form-control" rows="8"></textarea>
+			</div>
+			<button type="button" class="btn btn-primary" 
+    			data-toggle="button" style="position:absolute;right:0px;"> 提交
+			</button>
+			</form>	
+		</div>
+		
+		<div style="position:absolute;top:80%;left:10%;">
+		<h4>
+		负责联系人：王先生
+		</br>
+		电子邮箱：www.1291753596@qq.com
+		</h4>
+		</div>
 		</div>
 	</body>
 </html>
