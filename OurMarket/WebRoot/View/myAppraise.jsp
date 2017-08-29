@@ -3,9 +3,9 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+ 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html> 
+<html>
 <head>
 <title>我的评价</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -103,9 +103,9 @@ $(function() {
 				<li><a href="footmark.jsp">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="refundmanage.jsp">退款管理</a></li>
-				<li><a href="GOODmanages.jsp">物品管理</a></li>
-				<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+				<li><a href="refundManage.jsp">退款管理</a></li>
+				<li><a href="goodsManages.jsp">物品管理</a></li>
+				<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
@@ -193,6 +193,7 @@ $(function() {
 							    </div>
 							</li>
 							<br />
+							<li><label>卖家的服务态度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 							<div class="block">
 							        <ul>
 							            <li data-default-index="0">
@@ -239,12 +240,20 @@ $(function() {
 							</li>
 							<br />
 							<li><label>卖家的服务态度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-											
+								<div class="block">
+								        <ul>
+								            <li data-default-index="0">
+								                        <span>
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                        </span>
+								                <em class="level"></em>
+								            </li>
+								        </ul>
+								</div>
 							</li>
 							
 						</ul>
