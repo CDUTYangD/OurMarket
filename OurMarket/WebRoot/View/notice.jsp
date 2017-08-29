@@ -106,7 +106,7 @@ $(function() {
 				<ul class="nav nav-sidebar">
 					<li><a href="http://localhost:8080/OurMarket/View/refundManage.jsp">退款管理</a></li>
 					<li><a href="http://localhost:8080/OurMarket/View/goodsManages.jsp">物品管理</a></li>
-					<li><a href="http://localhost:8080/OurMarket/View/orderManage.jsp">订单管理</a></li>
+					<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 					<li><a href="http://localhost:8080/OurMarket/View/Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">

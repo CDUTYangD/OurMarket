@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox" name="test" style="float: right;">
              </div>
              </div>
              <div class="col-xs-4 col-lg-3 col-md-3">
@@ -97,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox" name="test" style="float: right;">
              </div>
              </div>
          	  <div class="col-xs-4 col-lg-3 col-md-3">
@@ -110,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox"name="test" style="float: right;">
           	  		</div>
              </div>
           <div class="col-xs-4 col-lg-3 col-md-3">
@@ -123,7 +123,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox" name="test"style="float: right;">
              </div>
            </div>
          <div class="col-xs-4 col-lg-3 col-md-3">
@@ -136,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox" name="test" style="float: right;">
             </div>
            </div>
          <div class="col-xs-4 col-lg-3 col-md-3">
@@ -149,7 +149,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox"name="test"  style="float: right;">
             </div>
            </div>
            <div class="col-xs-4 col-lg-3 col-md-3">
@@ -162,14 +162,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           	 <div>2017年最新火爆款式……</div>
           	 <div>
           	  	<a href="#"class="shop"><i class="fa fa-bars"></i>XX卖家</a>
-          	  	<input type="checkbox" style="float: right;">
+          	  	<input type="checkbox" name="test" style="float: right;">
             </div>
            </div>
          
          <div class="col-xs-12 col-lg-12 col-md-12">
          	<br />
          	<label>
-         		<h4><input type="checkbox" />全选</h4>
+         		<h4><input type="checkbox" name="selected" onclick="selectAll()" />全选</h4>
          		<h4><input type="checkbox" />反选</h4>
          	</label>
          	<br />
@@ -187,14 +187,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      </div>
      </body>
      <script type="text/javascript">
+     	//是否选中
+     	function selectOne() {
+	        var names = document.getElementsByName("test");            
+	        var flag = false ;//标记判断是否选中一个                 
+	        for(var i=0;i<names.length;i++){  
+	            if(names[i].checked){  
+	                    flag = true ;  
+	                    return true;
+	             }  
+	         }  
+	         if(!flag){  
+	            return false ;  
+	         }  
+        }  
      	var a =document.getElementById("delete1");
      	a.onclick=function(){
      		if(confirm("是否下架？"))
      		{
-     			location.href="goodsputoff.html";
+     			var selected=selectOne();
+     			if(selected)
+ 					location.href="goodsPutoff.jsp";
+ 				else
+ 					alert("请选择要下架的物品")
      		}
      		else{
+     			
      		}
      	}
+     	
      </script>
 </html>

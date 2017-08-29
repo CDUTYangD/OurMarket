@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <meta charset="UTF-8">
-<title>通知</title>
+<title>消息设置</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
@@ -106,7 +106,7 @@ $(function() {
 				<ul class="nav nav-sidebar">
 					<li><a href="refundManage.jsp">退款管理</a></li>
 					<li><a href="goodsManages.jsp">物品管理</a></li>
-					<li><a href="orderManage.jsp">订单管理</a></li>
+					<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
@@ -128,9 +128,6 @@ $(function() {
 			</div>
 
 		<div class="col-sm-5 col-md-7 " style="margin-top: 10px;padding: 0px;">
-			<!--<div class="col-md-4">
-				<h4  style="font-weight: 600;margin-top: 20px;">有人给我发了私信</h4>	
-			</div>-->
 			
 			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
 				<form action="" method="get" >
@@ -143,17 +140,7 @@ $(function() {
 					
 				</form>
 			</div>	
-			
-			<!--<div class="col-md-4">
-				<h4  style="font-weight: 600;margin-top: 20px;">关注的买卖家的动态</h4>	
-			</div>
-			
-			<div class="col-md-6" style="line-height: 40px;margin-top: 10px;">
-				<form action="" method="get">
-					<label style="margin-right: 25px;"><input name="setting" type="radio" value="" />&nbsp;不通知</label>
-					<label ><input name="setting" type="radio" value="" />&nbsp;通知</label>
-				</form>
-			</div>	-->
+
 			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
 				<form action="" method="get" >
 					<h3>关注的买卖家的动态</h3>
@@ -183,6 +170,11 @@ $(function() {
 					</div>
 				</form>
 			</div>	
+			
+			<div class="col-md-7 " style="line-height: 40px;margin-top: 10px;">
+				<input type="button" class="btn-default btn" value="提交" style="float: right;" />
+			</div>	
+			
 		</div>
 </div>
 </body>

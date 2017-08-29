@@ -97,7 +97,9 @@ $(function() {
 					<ul class="nav nav-sidebar">
 						<li><a href="refundManage.jsp">退款管理</a></li>
 						<li><a href="goodsManages.jsp">物品管理</a></li>
-						<li class="active"><a href="ordermanage.jsp">订单管理</a></li>
+						<li class="active">
+							<a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a>
+						</li>
 						<li><a href="Appraise.jsp">我的评价</a></li>
 					</ul>
 					<ul class="nav nav-sidebar">
@@ -172,7 +174,7 @@ $(function() {
 					<div style="text-align: center;">
 						<br />
 						<br />
-						<button type="button" class="btn btn-success">确认发货</button>
+						<button onclick="window.location.href='orderManage.jsp'" type="button" class="btn btn-success">确认发货</button>
 					</div>
 			</div>
 		</div>

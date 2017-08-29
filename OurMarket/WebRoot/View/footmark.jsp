@@ -102,7 +102,7 @@ $(function() {
 						<ul class="nav nav-sidebar">
 							<li><a href="refundManage.jsp">退款管理</a></li>
 							<li><a href="goodsManages.jsp">物品管理</a></li>
-							<li><a href="orderManage.jsp">订单管理</a></li>
+							<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 							<li><a href="Appraise.jsp">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
@@ -126,7 +126,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -139,7 +139,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -152,7 +152,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -164,7 +164,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -176,7 +176,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -189,7 +189,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -211,7 +211,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -224,7 +224,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -237,7 +237,7 @@ $(function() {
 					 	</div>
 					 	<p style="">二手书桌	</p>
 					 	<div style="text-align: center;">
-					 		<button  class="btn btn-default" style="height:30px;">找相似</button>
+					 		<button  class="btn btn-default" style="height:30px;">查看</button>
 					 	</div>
 					 	</div>		
 					</td>
@@ -261,7 +261,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 				
@@ -275,7 +275,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 				
@@ -289,7 +289,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 			</div>
@@ -306,7 +306,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 				
@@ -320,7 +320,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 				
@@ -334,7 +334,7 @@ $(function() {
 					</div>
 					<br><br><br>
 					<span style="color: orangered;font-size: larger;display: block;"><i class="fa fa-rmb"></i>86.0</span>
-					<button class="btn btn-default"style="float: right;margin-left: 20px;">找相似</button>
+					<button class="btn btn-default"style="float: right;margin-left: 20px;">查看</button>
 					</td>
 				</table>
 			</div>

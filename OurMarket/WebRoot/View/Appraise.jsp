@@ -101,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<ul class="nav nav-sidebar">
 				<li><a href="http://localhost:8080/OurMarket/View/refundManage.jsp">退款管理</a></li>
 				<li><a href="http://localhost:8080/OurMarket/View/goodsManages.jsp">物品管理</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/orderManage.jsp">订单管理</a></li>
+				<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 				<li class="active"><a href="http://localhost:8080/OurMarket/View/Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
@@ -137,7 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</td>
 			<td>2016/10/10</td>
 			<td>已评价</td>
-			<td><a>查看</a></td>
+			<td><a href="myAppraise.jsp">查看</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -153,7 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></button></td>
 		</tr>
 		<tr  class="warning">
 			<td>
@@ -185,7 +185,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -201,7 +201,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -217,7 +217,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -233,7 +233,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		
 		<tr class="success">
@@ -250,7 +250,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -266,7 +266,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -282,7 +282,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -298,7 +298,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -314,7 +314,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -330,7 +330,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 		<tr class="success">
 			<td>
@@ -346,7 +346,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			<td>2015/06/03</td>
 			<td>未评价</td>
-			<td><a>去评价</a></td>
+			<td><a href="myAppraise.jsp">去评价</a></td>
 		</tr>
 	</tbody>
 	<c:forEach items="${comInfos}" var="comInfo"> 

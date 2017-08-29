@@ -15,6 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/Logout.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
@@ -37,6 +38,11 @@ $(function() {
 	});
 })
 </script>
+<style>
+	.block li label,.con span{ font-size: 18px; margin-right: 20px; line-height: 23px;}
+    .block li span{display: inline-block; vertical-align: middle; cursor: pointer;}
+    .block li span img{margin-right: -5px; }
+</style>
 </head>
 
 <body>
@@ -99,7 +105,7 @@ $(function() {
 			<ul class="nav nav-sidebar">
 				<li><a href="refundmanage.jsp">退款管理</a></li>
 				<li><a href="GOODmanages.jsp">物品管理</a></li>
-				<li><a href="ordermanage.jsp">订单管理</a></li>
+				<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
@@ -126,7 +132,6 @@ $(function() {
 						</ul>
 					</div>
 				</div>
-				
 				<!--小屏设备显示-->
 				<div class="hidden-lg hidden-md hidden-sm" style="text-align: center;">
 					<div style="margin-left: 10px;height: 30%;background-color: ;overflow: hidden;">
@@ -172,24 +177,36 @@ $(function() {
 							<br />
 							<br />
 							<li><label>商品的符合程度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-								<span>
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-													
-								</span>
+								<div class="block">
+							        <ul>
+							            <li data-default-index="0">
+							                        <span>
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                        </span>
+							                <em class="level"></em>
+							            </li>
+							        </ul>
+							    </div>
 							</li>
 							<br />
-							<li><label>卖家的服务态度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-								<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-											
-							</li>
+							<div class="block">
+							        <ul>
+							            <li data-default-index="0">
+							                        <span>
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+							                        </span>
+							                <em class="level"></em>
+							            </li>
+							        </ul>
+							</div>
 							<br />
 							<br />
 							<br />
@@ -205,14 +222,20 @@ $(function() {
 							<br />
 							<br />
 							<li><label>商品的符合程度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-								<span>
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-									<img src="img/xingxing.jpg" style="width: 17px;height: 17px;">
-													
-								</span>
+								<div class="block">
+								        <ul>
+								            <li data-default-index="0">
+								                        <span>
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                            <img src="http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png">
+								                        </span>
+								                <em class="level"></em>
+								            </li>
+								        </ul>
+								</div>
 							</li>
 							<br />
 							<li><label>卖家的服务态度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -255,5 +278,97 @@ $(function() {
 			
 		}
 	}
+
+    /*
+     * 根据index获取 str
+     * **/
+    function byIndexLeve(index){
+        var str ="";
+        switch (index)
+        {
+            case 0:
+                str="差评";
+                break;
+            case 1:
+                str="较差";
+                break;
+            case 2:
+                str="中等";
+                break;
+            case 3:
+                str="一般";
+                break;
+            case 4:
+                str="好评";
+                break;
+        }
+        return str;
+    }
+    //  星星数量
+    var stars = [
+        ['x2.png', 'x1.png', 'x1.png', 'x1.png', 'x1.png'],
+        ['x2.png', 'x2.png', 'x1.png', 'x1.png', 'x1.png'],
+        ['x2.png', 'x2.png', 'x2.png', 'x1.png', 'x1.png'],
+        ['x2.png', 'x2.png', 'x2.png', 'x2.png', 'x1.png'],
+        ['x2.png', 'x2.png', 'x2.png', 'x2.png', 'x2.png'],
+    ];
+    $(".block li").find("img").hover(function(e) {
+        var obj = $(this);
+        var index = obj.index();
+        if(index < (parseInt($(".block li").attr("data-default-index")) -1)){
+            return ;
+        }
+        var li = obj.closest("li");
+        var star_area_index = li.index();
+        for (var i = 0; i < 5; i++) {
+            li.find("img").eq(i).attr("src", "http://7xnlea.com2.z0.glb.qiniucdn.com/" + stars[index][i]);//切换每个星星
+        }
+        $(".level").html(byIndexLeve(index));
+    }, function() {
+    })
+ 
+    $(".block li").hover(function(e) {
+    }, function() {
+        var index = $(this).attr("data-default-index");//点击后的索引
+        index = parseInt(index);
+        console.log("index",index);
+        $(".level").html(byIndexLeve(index-1));
+        console.log(byIndexLeve(index-1));
+        $(".order-evaluation ul li:eq(0)").find("img").attr("src","http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png");
+        for (var i=0;i<index;i++){
+ 
+            $(".order-evaluation ul li:eq(0)").find("img").eq(i).attr("src","http://7xnlea.com2.z0.glb.qiniucdn.com/x2.png");
+        }
+    })
+    $(".block li").find("img").click(function() {
+        var obj = $(this);
+        var li = obj.closest("li");
+        var star_area_index = li.index();
+        var index1 = obj.index();
+        li.attr("data-default-index", (parseInt(index1)+1));
+        var index = $(".block li").attr("data-default-index");//点击后的索引
+        index = parseInt(index);
+        console.log("index",index);
+        $(".level").html(byIndexLeve(index-1));
+        console.log(byIndexLeve(index-1));
+        $(".order-evaluation ul li:eq(0)").find("img").attr("src","http://7xnlea.com2.z0.glb.qiniucdn.com/x1.png");
+        for (var i=0;i<index;i++){
+            $(".order-evaluation ul li:eq(0)").find("img").eq(i).attr("src","http://7xnlea.com2.z0.glb.qiniucdn.com/x2.png");
+        }
+ 
+    });
+    //印象
+    $(".order-evaluation-check").click(function(){
+        if($(this).hasClass('checked')){
+            //当前为选中状态，需要取消
+            $(this).removeClass('checked');
+        }else{
+            //当前未选中，需要增加选中
+            $(this).addClass('checked');
+        }
+    });
+
+ 
+</script>
 </script>
 </html>

@@ -100,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   						<p>&nbsp;</p>
   						<br />
   					<button type="submit" id ="submit1" class="btn btn-default" style="style="position: absolute;bottom: 0px;">上传图片</button>
-  					<button type="submit" id ="submit1" class="btn btn-default " style="position: absolute;bottom: 0px;right: 0px;">确认提交</button>
+  					<button onclick="window.location.href='shelvedGoods.jsp'" type="submit" id ="submit1" class="btn btn-default " style="position: absolute;bottom: 0px;right: 0px; ">确认提交</button>
   					</div>
   					<div class="col-sm-12 col-md-12 col-lg-12" style="">
   					</div>

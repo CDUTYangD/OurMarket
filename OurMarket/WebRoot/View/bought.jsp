@@ -100,7 +100,7 @@ $(function() {
 						<ul class="nav nav-sidebar">
 							<li><a href="refundManage.jsp">退款管理</a></li>
 							<li><a href="goodsManages.jsp">物品管理</a></li>
-							<li><a href="orderManage.jsp">订单管理</a></li>
+							<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 							<li><a href="Appraise.jsp">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
@@ -167,7 +167,7 @@ $(function() {
 					25000.0
 				</td>
 				<td style="text-align: center;">
-					<button  class="btn btn-success"style="">确认收货</button>
+					<button onclick="received()" class="btn btn-success"style="">确认收货</button>
 				</td>
 				
 				
@@ -192,7 +192,7 @@ $(function() {
 						合计：
 						<span class="price"><i class="fa fa-rmb"></i>25000.0</span>
 					</p>
-					<button   class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
+					<button onclick="received()"  class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
 				</div>
 				</td>
 			</table>
@@ -245,7 +245,7 @@ $(function() {
 					25000.0
 				</td>
 				<td style="text-align: center;">
-					<button  class="btn btn-success"style="">确认收货</button>
+					<button onclick="received()" class="btn btn-success"style="">确认收货</button>
 				</td>
 				
 				
@@ -270,7 +270,7 @@ $(function() {
 						合计：
 						<span class="price"><i class="fa fa-rmb"></i>25000.0</span>
 					</p>
-					<button   class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
+					<button  onclick="received()" class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
 				</div>
 				</td>
 			</table>
@@ -323,7 +323,7 @@ $(function() {
 					25000.0
 				</td>
 				<td style="text-align: center;">
-					<button  class="btn btn-success"style="">确认收货</button>
+					<button  onclick="received()" class="btn btn-success"style="">确认收货</button>
 				</td>
 				
 				
@@ -348,12 +348,23 @@ $(function() {
 						合计：
 						<span class="price"><i class="fa fa-rmb"></i>25000.0</span>
 					</p>
-					<button   class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
+					<button onclick="received()"  class= "btn btn-success"style="float: right;margin-left: 20px;">确认收货</button>
 				</div>
 				</td>
 			</table>
 			
 			
 </body>
-
+<script>
+	function received(){
+		if(confirm("是否确认已收货？"))
+		{
+			location.href='bought.jsp';
+		}
+		else
+		{
+			
+		}
+	}
+</script>
 </html>

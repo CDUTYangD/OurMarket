@@ -66,14 +66,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
                     <li>
                         <!--<p><img alt="" src="img/adress.png" class="fa"> <span>四川省成都理工大学</span></p>  -->
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>四川省成都理工大学</a>
+                        <a href="#"><i class="fa fa-dashboard fa-fw nav_icon"></i>四川省成都理工大学</a>
                     </li>
                     <li>
-                        <a href="widgets.html"><i class="fa fa-envelope nav_icon"></i>购物管理</a>
+                        <a href="http://localhost:8080/OurMarket/View/bought.jsp"><i class="fa fa-envelope nav_icon"></i>购物管理</a>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="widgets.html"><i class="fa fa-flask nav_icon"></i>销售管理</a>
+                        <a href="http://localhost:8080/OurMarket/View/orderManage.jsp"><i class="fa fa-flask nav_icon"></i>销售管理</a>
                     </li>
                 </ul>
             </div>
