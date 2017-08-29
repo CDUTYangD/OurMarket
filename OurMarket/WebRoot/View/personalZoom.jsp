@@ -88,7 +88,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<button type="submit" id="changepassword" class="btn btn-default"style=";">修改密码</button>
       			</div>
       			<div class="col-sm-4 col-md-4 col-lg-4 " style="background-color: ;">
-					 <img src="img/erhuo.png" />
+					 <img src="../img/erhuo.png" />
       			</div>
       		</div>
       		<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 " >
