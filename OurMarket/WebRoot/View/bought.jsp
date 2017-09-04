@@ -101,7 +101,7 @@ $(function() {
 							<li><a href="refundManage.jsp">退款管理</a></li>
 							<li><a href="goodsManages.jsp">物品管理</a></li>
 							<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-							<li><a href="Appraise.jsp">我的评价</a></li>
+							<li><a href="../Appraise">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
 							<li><a href="propertycenter.jsp">资产中心</a></li>

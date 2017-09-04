@@ -17,6 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         setTimeout(hideURLbar, 0);
     }, false);
     function hideURLbar() {
+    
         window.scrollTo(0, 1);
     } </script>
     <!-- Bootstrap Core CSS -->
@@ -139,9 +140,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <input type="password" name="password" id="pass"  class="form-control input-lg" placeholder="登录密码">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-lg btn-block" method="" action="">立刻登录</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" formaction="Appraise">立刻登录</button>
                                 <span><a href="#">找回密码</a></span>
-                                <span><a href="signUp.html" class="pull-right">注册</a></span>
+                                <span><a href="View/signUp.jsp" class="pull-right">注册</a></span>
                             </div>
                         </form>
                     </div>

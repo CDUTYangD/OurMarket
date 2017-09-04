@@ -3,11 +3,11 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%> 
-<!-- ceshi -->
+%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head> 
+<head>
 	<title>评价</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +17,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/Logout.js"></script>
 	
-	
-	
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-	<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
-	
-	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" href="../css/Message.css" />
+	<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+	<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />	
+	<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
 	<script type="text/javascript">
 	$(function() {
 		$("#button_show_right,#button_show_left").click(function() {
@@ -72,10 +69,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="http://localhost:8080/OurMarket/home.jsp">首页</a></li>
-			<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
-			<li><a href="http://localhost:8080/OurMarket/View/personalZoom.jsp">个人中心</a></li>
-			<li><a href="http://localhost:8080/OurMarket/View/service.jsp">客服</a></li>
+			<li><a href="homepage.html">首页</a></li>
+			<li><a href="Message.html">消息</a></li>
+			<li><a href="personalzoom.html">个人中心</a></li>
+			<li><a href="Service.html">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -93,19 +90,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<!--sidebar  边栏-->
 			<ul class="nav nav-sidebar">
 				<!--这是列表组-->
-				<li ><a href="http://localhost:8080/OurMarket/View/bought.jsp">已买到宝贝</a></li>
+				<li ><a href="bought.html">已买到宝贝</a></li>
 				<li><a href="uncollected.html">未收款宝贝</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/shelvedGoods.jsp">已上架宝贝</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/footmark.jsp">足迹宝贝</a></li>
+				<li><a href="shelved.html">已上架宝贝</a></li>
+				<li><a href="footmark.html">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="http://localhost:8080/OurMarket/View/refundManage.jsp">退款管理</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/goodsManages.jsp">物品管理</a></li>
-				<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-				<li class="active"><a href="http://localhost:8080/OurMarket/View/Appraise.jsp">我的评价</a></li>
+				<li><a href="refundmanage.html">退款管理</a></li>
+				<li><a href="GOODmanages.html">物品管理</a></li>
+				<li><a href="ordermanage.html">订单管理</a></li>
+				<li class="active"><a href="Appraise.html">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="http://localhost:8080/OurMarket/View/propertyCenter.jsp">资产中心</a></li>
+				<li><a href="propertycenter.html">资产中心</a></li>
 			</ul>
 			</div>
 		</div>
@@ -121,234 +118,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</tr>
 	</thead>
 	<tbody>
-	<tbody>
-		<tr class="active">
-			<td>
-				<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg " style="width: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华硕笔记本
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			</td>
-			<td>2016/10/10</td>
-			<td>已评价</td>
-			<td><a href="myAppraise.jsp">查看</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></button></td>
-		</tr>
-		<tr  class="warning">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a>去评价</a></td>
-		</tr>
-		<tr  class="danger">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-		<tr class="success">
-			<td>
-			<div class="col-sm-3 col-md-3">
-					<img src="../img/huaweip10.jpg" style="height: 100px;"/>
-				</div>
-				<div class="col-sm-9 col-md-9">
-					华为手机
-					<br />
-					数量：*2
-					<br />
-					价格：2999*2
-				</div>
-			<td>2015/06/03</td>
-			<td>未评价</td>
-			<td><a href="myAppraise.jsp">去评价</a></td>
-		</tr>
-	</tbody>
 	<c:forEach items="${comInfos}" var="comInfo"> 
 		<tr class="active">
 			<td>

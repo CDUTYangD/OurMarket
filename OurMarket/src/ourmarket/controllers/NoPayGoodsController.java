@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NoPayGoodsController {
 	@RequestMapping("noPayGoods")
 	public String index(){
-		return "noPayGoods";
+		return "uncollected";
 	}
 }

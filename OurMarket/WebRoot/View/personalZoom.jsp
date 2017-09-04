@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	a.onclick=function(){
 		if(confirm("是否提交？"))
 		{
-			location.href="personalzoom.html";
+			location.href="../home.jsp";
 		}
 		else{
 			

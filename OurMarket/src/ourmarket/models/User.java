@@ -43,7 +43,19 @@ public class User implements java.io.Serializable {
 		this.ugender = ugender;
 		this.upassword = upassword;
 	}
-
+	
+	/**  other constructor	 */
+	public User(User user)
+	{
+		this.rid = user.rid;
+		this.imageListId = user.imageListId;
+		this.unickName = user.unickName;
+		this.uphone = user.uphone;
+		this.uemial = user.uemial;
+		this.ucredit = user.ucredit;
+		this.ugender = user.ugender;
+		this.upassword = user.upassword;
+	}
 	// Property accessors
 
 	public Integer getUid() {

@@ -3,8 +3,17 @@
  */
 package ourmarket.controllers;
 
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import ourmarket.models.User;
+import ourmarket.services.IUserService;
 
 /**
  * 
@@ -16,9 +25,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/Home")
 public class HomeController {
-
 	@RequestMapping("/Index")
-	public String index() {
+	public String index(HttpServletRequest request,Model model) {
 		return "home";
 	}
 }

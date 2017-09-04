@@ -209,7 +209,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	a.onclick=function(){
 		if(confirm("是否提交？"))
 		{
-			location.href="personalzoom.html";
+			location.href="personalZoom.jsp";
 		}
 
 		else{
@@ -218,7 +218,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	var b=document.getElementById("changepassword");
 	b.onclick=function(){
-		location.href="changepassword.html";
+		location.href="changepassword.jsp";
 	}
 	
 </script>
