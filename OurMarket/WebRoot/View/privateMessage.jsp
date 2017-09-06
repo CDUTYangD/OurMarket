@@ -13,17 +13,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%= basePath %>/js/jquery.min.js"></script>
+<script src="<%= basePath %>/js/bootstrap.min.js"></script>
+<script src="<%= basePath %>/js/Logout.js"></script>
 
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
 
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="../css/Message.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
 
 <script type="text/javascript">
 $(function() {
@@ -247,6 +247,6 @@ $(function() {
 
 </div>
 
-<script src="../js/webSocket.js" type="text/javascript"></script>
+<script src="<%= basePath %>/js/webSocket.js" type="text/javascript"></script>
 </body>
 </html>

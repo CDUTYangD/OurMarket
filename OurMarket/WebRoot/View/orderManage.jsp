@@ -12,16 +12,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%= basePath %>/js/jquery.min.js"></script>
+<script src="<%= basePath %>/js/bootstrap.min.js"></script>
+<script src="<%= basePath %>/js/Logout.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
-<link rel="stylesheet" type="text/css" href="../css/Message.css" />
-<link rel="stylesheet" type="text/css" href="../css/bought.css"/>
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/bought.css"/>
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
 <script type="text/javascript">
 $(function() {
 	$("#button_show_right,#button_show_left").click(function() {
@@ -98,7 +98,7 @@ $(function() {
 						<li><a href="refundManage.jsp">退款管理</a></li>
 						<li><a href="goodsManages.jsp">物品管理</a></li>
 						<li class="active">
-							<a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a>
+							<a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a>
 						</li>
 						<li><a href="Appraise.jsp">我的评价</a></li>
 					</ul>

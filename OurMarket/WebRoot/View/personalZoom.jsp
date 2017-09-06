@@ -14,12 +14,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="<%= basePath %>/js/jquery.min.js"></script>
+<script src="<%= basePath %>/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/carousel.css" />
-<link rel="stylesheet" href="../css/dashboard.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/dashboard.css" />
 
 </head>
 
