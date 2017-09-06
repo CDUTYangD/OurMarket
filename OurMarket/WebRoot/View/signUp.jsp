@@ -75,6 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	</nav>
       <!--主界面-->
+      <form action = "../signUp" name="signUpForm" id="signUpFrom" method="post">
       <div  class="container-fluid">
 
 		  <div class="row" style="background-color: " id="Mbody">
@@ -94,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="ssBody" class="form-group" style=";margin: 20px">
 					<div class="form-group">
 						<label >手机号：</label>
-						<input type="text" class="form-control" id="name1" placeholder="请输入手机号">
+						<input type="text" class="form-control" id="name1" placeholder="请输入手机号" name="phone">
 				    </div>
 					<div id="checkUpPhone">
 						<!--这是填写手机号提示框-->
@@ -124,7 +125,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 				<div class="form-group">
 					<label >输入密码：</label>
-					<input type="password" class="form-control" id="setP" placeholder="">
+					<input type="password" class="form-control" id="setP" placeholder="" name="password">
 				</div>
 					<div id="checkUpPa">
 						<!--检查初始密码-->
@@ -142,7 +143,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					
 				</div>
   						
-  				<button type="submit" id ="submit" class="btn btn-default">提交</button>
+  				<button type="submit" id ="submit" class="btn btn-default" onclick = "signUpSub" >提交</button>
       			</div>
 					</div>
 				</div>
@@ -153,7 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       	</div>
 
       </div>
-
+</form>
 	
 </body>
 <script type="text/javascript">
@@ -203,13 +204,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         }
 
  </script>
+ 
+ 
 	<!--<script type="text/javascript" src="js/myDrag.js"></script>-->
 <script type="text/javascript">
 	var a=document.getElementById("submit");
 	a.onclick=function(){
 		if(confirm("是否提交？"))
 		{
-			location.href="personalZoom.jsp";
+			submit();
 		}
 
 		else{

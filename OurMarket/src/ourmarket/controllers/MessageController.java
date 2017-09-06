@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MessageController {
 	@RequestMapping("message")
 	public String index(){
-		return "message";
+		return "Message";
 	}
 }
