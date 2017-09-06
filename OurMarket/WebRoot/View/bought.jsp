@@ -92,10 +92,10 @@ $(function() {
 						<!--sidebar  边栏-->
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
-							<li class="active"><a href="http://localhost:8080/OurMarket/View/bought.jsp">已买到宝贝</a></li>
+							<li class="active"><a href="bought.jsp">已买到宝贝</a></li>
 							<li><a href="uncollected.jsp">未收款宝贝</a></li>
-							<li><a href="http://localhost:8080/OurMarket/View/shelvedGoods.jsp">已上架宝贝</a></li>
-							<li><a href="http://localhost:8080/OurMarket/View/footmark.jsp">足迹宝贝</a></li>
+							<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
+							<li><a href="footmark.jsp">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
 							<li><a href="refundManage.jsp">退款管理</a></li>
