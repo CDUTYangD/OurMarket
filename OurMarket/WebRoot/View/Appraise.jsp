@@ -69,10 +69,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="homepage.jsp">首页</a></li>
+			<li><a href="../home.jsp">首页</a></li>
 			<li><a href="Message.jsp">消息</a></li>
-			<li><a href="personalzoom.jsp">个人中心</a></li>
-			<li><a href="Service.jsp">客服</a></li>
+			<li><a href="personalZoom.jsp">个人中心</a></li>
+			<li><a href="service.jsp">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -92,12 +92,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<!--这是列表组-->
 				<li ><a href="bought">已买到宝贝</a></li>
 				<li><a href="View/uncollected.jsp">未收款宝贝</a></li>
-				<li><a href="View/shelved.jsp">已上架宝贝</a></li>
+				<li><a href="View/shelvedGoods.jsp">已上架宝贝</a></li>
 				<li><a href="View/footmark.jsp">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
 				<li><a href="View/refundManage.jsp">退款管理</a></li>
-				<li><a href="View/goodManages.jsp">物品管理</a></li>
+				<li><a href="View/goodsManages.jsp">物品管理</a></li>
 				<li><a href="View/orderManage.jsp">订单管理</a></li>
 				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
 			</ul>
