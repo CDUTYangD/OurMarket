@@ -93,14 +93,14 @@ $(function() {
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
 							<li class="active"><a href="bought.jsp">已买到宝贝</a></li>
-							<li><a href="uncollected.jsp">未收款宝贝</a></li>
-							<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-							<li><a href="footmark.jsp">足迹宝贝</a></li>
+							<li><a href="uncollected">未收款宝贝</a></li>
+							<li><a href="shelvedGoods">已上架宝贝</a></li>
+							<li><a href="footmark">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="refundManage.jsp">退款管理</a></li>
-							<li><a href="goodsManages.jsp">物品管理</a></li>
-							<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+							<li><a href="refundManage">退款管理</a></li>
+							<li><a href="goodsManages">物品管理</a></li>
+							<li><a href="orderManage">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 							<li><a href="../Appraise">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
