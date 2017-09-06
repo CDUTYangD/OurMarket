@@ -17,12 +17,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/Logout.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
 
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="../css/Message.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
 <script type="text/javascript">
 $(function() {
 	$("#button_show_right,#button_show_left").click(function() {
@@ -75,10 +75,10 @@ $(function() {
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="../homepage.jsp">首页</a></li>
+			<li><a href="../home.jsp">首页</a></li>
 			<li><a href="Message.jsp">消息</a></li>
-			<li><a href="personalzoom.jsp">个人中心</a></li>
-			<li><a href="Service.jsp">客服</a></li>
+			<li><a href="personalZoom.jsp">个人中心</a></li>
+			<li><a href="service.jsp">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -109,7 +109,7 @@ $(function() {
 				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="propertycenter.jsp">资产中心</a></li>
+				<li><a href="propertyCenter.jsp">资产中心</a></li>
 			</ul>
 			</div>
 			
@@ -377,6 +377,7 @@ $(function() {
         }
     });
 
+ 
  
 </script>
 </script>

@@ -17,9 +17,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/carousel.css" />
-<link rel="stylesheet" href="../css/dashboard.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/dashboard.css" />
 
 </head>
 
@@ -105,6 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<div class="col-sm-12 col-md-12 col-lg-12" style="">
   					</div>
       			</div>
+      			
       			     	<!--右边的logo-->
       			<div class="col-sm-4 col-md-4 col-lg-4 hidden-xs" style="background-color: ;">
 					 <img src="../img/erhuo.png" />

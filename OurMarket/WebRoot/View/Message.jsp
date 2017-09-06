@@ -18,11 +18,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/Logout.js"></script>
 
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="../css/Message.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
 
 <script type="text/javascript">
 $(function() {
@@ -105,11 +105,11 @@ $(function() {
 				<ul class="nav nav-sidebar">
 					<li><a href="refundManage.jsp">退款管理</a></li>
 					<li><a href="goodsManages.jsp">物品管理</a></li>
-					<li><a href="ordermanage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+					<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
 					<li><a href="Appraise.jsp">我的评价</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a href="propertycenter.jsp">资产中心</a></li>
+					<li><a href="propertyCenter.jsp">资产中心</a></li>
 				</ul>
 			</div>
 		
@@ -180,6 +180,7 @@ $(function() {
 				<button class="btn btn-info" id="send-message" onclick="send_message()">发送</button>
 
 			</div> 
+			
 			
 		</div>
 		</div>

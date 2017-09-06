@@ -17,10 +17,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/carousel.css" />
-<link rel="stylesheet" href="../css/dashboard.css" />
-<link rel="stylesheet" href="../css/Paidgoods.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/Paidgoods.css" />
 </head>
 
 <body>
@@ -61,6 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<input type="text" class="form-control" placeholder="Search...">
 			</form>
 		</div>
+		
 
 	</div>
 	</nav>

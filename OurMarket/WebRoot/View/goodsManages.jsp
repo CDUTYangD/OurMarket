@@ -16,10 +16,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/Logout.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<%=basePath%>/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="<%=basePath%>/css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="<%=basePath%>/css/carousel.css" />
-<link rel="stylesheet" type="text/css" href="<%=basePath%>/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css">
 <script type="text/javascript">
 	$(function() {
 		$("#button_show_right,#button_show_left").click(function() {
@@ -111,6 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 </body>
 <script type="text/javascript">
+	
 	
 </script>
 </html>

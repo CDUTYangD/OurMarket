@@ -17,9 +17,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="<%=basePath%>/css/bootstrap.min.css">
-<link rel="stylesheet" href="<%=basePath%>/css/carousel.css" />
-<link rel="stylesheet" href="<%=basePath%>/css/dashboard.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/dashboard.css" />
 
 </head>
 
@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="../home.jsp">首页</a></li>
 				<li><a href="Message.jsp">消息</a></li>
-				<li><a href="personalzoom.jsp">个人中心</a></li>
+				<li><a href="personalZoom.jsp">个人中心</a></li>
 				<li><a href="service.jsp">客服</a></li>
 				<li><a onclick="Logout()" >登出</a></li>
 				
@@ -137,6 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 			
 		}
+		
 	
 </script>
 
