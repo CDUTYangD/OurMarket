@@ -96,13 +96,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<li><a href="View/footmark.jsp">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="View/refundmanage.jsp">退款管理</a></li>
-				<li><a href="View/GOODmanages.jsp">物品管理</a></li>
-				<li><a href="View/ordermanage.jsp">订单管理</a></li>
+				<li><a href="View/refundManage.jsp">退款管理</a></li>
+				<li><a href="View/goodManages.jsp">物品管理</a></li>
+				<li><a href="View/orderManage.jsp">订单管理</a></li>
 				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="propertycenter.jsp">资产中心</a></li>
+				<li><a href="propertyCenter.jsp">资产中心</a></li>
 			</ul>
 			</div>
 		</div>
