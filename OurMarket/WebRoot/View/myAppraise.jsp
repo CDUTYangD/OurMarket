@@ -12,9 +12,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/Logout.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
@@ -75,10 +75,10 @@ $(function() {
 	<div id="navbar-right" class="navbar-collapse collapse">
 		<!--这是一个汉堡按钮-->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="../home.jsp">首页</a></li>
-			<li><a href="Message.jsp">消息</a></li>
-			<li><a href="personalZoom.jsp">个人中心</a></li>
-			<li><a href="service.jsp">客服</a></li>
+			<li><a href="home.jsp">首页</a></li>
+			<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+			<li><a href="personalZoom">个人中心</a></li>
+			<li><a href="service">客服</a></li>
 			<li><a onclick="Logout()" >登出</a></li>
 			
 		</ul>
@@ -97,19 +97,19 @@ $(function() {
 			<!--sidebar  边栏-->
 			<ul class="nav nav-sidebar">
 				<!--这是列表组-->
-				<li ><a href="bought.jsp">已买到宝贝</a></li>
-				<li><a href="uncollected.jsp">未收款宝贝</a></li>
-				<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-				<li><a href="footmark.jsp">足迹宝贝</a></li>
+				<li ><a href="bought">已买到宝贝</a></li>
+				<li><a href="uncollected">未收款宝贝</a></li>
+				<li><a href="shelvedGoods">已上架宝贝</a></li>
+				<li><a href="footmark">足迹宝贝</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="refundManage.jsp">退款管理</a></li>
-				<li><a href="goodsManages.jsp">物品管理</a></li>
-				<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-				<li class="active"><a href="Appraise.jsp">我的评价</a></li>
+				<li><a href="refundManage">退款管理</a></li>
+				<li><a href="goodsManages">物品管理</a></li>
+				<li><a href="orderManage">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+				<li class="active"><a href="Appraise">我的评价</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="propertyCenter.jsp">资产中心</a></li>
+				<li><a href="propertyCenter">资产中心</a></li>
 			</ul>
 			</div>
 			
@@ -117,7 +117,7 @@ $(function() {
 				<!--大屏设备显示-->
 				<div style="background-color: ;overflow: hidden;" class="hidden-xs">
 					<div style="float: left;width: 40%;background-color: ;">
-						<img src="../img/huaweip10.jpg" style="width: 80%;"/>
+						<img src="<%=basePath%>/img/huaweip10.jpg" style="width: 80%;"/>
 					</div>
 					
 					<div style="float: right;width: 50%;background-color: ;">
@@ -281,7 +281,7 @@ $(function() {
 	a.onclick=function(){
 		if(confirm("是否提交"))
 		{
-			location.href="Appraise.html";
+			location.href="AppraiseLog";
 		}
 		else{
 			

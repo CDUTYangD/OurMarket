@@ -13,9 +13,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/Logout.js"></script>
 
 <link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
@@ -71,10 +71,10 @@ $(function() {
 			<div id="navbar-right" class="navbar-collapse collapse">
 				<!--这是一个汉堡按钮-->
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="../home.jsp">首页</a></li>
-						<li><a href="Message.jsp">消息</a></li>
-						<li><a href="personalZoom.jsp">个人中心</a></li>
-						<li><a href="service.jsp">客服</a></li>
+						<li><a href="home.jsp">首页</a></li>
+						<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+						<li><a href="personalZoom">个人中心</a></li>
+						<li><a href="service">客服</a></li>
 						<li><a onclick="Logout()" >登出</a></li>
 						
 					</ul>
@@ -94,19 +94,19 @@ $(function() {
 						<!--sidebar  边栏-->
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
-							<li><a href="bought.jsp">已买到宝贝</a></li>
-							<li><a href="uncollected.jsp">未收款宝贝</a></li>
-							<li><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-							<li class="active"><a href="footmark.jsp">足迹宝贝</a></li>
+							<li><a href="bought">已买到宝贝</a></li>
+							<li><a href="uncollected">未收款宝贝</a></li>
+							<li><a href="shelved">已上架宝贝</a></li>							
+							<li class="active"><a href="footmark">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="refundManage.jsp">退款管理</a></li>
-							<li><a href="goodsManages.jsp">物品管理</a></li>
-							<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-							<li><a href="Appraise.jsp">我的评价</a></li>
+							<li><a href="refundManage">退款管理</a></li>
+							<li><a href="goodsManages">物品管理</a></li>
+							<li><a href="orderManage">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+							<li><a href="Appraise">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="propertyCenter.jsp">资产中心</a></li>
+							<li><a href="propertyCenter">资产中心</a></li>
 						</ul>
 					</div>
 				</div>
@@ -120,7 +120,7 @@ $(function() {
 				
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -133,7 +133,7 @@ $(function() {
 					
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -146,7 +146,7 @@ $(function() {
 					
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -158,7 +158,7 @@ $(function() {
 					</td>
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -170,7 +170,7 @@ $(function() {
 					</td>
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -183,7 +183,7 @@ $(function() {
 					
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -205,7 +205,7 @@ $(function() {
 				<tr>
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -218,7 +218,7 @@ $(function() {
 					
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -231,7 +231,7 @@ $(function() {
 					
 					<td style="padding-right: 60px;">
 						<div class="row" style="padding-bottom: 0px;padding-top: 10px;padding-left: 20px;">
-					 	<a href="#"><img src="../img/desk.jpg" style="height: 200px;"></a>
+					 	<a href="#"><img src="<%=basePath%>/img/desk.jpg" style="height: 200px;"></a>
 					 	<div class="price" >
 					 		<i class="fa fa-rmb"></i><span >86.0</span>
 					 	</div>
@@ -253,7 +253,7 @@ $(function() {
 				<h5 style="margin: 0px;background-color: #E1E6EF;">7.17</h5>
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >
@@ -267,7 +267,7 @@ $(function() {
 				
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive" style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive" style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >
@@ -281,7 +281,7 @@ $(function() {
 				
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive" style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive" style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >
@@ -298,7 +298,7 @@ $(function() {
 				<h5 style="margin: 0px;background-color: #E1E6EF;">7.16</h5>
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >
@@ -312,7 +312,7 @@ $(function() {
 				
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >
@@ -326,7 +326,7 @@ $(function() {
 				
 				<table class="table " style="border: groove;">	
 					<td class="col-xs-5">
-						<img src="../img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
+						<img src="<%=basePath%>/img/desk.jpg" class="img-responsive  " style="height: 130px;"/>
 					</td>
 					<td class="col-xs-7" >
 					<div >

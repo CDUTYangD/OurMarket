@@ -14,8 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
@@ -50,10 +50,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../home.jsp">首页</a></li>
-					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalZoom.jsp">个人中心</a></li>
-					<li><a href="service.jsp">客服</a></li>
+					<li><a href="home.jsp">首页</a></li>
+					<li><a href="Message">消息</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 					
 				</ul>
@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <div class="col-xs-4 col-lg-3 col-md-3">
              		<br />
              			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -91,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <div class="col-xs-4 col-lg-3 col-md-3">
              		<br />
              			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -104,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          	  <div class="col-xs-4 col-lg-3 col-md-3">
          	  		<br />
          	  			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="col-xs-4 col-lg-3 col-md-3">
           		<br />
           			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -130,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div class="col-xs-4 col-lg-3 col-md-3">
          		<br />
          			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -143,7 +143,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div class="col-xs-4 col-lg-3 col-md-3">
          		<br />
          			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>
@@ -156,7 +156,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <div class="col-xs-4 col-lg-3 col-md-3">
            		<br />
            			<br />
-             <img src="../img/goods1.jpg" class="goods img-responsive" />
+             <img src="<%=basePath%>/img/goods1.jpg" class="goods img-responsive" />
              <div class="price">
               	 <i class="fa fa-jpy fa-lg"></i>99.00
              </div>

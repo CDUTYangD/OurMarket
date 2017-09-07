@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class NoPayGoodsController {
-	@RequestMapping("noPayGoods")
+	@RequestMapping("uncollected")
 	public String index(){
 		return "uncollected";
 	}

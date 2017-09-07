@@ -13,9 +13,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/Logout.js"></script>
 
 <link rel="stylesheet" href="<%=basePath%>/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<%=basePath%>/css/dashboard.css" />
@@ -71,10 +71,10 @@ $(function() {
 			<div id="navbar-right" class="navbar-collapse collapse">
 				<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="http://localhost:8080/OurMarket/home.jsp">首页</a></li>
+					<li><a href="home.jsp">首页</a></li>
 					<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
-					<li><a href="http://localhost:8080/OurMarket/View/personalZoom.jsp">个人中心</a></li>
-					<li><a href="http://localhost:8080/OurMarket/View/service.jsp">客服</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
@@ -92,19 +92,19 @@ $(function() {
 						<!--sidebar  边栏-->
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
-							<li class="active"><a href="bought.jsp">已买到宝贝</a></li>
+							<li class="active"><a href="bought">已买到宝贝</a></li>
 							<li><a href="uncollected">未收款宝贝</a></li>
-							<li><a href="shelvedGoods">已上架宝贝</a></li>
+							<li><a href="shelved">已上架宝贝</a></li>
 							<li><a href="footmark">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
 							<li><a href="refundManage">退款管理</a></li>
 							<li><a href="goodsManages">物品管理</a></li>
 							<li><a href="orderManage">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-							<li><a href="../Appraise">我的评价</a></li>
+							<li><a href="Appraise">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="propertyCenter.jsp">资产中心</a></li>
+							<li><a href="propertyCenter">资产中心</a></li>
 						</ul>
 					</div>
 				</div>
@@ -145,7 +145,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -176,7 +176,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
@@ -223,7 +223,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -254,7 +254,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
@@ -301,7 +301,7 @@ $(function() {
 			
 			<tr>
 				<td class="col-md-3  col-sm-4 col-xs-3">
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive " style="height: 80px;margin-right: 0px;float: left;"/>
 				<div class=" hidden-xs " >
 					 官方旗舰店/华为honor/荣耀荣耀8青春版全网通智能手机
 				</div>
@@ -332,7 +332,7 @@ $(function() {
 			<!--手机上显示-->
 			<table class="table visible-xs  " style="border: groove;">	
 				<td >
-					<img src="../img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
+					<img src="<%=basePath%>/img/5900049bN90cf8936.jpg" class="img-responsive pic "/>
 				</td>
 				<td >
 				<div  >
@@ -359,7 +359,7 @@ $(function() {
 	function received(){
 		if(confirm("是否确认已收货？"))
 		{
-			location.href='bought.jsp';
+			location.href='bought';
 		}
 		else
 		{

@@ -12,9 +12,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/Logout.js"></script>
 
 <link rel="stylesheet" type="text/css" href="<%= basePath %>/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
@@ -61,10 +61,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../home.jsp">首页</a></li>
-					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalZoom.jsp">个人中心</a></li>
-					<li><a href="service.jsp">客服</a></li>
+					<li><a href="home.jsp">首页</a></li>
+					<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 					
 				</ul>
@@ -75,37 +75,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	</div>
 </nav>
-<div  class="img-responsive hidden-sm hidden-xs  "style="background-image: url(../img/service.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
+<div  class="img-responsive hidden-sm hidden-xs  "style="background-image: url(<%=basePath%>/img/service.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutaway.jsp"><button id="botton1" class="btn-success btn-lg"style="width: 140px;">我要上架</button></a>
+		<a href="goodsPutaway"><button id="botton1" class="btn-success btn-lg"style="width: 140px;">我要上架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutoff.jsp"><button id="botton2" class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
+		<a href="goodsPutoff"><button id="botton2" class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutaway.jsp"><button id="botton3" class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
+		<a href="goodsPutaway"><button id="botton3" class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
 	</div>
 	<br><br><br><br><br><br><br><br><br>
 </div>
 
 <!--当设备屏幕小的时候-->
-<div  class="img-responsive hidden-md hidden-lg "style="background-image: url(../img/servicem.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
+<div  class="img-responsive hidden-md hidden-lg "style="background-image: url(<%=basePath%>/img/servicem.jpg); width: 100%;height: 100%;background-size: 100%;background-repeat: no-repeat;" >
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutaway.jsp"><button class="btn-success btn-lg" style="width: 140px;">我要上架</button></a>
+		<a href="goodsPutaway"><button class="btn-success btn-lg" style="width: 140px;">我要上架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutoff.jsp"><button class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
+		<a href="goodsPutoff"><button class="btn-warning btn-lg"style="width: 140px;">我要下架</button></a>
 	</div>
 	<br><br><br>
 	<div style="text-align: center;">
-		<a href="goodsPutaway.jsp"><button class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
+		<a href="goodsPutaway"><button class="btn-primary btn-lg"style="width: 140px;">信息修改</button></a>
 	</div>
 	<br><br><br><br><br><br><br><br><br> 
 </div>

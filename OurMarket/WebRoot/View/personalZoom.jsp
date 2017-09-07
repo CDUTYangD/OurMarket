@@ -47,10 +47,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="../home.jsp">首页</a></li>
-				<li><a href="Message.jsp">消息</a></li>
-				<li><a href="personalZoom.jsp">个人中心</a></li>
-				<li><a href="service.jsp">客服</a></li>
+				<li><a href="home.jsp">首页</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+				<li><a href="personalZoom">个人中心</a></li>
+				<li><a href="service">客服</a></li>
 				<li><a onclick="Logout()" >登出</a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
@@ -88,7 +88,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<button type="submit" id="changepassword" class="btn btn-default"style=";">修改密码</button>
       			</div>
       			<div class="col-sm-4 col-md-4 col-lg-4 " style="background-color: ;">
-					 <img src="../img/erhuo.png" />
+					 <img src="<%=basePath%>/img/erhuo.png" />
       			</div>
       		</div>
       		<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 " >
@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	a.onclick=function(){
 		if(confirm("是否提交？"))
 		{
-			location.href="../home.jsp";
+			location.href="personalZoom";
 		}
 		else{
 			

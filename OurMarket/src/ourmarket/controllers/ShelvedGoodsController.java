@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShelvedGoodsController {
 	@RequestMapping("shelved")
 	public String index(){
-		return "shelved";
+		return "shelvedGoods";
 	}
 }

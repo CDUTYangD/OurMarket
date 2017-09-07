@@ -63,9 +63,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="../home.jsp">首页</a></li>
-				<li><a href="Message.jsp">消息</a></li>
-				<li><a href="personalZoom.jsp">个人中心</a></li>
-				<li><a href="service.jsp">客服</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+				<li><a href="personalZoom">个人中心</a></li>
+				<li><a href="service">客服</a></li>
 				<li><a onclick="Logout()" >登出</a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
@@ -188,17 +188,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           rePassword.onblur=function () {
             if((password.value!="")&&(password.value!==rePassword.value))
             {
-                checkUpRP.innerHTML="<img src='../../img/wrong.png' alt=''> <i>密码不相同请重新输入</i>   ";
+                checkUpRP.innerHTML="<img src='<%=basePath%>/img/wrong.png' alt=''> <i>密码不相同请重新输入</i>   ";
 //                password.value="";
 //                rePassword.value="";
             }
             else if (password.value!=""){
-                checkUpRP.innerHTML="<img src='.../../img/right.png' alt=''> <i>密码验证通过</i>   ";
+                checkUpRP.innerHTML="<img src='<%=basePath%>/img/right.png' alt=''> <i>密码验证通过</i>   ";
                 passSign=true;
 			}
 			else
 			{
-                checkUpRP.innerHTML="<img src='../../img/wrong.png' alt=''> <i>密码不能为空</i>   ";
+                checkUpRP.innerHTML="<img src='<%=basePath%>/img/wrong.png' alt=''> <i>密码不能为空</i>   ";
 			}
 
         }

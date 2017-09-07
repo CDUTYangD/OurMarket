@@ -37,7 +37,7 @@ $(function() {
 })
 </script>
 </head>
-	<body style="background: url(../img/ser.jpg);">
+	<body style="background: url(<%=basePath%>/img/ser.jpg);">
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!--navbar-inverse 表示带反色（黑色背景，白色文字）的导航栏，navbar-fixed-top 表示 一直停留在顶部  添加 role="navigation"，有助于增加可访问性-->
 		<div class="container-fluid">
@@ -66,10 +66,10 @@ $(function() {
 			<div id="navbar-right" class="navbar-collapse collapse">
 				<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../home.jsp">首页</a></li>
-					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalZoom.jsp">个人中心</a></li>
-					<li><a href="service.jsp">客服</a></li>
+					<li><a href="home.jsp">首页</a></li>
+					<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">

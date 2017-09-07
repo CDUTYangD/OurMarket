@@ -14,8 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/js/jquery.min.js"></script>
+<script src="<%=basePath%>/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<%= basePath %>/css/carousel.css" />
@@ -49,10 +49,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../home.jsp">首页</a></li>
-					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalZoom.jsp">个人中心</a></li>
-					<li><a href="service.jsp">客服</a></li>
+					<li><a href="home.jsp">首页</a></li>
+					<li><a href="Message">消息</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 					
 				</ul>
@@ -92,8 +92,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div><br >
   						</form>
   					<div class="col-sm-8 col-md-8 col-lg-8" style="background-color: ;text-align: left;">
-      				<img src="../img/1.png" />
-      				<img src="../img/1.png" />
+      				<img src="<%=basePath%>/img/1.png" />
+      				<img src="<%=basePath%>/img/1.png" />
   					</div>
   					<div class="col-sm-4 col-md-4 col-lg-4" style="background-color: ;text-align: left;">
   						
@@ -108,7 +108,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       			
       			     	<!--右边的logo-->
       			<div class="col-sm-4 col-md-4 col-lg-4 hidden-xs" style="background-color: ;">
-					 <img src="../img/erhuo.png" />
+					 <img src="<%=basePath%>/img/erhuo.png" />
       			</div>
       		</div>
       		<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 " >

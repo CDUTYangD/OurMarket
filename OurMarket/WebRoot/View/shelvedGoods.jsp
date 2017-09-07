@@ -70,10 +70,10 @@ $(function() {
 			<div id="navbar-right" class="navbar-collapse collapse">
 				<!--这是一个汉堡按钮-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="homepage.jsp">首页</a></li>
-					<li><a href="Message.jsp">消息</a></li>
-					<li><a href="personalzoom.jsp">个人中心</a></li>
-					<li><a href="Service.jsp">客服</a></li>
+					<li><a href="home.jsp">首页</a></li>
+					<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+					<li><a href="personalZoom">个人中心</a></li>
+					<li><a href="service">客服</a></li>
 					<li><a onclick="Logout()" >登出</a></li>
 					
 				</ul>
@@ -93,19 +93,19 @@ $(function() {
 						<!--sidebar  边栏-->
 						<ul class="nav nav-sidebar">
 							<!--这是列表组-->
-							<li><a href="bought.jsp">已买到宝贝</a></li>
-							<li><a href="uncollected.jsp">未收款宝贝</a></li>
-							<li class="active"><a href="shelvedGoods.jsp">已上架宝贝</a></li>
-							<li><a href="footmark.jsp">足迹宝贝</a></li>
+							<li><a href="bought">已买到宝贝</a></li>
+							<li><a href="uncollected">未收款宝贝</a></li>
+							<li class="active"><a href="shelvedGoods">已上架宝贝</a></li>
+							<li><a href="footmark">足迹宝贝</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="refundManage.jsp">退款管理</a></li>
-							<li><a href="goodsManages.jsp">物品管理</a></li>
-							<li><a href="orderManage.jsp">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
-							<li><a href="Appraise.jsp">我的评价</a></li>
+							<li><a href="refundManage">退款管理</a></li>
+							<li><a href="goodsManages">物品管理</a></li>
+							<li><a href="orderManage">订单管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></a></li>
+							<li><a href="Appraise">我的评价</a></li>
 						</ul>
 						<ul class="nav nav-sidebar">
-							<li><a href="propertyCenter.jsp">资产中心</a></li>
+							<li><a href="propertyCenter">资产中心</a></li>
 						</ul>
 					</div>
 				</div>
@@ -120,7 +120,7 @@ $(function() {
 			  </div>  
 	          <div class="row img-responsive">
 	            <div class="col-xs-6 col-lg-4" style="">
-	              <img src="../img/5900049bN90cf8936.jpg" style="width: 200px;height=200px"/>
+	              <img src="<%=basePath%>/img/5900049bN90cf8936.jpg" style="width: 200px;height=200px"/>
 	              <div style=";">
 		              <p class="goodsname">华硕笔记本zx50</p>
 		              <p class="goodsprice">价格：5000.00RMB</p>
@@ -130,7 +130,7 @@ $(function() {
 	              </div>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="../img/huaweip10.jpg" style="width: 200px;height=200px"/>
+	              <img src="<%=basePath%>/img/huaweip10.jpg" style="width: 200px;height=200px"/>
 	              <p class="goodsname">华为手机P10</p>
 	              <p class="goodsprice">价格：2700.00RMB</p>
 	              <p class="goodsnum">余量：10</p>
@@ -138,7 +138,7 @@ $(function() {
 	               <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	            <img src="../img/oppor11.jpg" style="width: 200px;height=200px"/>  
+	            <img src="<%=basePath%>/img/oppor11.jpg" style="width: 200px;height=200px"/>  
 	           	  <p class="goodsname">OPPO手机R11</p>
 	              <p class="goodsprice">价格：1500.00RMB</p>
 	              <p class="goodsnum">余量：10</p>
@@ -146,7 +146,7 @@ $(function() {
 	               <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="../img/desk.jpg" style="width: 200px;height=200px"/>
+	              <img src="<%=basePath%>/img/desk.jpg" style="width: 200px;height=200px"/>
 					<p class="goodsname">书桌</p>
 					<p class="goodsprice">价格:100RMB</p>
 					<p class="goodsnum">余量:20</p>
@@ -154,7 +154,7 @@ $(function() {
 					 <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="../img/backpack.jpg" style="width: 200px;height=200px"/>
+	              <img src="<%=basePath%>/img/backpack.jpg" style="width: 200px;height=200px"/>
 	              <p class="goodsname">书包</p>
 					<p class="goodsprice">价格:80RMB</p>
 					<p class="goodsnum">余量:20</p>
@@ -162,7 +162,7 @@ $(function() {
 					 <p>&nbsp;</p>
 	            </div>
 	            <div class="col-xs-6 col-lg-4">
-	              <img src="../img/shoes.jpg" style="width: 200px;height=200px"/>
+	              <img src="<%=basePath%>/img/shoes.jpg" style="width: 200px;height=200px"/>
 	                <p class="goodsname">耐克鞋</p>
 					<p class="goodsprice">价格:350RMB</p>
 					<p class="goodsnum">余量:20</p>
