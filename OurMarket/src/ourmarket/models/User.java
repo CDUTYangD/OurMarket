@@ -1,5 +1,7 @@
 package ourmarket.models;
 
+import java.sql.Timestamp;
+
 /**
  * User entity. @author MyEclipse Persistence Tools
  */
@@ -17,6 +19,7 @@ public class User implements java.io.Serializable {
 	private Integer ucredit;
 	private Short ugender;
 	private String upassword;
+	private Integer uqq;
 
 	// Constructors
 
@@ -33,7 +36,7 @@ public class User implements java.io.Serializable {
 
 	/** full constructor */
 	public User(Integer rid, Long imageListId, String unickName, String uphone, String uemial, Integer ucredit,
-			Short ugender, String upassword) {
+			Short ugender, String upassword, Integer uqq) {
 		this.rid = rid;
 		this.imageListId = imageListId;
 		this.unickName = unickName;
@@ -42,6 +45,7 @@ public class User implements java.io.Serializable {
 		this.ucredit = ucredit;
 		this.ugender = ugender;
 		this.upassword = upassword;
+		this.uqq = uqq;
 	}
 	
 	/**  other constructor	 */
@@ -56,7 +60,19 @@ public class User implements java.io.Serializable {
 		this.ugender = user.ugender;
 		this.upassword = user.upassword;
 	}
+	
+	
+	
 	// Property accessors
+
+
+	public Integer getUqq() {
+		return uqq;
+	}
+
+	public void setUqq(Integer uqq) {
+		this.uqq = uqq;
+	}
 
 	public Integer getUid() {
 		return this.uid;

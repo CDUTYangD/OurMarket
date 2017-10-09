@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import ourmarket.models.User;
 import ourmarket.services.IUserService;
+import ourmarket.sys.SessionInfo;
 
 /**
  * 
@@ -23,10 +24,31 @@ import ourmarket.services.IUserService;
  * @date 2017年4月29日下午4:32:24
  */
 @Controller
-@RequestMapping("/Home")
 public class HomeController {
-	@RequestMapping("/Index")
-	public String index(HttpServletRequest request,Model model) {
-		return "home";
+	@Autowired
+	IUserService userService = null;
+	@RequestMapping("log")
+	public String index(HttpServletRequest request,Model model,String phone,String password) {
+		
+		List<User> users = userService.findAllUsers();
+		for(User user:users)
+		{
+			if(user.getUphone().equals(phone) || user.getUnickName().equals(phone))
+			{
+				if(user.getUpassword().equals(password))
+				{
+					SessionInfo sessionInfo = new SessionInfo();
+					sessionInfo.setHeadImageID(user.getImageListId());
+					sessionInfo.setPhone(user.getUphone());
+					sessionInfo.setRoleID(user.getRid());
+					sessionInfo.setUserID(user.getUid());
+					sessionInfo.setUserName(user.getUnickName());
+					//sessionInfo.setLastDate(user.getLastDate());
+					request.getSession().setAttribute("sessionInfo", sessionInfo);
+					return "redirect:/propertyCenter";
+				}
+			}
+		}		
+		return "redirect:/home.jsp";
 	}
 }

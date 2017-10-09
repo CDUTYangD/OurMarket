@@ -14,13 +14,13 @@ public class ImageLibraryServiceClass  implements IImageLibraryService{
 	@Override
 	public void addImageLibrary(ImageLibrary imageList) {
 		// TODO Auto-generated method stub
-		
+		imageLibraryDAO.save(imageList);
 	}
 
 	@Override
 	public void deleteImageLibrary(ImageLibrary imageList) {
 		// TODO Auto-generated method stub
-		
+		imageLibraryDAO.delete(imageList);
 	}
 	@Override
 	public ImageLibrary findImageList(long imageListId) {

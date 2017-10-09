@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="<%= basePath %>/css/dashboard.css" />
 
 <link href="css/drag.css" rel="stylesheet" type="text/css"/>
-<style>
+<style type="text/css">
 	.form-control{
 		/*width: 70%;*/
 	}
@@ -32,6 +32,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	#menu{
 
+	}
+	body{
+	 background-image: url(../img/bgImg/bg_signUp.png);
+     height: 100%;
+     
 	}
 </style>
 		<script type="text/javascript">
@@ -155,7 +160,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       </div>
 </form>
-	
+	<div class="row" style="padding-top: 60px; clear: both;">
+			<div class="col-md-12 text-center">
+				<p class="col-md-12">
+					<small>&copy; 貮获引资 <a
+						href="http://localhost:8080/OurMarket/" target="_blank" title="貮获">联系我们</a>
+						- Collect from <a href="http://localhost:8080/OurMarket"
+						title="建议" target="_blank">建议</a></small>
+				</p>
+			</div>
+		</div>
 </body>
 <script type="text/javascript">
 

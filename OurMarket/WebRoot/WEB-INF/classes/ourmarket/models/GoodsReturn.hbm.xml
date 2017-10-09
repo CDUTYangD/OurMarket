@@ -13,6 +13,9 @@
         <property name="oid" type="java.lang.Integer">
             <column name="oID" />
         </property>
+        <property name="uid" type="java.lang.Integer">
+            <column name="uID" not-null="true"/>
+        </property>
         <property name="rreason" type="java.lang.String">
             <column name="rReason" length="150" not-null="true" />
         </property>

@@ -82,13 +82,13 @@ $(function() {
 		<!-- 大屏屏幕显示 -->
 		<div class="hidden-sm hidden-xs">
 		<div id="textbox" style="position:absolute;top:30%;left:25%;right:25%;">
-			<form role="form">
+			<form role="form" name="serviceform" action="serviceup">
 			<div class="form-group">
 				<label for="name" style=""><h4 style="background-color:yellow;">如有不满，请多见谅。希望您提出您的宝贵意见：</h4></label>
-				<textarea class="form-control" rows="8"></textarea>
+				<textarea class="form-control" rows="8"  name="servicemessage"></textarea>
 			</div>
-			<button type="button" class="btn btn-primary" 
-    			data-toggle="button" style="position:absolute;right:0px;"> 提交
+			<button type="submit" class="btn btn-primary" 
+    			data-toggle="submit" style="position:absolute;right:0px;"> 提交
 			</button>
 			</form>	
 		</div>
@@ -105,13 +105,13 @@ $(function() {
 		<!-- 小屏屏幕显示 -->
 		<div class="hidden-lg hidden-md">
 		<div id="textbox" style="position:absolute;top:20%;left:2%;right:2%;">
-			<form role="form">
+			<form role="form" name="serviceform" action="serviceup">
 			<div class="form-group">
 				<label for="name" style=""><h4 style="background-color:yellow;">如有不满，请多见谅。希望您提出您的宝贵意见：</h4></label>
 				<textarea class="form-control" rows="8"></textarea>
 			</div>
-			<button type="button" class="btn btn-primary" 
-    			data-toggle="button" style="position:absolute;right:0px;"> 提交
+			<button type="submit" class="btn btn-primary" 
+    			data-toggle="submit" style="position:absolute;right:0px;"> 提交
 			</button>
 			</form>	
 		</div>

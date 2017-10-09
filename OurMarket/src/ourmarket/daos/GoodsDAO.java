@@ -40,7 +40,7 @@ public class GoodsDAO {
 	public static final String GBRIFE_INTRODUCTION = "gbrifeIntroduction";
 	public static final String GSTATE = "gstate";
 	public static final String GTYPE = "gtype";
-
+	public static final String GLOCATION = "glocation";
 	private SessionFactory sessionFactory;
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
@@ -127,6 +127,9 @@ public class GoodsDAO {
 
 	public List findByUid(Object uid) {
 		return findByProperty(UID, uid);
+	}
+	public List findByLocation(Object glocation) {
+		return findByProperty(GLOCATION, glocation);
 	}
 
 	public List findByImageListId(Object imageListId) {

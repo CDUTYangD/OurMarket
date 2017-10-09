@@ -15,7 +15,36 @@ public class ComentsInfo {
 	float goodPrice;//价格
 	short commentState;//评论状态
 	Timestamp commentTime;//评论时间
+	int oid;
+	int gid;
 	
+	public ComentsInfo() {
+		super();
+	}
+	public ComentsInfo(String goodName, int goodNum, String goodImg, float goodPrice, short commentState,
+			Timestamp commentTime, int oid, int gid) {
+		super();
+		this.goodName = goodName;
+		this.goodNum = goodNum;
+		this.goodImg = goodImg;
+		this.goodPrice = goodPrice;
+		this.commentState = commentState;
+		this.commentTime = commentTime;
+		this.oid = oid;
+		this.gid = gid;
+	}
+	public int getOid() {
+		return oid;
+	}
+	public void setOid(int oid) {
+		this.oid = oid;
+	}
+	public int getGid() {
+		return gid;
+	}
+	public void setGid(int gid) {
+		this.gid = gid;
+	}
 	public String getGoodName() {
 		return goodName;
 	}

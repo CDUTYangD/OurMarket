@@ -32,6 +32,7 @@ public class GoodsReturnDAO {
 	public static final String OID = "oid";
 	public static final String RREASON = "rreason";
 	public static final String RSTATE = "rstate";
+	public static final String UID = "uid";
 
 	private SessionFactory sessionFactory;
 
@@ -65,6 +66,17 @@ public class GoodsReturnDAO {
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
+			throw re;
+		}
+	}
+	
+	public void update(GoodsReturn transientInstance) {
+		log.debug("updateing GoodsReturn instance");
+		try {
+			getCurrentSession().update(transientInstance);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
 			throw re;
 		}
 	}
@@ -116,6 +128,9 @@ public class GoodsReturnDAO {
 
 	public List findByRstate(Object rstate) {
 		return findByProperty(RSTATE, rstate);
+	}
+	public List findByUid(Object uid) {
+		return findByProperty(UID, uid);
 	}
 
 	public List findAll() {

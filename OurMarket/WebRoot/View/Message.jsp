@@ -1,8 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -83,8 +85,8 @@
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="home.jsp">首页</a></li>
-				<li><a href="Message.jsp">消息</a></li>
+				<li><a href="home">首页</a></li>
+				<li><a href="privateMessage">消息</a></li>
 				<li><a href="personalZoom">个人中心</a></li>
 				<li><a href="service">客服</a></li>
 				<li><a onclick="Logout()">登出</a></li>
@@ -127,13 +129,10 @@
 
 				<ul class="list-unstyled"
 					style="border:1px solid #96c2f1;background:#eff7ff; margin-top: 5px;">
-					<li class="active"><a href="Message.jsp"><i
-							class="fa fa-comment fa-lg"></i>系统消息</a></li>
-					<li><a href="privateMessage.jsp"><i
-							class="fa fa-envelope-o fa-lg "></i>私信</a></li>
-					<li><a href="notice.jsp"><i class="fa fa-bell fa-lg"></i>通知</a></li>
-					<li><a href="messageSettings.jsp"><i
-							class="fa fa-cog fa-lg"></i>消息设置</a></li>
+					<li class="active"><a href="#"><i
+							class="fa fa-comment fa-lg"></i>活动</a></li>
+					<li><a href="privateMessage"><i
+						    class="fa fa-envelope-o fa-lg "></i>通知</a></li>
 					<img src="<%=basePath%>/img/erhuo.png" width="150px" height="300px"
 						class="hidden-xs" />
 				</ul>
@@ -142,45 +141,59 @@
 			<div class="col-sm-5 col-md-6 "
 				style="margin-top: 5px; margin-top: 5px;padding: 0px;">
 				<ul class="content-reply-box mg " id="chatlog">
-					<li class="odd"><a class="user" href="#"><img
-							class="img-responsive avatar_" src="<%=basePath%>/img/2.png" alt=""><span
-							class="user-name"></span></a>
-						<div class="reply-content-box">
-							<span class="reply-time" id="chat-time">03-08 15：00</span>
-							<div class="reply-content pr">
-								<span class="arrow">&nbsp;</span> 您好！
-							</div>
-						</div></li>
+					
 
-					<li class="odd"><a class="user" href="#"><img
-							class="img-responsive avatar_" src="<%=basePath%>/img/2.png" alt=""><span
-							class="user-name"></span></a>
-						<div class="reply-content-box">
-							<span class="reply-time" id="chat-time">03-08 15：00</span>
-							<div class="reply-content pr">
-								<span class="arrow">&nbsp;</span> 我是贰获小助手
-							</div>
-						</div></li>
+			
 
-					<li class="odd"><a class="user" href="#"><img
-							class="img-responsive avatar_" src="<%=basePath%>/img/2.png" alt=""><span
-							class="user-name"></span></a>
-						<div class="reply-content-box">
-							<span class="reply-time" id="chat-time">03-08 15：01</span>
-							<div class="reply-content pr">
-								<span class="arrow">&nbsp;</span> 客官暂时没有消息哦~
-							</div>
-						</div></li>
+					
+					<tbody>
 
-					<li class="odd"><a class="user" href="#"><img
-							class="img-responsive avatar_" src="<%=basePath%>/img/2.png" alt=""><span
-							class="user-name"></span></a>
-						<div class="reply-content-box">
-							<span class="reply-time" id="chat-time">03-08 15：01</span>
-							<div class="reply-content pr">
-								<span class="arrow">&nbsp;</span> 如果有什么问题可以写在下方噢~
-							</div>
-						</div></li>
+
+
+
+<!--<c:forEach items="${msgs}" var="msaMessage">
+							<li class="odd"><a class="user" href="#"><img
+									class="img-responsive avatar_" src="<%=basePath%>/img/2.png"
+									alt=""><span class="user-name"></span></a>
+								<div class="reply-content-box">
+									<span class="reply-time" id="chat-time">${msaMessage.getMtime()}</span>
+									<div class="reply-content pr">
+										<span class="arrow">&nbsp;</span> ${msaMessage.getMcontent()}
+									</div>
+								</div></li>
+						</c:forEach>
+  -->
+		                
+
+                         <c:forEach items="${messages}" var="messagesInfo">
+							<li class="${messagesInfo.getType() }"><a class="user" href="#"><img
+									class="img-responsive avatar_" src="<%=basePath%>/img/2.png"
+									alt=""><span class="user-name"></span></a>
+								<div class="reply-content-box">
+									<span class="reply-time" id="chat-time">${messagesInfo.getTimestamp()}</span>
+									<div class="reply-content pr">
+										<span class="arrow">&nbsp;</span> ${messagesInfo.getMessageString()}
+									</div>
+									<input type="hidden" id="from" value="${messagesInfo.getFrom() }">
+									<input type="hidden" id="to" value="${messagesInfo.getTo() }">
+								</div></li>
+						</c:forEach>
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+					</tbody>
+				
 				</ul>
 				<!--发送框-->
 				<div>
@@ -197,7 +210,9 @@
 			</div>
 		</div>
 	</div>
+<script type="text/javascript">
 
+</script>
 	<script src="<%=basePath%>/js/webSocket.js" type="text/javascript"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@ public class Goods implements java.io.Serializable {
 	private String gbrifeIntroduction;
 	private Short gstate;
 	private Short gtype;
+	private Short glocation;
 
 	// Constructors
 
@@ -30,8 +31,8 @@ public class Goods implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Goods(String gname, Integer gnum, Timestamp gproductTime, String gtitle, Float gprice, Short gstate,
-			Short gtype) {
+	public Goods(Integer uid,String gname, Integer gnum, Timestamp gproductTime, String gtitle, Float gprice, Short gstate,
+			Short gtype,Short glocation,Long imageListId) {
 		this.gname = gname;
 		this.gnum = gnum;
 		this.gproductTime = gproductTime;
@@ -39,11 +40,14 @@ public class Goods implements java.io.Serializable {
 		this.gprice = gprice;
 		this.gstate = gstate;
 		this.gtype = gtype;
+		this.glocation=glocation;
+		this.imageListId=imageListId;
+		this.uid = uid;
 	}
 
 	/** full constructor */
 	public Goods(Integer uid, Long imageListId, String gname, Integer gnum, Integer gviewNum, Timestamp gproductTime,
-			String gtitle, Float gprice, String gbrifeIntroduction, Short gstate, Short gtype) {
+			String gtitle, Float gprice, String gbrifeIntroduction, Short gstate, Short gtype,Short glocation) {
 		this.uid = uid;
 		this.imageListId = imageListId;
 		this.gname = gname;
@@ -55,9 +59,18 @@ public class Goods implements java.io.Serializable {
 		this.gbrifeIntroduction = gbrifeIntroduction;
 		this.gstate = gstate;
 		this.gtype = gtype;
+		this.glocation=glocation;
 	}
 
 	// Property accessors
+
+	public Short getGlocation() {
+		return glocation;
+	}
+
+	public void setGlocation(Short glocation) {
+		this.glocation = glocation;
+	}
 
 	public Integer getGid() {
 		return this.gid;

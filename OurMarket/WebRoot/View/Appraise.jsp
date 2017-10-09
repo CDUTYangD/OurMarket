@@ -134,7 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</td>
 			<td>${comInfo.getCommentTime()}</td>
 			<td>${comInfo.getCommentState()}</td>
-			<td><a  data-toggle="modal" data-target="#myModal" action="myAppraise">查看</a></td>
+			<td><a  data-toggle="modal" data-target="#myModal" href="myAppraise">查看</a></td>
 		</tr>
 		</c:forEach>
 	</tbody>

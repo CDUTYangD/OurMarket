@@ -1,9 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-  
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -30,10 +31,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="container-fluid">
 		<!--流动的容器-->
 		<div class="navbar-header">
-		<!-- 测试 -->
+			<!-- 测试 -->
 			<!--这是按钮  缩放按钮-->
-			<button id="button_show_right" type="button" class="navbar-toggle collapsed" 
-				data-toggle="collapse" data-target="#navbar-right" aria-expanded="false"
+			<button id="button_show_right" type="button"
+				class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#navbar-right" aria-expanded="false"
 				aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
@@ -53,8 +55,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<li><a href="Message">消息</a></li>
 				<li><a href="personalZoom">个人中心</a></li>
 				<li><a href="service">客服</a></li>
-				<li><a onclick="Logout()" >登出</a></li>
-				
+				<li><a onclick="Logout()">登出</a></li>
+
 			</ul>
 			<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search...">
@@ -63,82 +65,66 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	</div>
 	</nav>
-      <!--主界面-->
-      
-      
-      <div  class="container-fluid">
-      	<div class="row">
-      		<div id ="blank_left" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 ">
-      			
-      		</div>
-      		
-      		<div id="menu" class=" col-xs-10 col-sm-8 col-md-8 col-lg-8 "style="background-color: ; " >
-      			<h1 class="page-header">个人信息</h1>
-      			<div class="col-sm-8 col-md-8 col-lg-8" style="background-color: ;text-align: left;">
-      				
-    			<label for="name">旧密码：</label>
-    			<input type="text" class="form-control" id="name" placeholder="">
-   					<p>&nbsp;</p>
-       			<label for="name">新密码：</label>
-    			<input type="text" class="form-control" id="name1" placeholder="">
-    				<p>&nbsp;</p>
-    		    <label for="name">确认密码：</label>
-  				<input type="text" class="form-control" id="name2" placeholder="">
-  				
-  					<p>&nbsp;</p>
-  						
-  				<button type="submit" id ="submit1" class="btn btn-default">提交</button>
-  				
-      		
-      			</div>
-      			     		
-      			<div class="col-sm-4 col-md-4 col-lg-4 " style="background-color: ;">
-					 <img src="img/erhuo.png" />
-      			</div>
-      			
-      			
-      			
-      		</div>
-      		
-      		
-      		
-      		<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 " >
-      			
-      		</div>
-      	</div>
-      	
-      </div>
+	<!--主界面-->
 
-	
+
+	<div class="container-fluid">
+		<div class="row">
+			<div id="blank_left" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 ">
+
+			</div>
+
+			<div id="menu" class=" col-xs-10 col-sm-8 col-md-8 col-lg-8 "
+				style="background-color: ; ">
+				<h1 class="page-header">个人信息</h1>
+				<div class="col-sm-8 col-md-8 col-lg-8"
+					style="background-color: ;text-align: left;">
+
+
+
+					<label for="name">旧密码：</label> <input type="password"
+						class="form-control" id="name" name="oldPassword"
+						placeholder="请输入旧密码">
+					<div ><img src="${changePasswordInfo.getImgSrc() }">
+					<i>${changePasswordInfo.getWrongString()}</i>
+					</div>
+					<div id="checkOldPassword"></div>
+					<p>&nbsp;</p>
+					<label for="name">新密码：</label> <input type="password"
+						class="form-control" id="name1" name="newPassword" placeholder="">
+					<p>&nbsp;</p>
+					<label for="name">确认密码：</label> <input type="password"
+						class="form-control" id="name2" name="reNewPassword"
+						placeholder="">
+					<div id="checkNewPassword"></div>
+					<p>&nbsp;</p>
+
+					<button type="submit" id="submit1" class="btn btn-default">提交</button>
+
+
+				</div>
+
+				<div class="col-sm-4 col-md-4 col-lg-4 " style="background-color: ;">
+					<img src="img/erhuo.png" />
+				</div>
+
+
+
+			</div>
+
+
+
+			<div id="blank_right" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 ">
+
+			</div>
+		</div>
+
+	</div>
+
+
 </body>
-<script type="text/javascript">
-	
-	
-	var btn=document.getElementById("submit1");
-		btn.onclick=function(){
-			var t1=document.getElementById("name1").value;
-			var t2=document.getElementById("name2").value;
-			var t3=document.getElementById("name").value;
-			if(t3=="")
-			{
-				alert("请输入密码");
-			}
-			else 
-			{
-				if(t1==t2)
-				{
-					alert("修改成功");
-					location.href="personalzoom";
-				}
-				else
-				{
-					alert("两次密码不一致");
-				}
-			}
-			
-		}
-		
-	
+<script type="text/javascript" src="<%=basePath%>/js/changePassword.js">
+   
 </script>
 
 </html>

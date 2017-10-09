@@ -15,6 +15,7 @@ public class GoodsReturn implements java.io.Serializable {
 	private String rreason;
 	private Short rstate;
 	private Timestamp rtime;
+	private Integer uid;
 
 	// Constructors
 
@@ -30,11 +31,12 @@ public class GoodsReturn implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public GoodsReturn(Integer oid, String rreason, Short rstate, Timestamp rtime) {
+	public GoodsReturn(Integer oid, String rreason, Short rstate, Timestamp rtime, Integer uid) {
 		this.oid = oid;
 		this.rreason = rreason;
 		this.rstate = rstate;
 		this.rtime = rtime;
+		this.uid = uid;
 	}
 
 	// Property accessors
@@ -77,6 +79,14 @@ public class GoodsReturn implements java.io.Serializable {
 
 	public void setRtime(Timestamp rtime) {
 		this.rtime = rtime;
+	}
+
+	public Integer getUid() {
+		return uid;
+	}
+
+	public void setUid(Integer uid) {
+		this.uid = uid;
 	}
 
 }

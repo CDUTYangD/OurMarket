@@ -1,67 +1,176 @@
-   var mapObj;
+   var map;
         function init() {
-            //´´½¨AMapµÄµØÍ¼
-            mapObj = new AMap.Map("iCenter", {
+            //ï¿½ï¿½ï¿½ï¿½AMapï¿½Äµï¿½Í¼
+            map = new AMap.Map("iCenter", {
                 rotateEnable: true,
                 dragEnable: true,
                 zoomEnable: true,
-                //¶şÎ¬µØÍ¼ÏÔÊ¾ÊÓ¿Ú
                 view: new AMap.View2D({
-                  //  center: new AMap.LngLat(106.404, 37.915),//µØÍ¼ÖĞĞÄµã
-                    zoom: 4,//µØÍ¼ÏÔÊ¾µÄËõ·Å¼¶±ğ
+                    zoom: 4,//ï¿½ï¿½Í¼ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½
                     crs: "'EPSG4326"
                 })
             });
-            //ÉèÖÃµØÍ¼ÓïÑÔÀàĞÍ£¬ÉèÖÃºóµ×Í¼ÖØĞÂ¼ÓÔØ£¬ĞÎ³ÉÖĞÓ¢ÎÄ¶ÔÕÕÍ¼
-            mapObj.setLang("zh_en");
+            map.setLang("zh_en");
 			
 			
 			
-//´´½¨Ô²¶ÔÏó
-circle = new AMap.Circle({   //Ô²ĞÎ±à¼­Æ÷µÄÑùÊ½
-        map: mapObj,  
-         center:new AMap.LngLat("104.13991928100586 ","30.6719018739570"),
-        radius:500,  
-        strokeColor: "#F33",  
-        strokeOpacity: 1,  
-        strokeWeight: 5,  
-        fillColor: "ee2200",  
-        fillOpacity: 0.35
-        
+//ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½
+		   //é“¶æåœˆå­
+		   circleYinXing = new AMap.Circle({
+           map: map,  
+           center:new AMap.LngLat("104.1452","30.67100"),
+           radius:140,  
+           strokeColor: "#32CD32",  
+           strokeOpacity: 1,  
+           strokeWeight: 5,  
+           fillColor: "ee2200",  
+           fillOpacity: 0.01
+      
+       });
        
+   		 //ç™æ¡åœˆå­
+	   circleYinXing = new AMap.Circle({
+       map: map,  
+       center:new AMap.LngLat("104.1488","30.67200"),
+       radius:140,  
+       strokeColor: "black",  
+       strokeOpacity: 1,  
+       strokeWeight: 5,  
+       fillColor: "ee2200",  
+       fillOpacity: 0.01
+  
+  		 });
+       
+   		//èŠ™è“‰åœˆå­
+   	   circleFuRong = new AMap.Circle({   
+       map: map,  
+       center:new AMap.LngLat("104.1425","30.67650"),
+       radius:140,  
+       strokeColor: "#F33",  
+       strokeOpacity: 1,  
+       strokeWeight: 5,  
+       fillColor: "ee2200",  
+       fillOpacity: 0.01
+  
+   });
    
+   		 //æ¾æ—åœˆå­
+  	   circleSongLin = new AMap.Circle({   //Ô²ï¿½Î±à¼­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+       map: map,  
+       center:new AMap.LngLat("104.1520","30.67285"),
+       radius:140,  
+       strokeColor: "#0000FF",  
+       strokeOpacity: 1,  
+       strokeWeight: 5,  
+       fillColor: "ee2200",  
+       fillOpacity: 0.01
+  
+   });
+   		//é¦™æ¨Ÿåœˆå­
+   	   circleXiangZhang = new AMap.Circle({  
+       map: map,  
+       center:new AMap.LngLat("104.1545","30.67684"),
+       radius:140,  
+       strokeColor: "#FFA500",  
+       strokeOpacity: 1,  
+       strokeWeight: 5,  
+       fillColor: "ee2200",  
+       fillOpacity: 0.01
+  
+   });
+   
+     //åŒ—è‹‘åœˆå­
+  	   circleBeiYuan = new AMap.Circle({
+       map: map,  
+       center:new AMap.LngLat("104.1478","30.67500"),
+       radius:140,  
+       strokeColor: "#00FFFF",  
+       strokeOpacity: 1,  
+       strokeWeight: 5,  
+       fillColor: "ee2200",  
+       fillOpacity: 0.01
+  
+   }); 
+      // å®ä¾‹åŒ–ç‚¹æ ‡è®°
+	
+
+    //é“¶æ
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position:  [104.1452, 30.67100], //åŸºç‚¹ä½ç½®
+        //offset: new AMap.Pixel(-20, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹
     });
+
+    		
+        //é¦™æ¨Ÿ
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position:  [104.1545, 30.67684], //åŸºç‚¹ä½ç½®
+       // offset: new AMap.Pixel(0, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹
+    });
+
+    
+        //ç™æ¡
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position:  [104.1488, 30.67200], //åŸºç‚¹ä½ç½®
+       // offset: new AMap.Pixel(0, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹  
+    });
+    
+       //æ¾æ—
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position: [104.1520, 30.67285], //åŸºç‚¹ä½ç½®
+       // offset: new AMap.Pixel(0, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹
+    });
+    
+        //èŠ™è“‰
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position:  [104.1425, 30.67650], //åŸºç‚¹ä½ç½®
+       // offset: new AMap.Pixel(0, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹  
+    });
+    
+        //åŒ—è‹‘
+    		var marker = new AMap.Marker({ //æ·»åŠ è‡ªå®šä¹‰ç‚¹æ ‡è®°
+        map: map,
+        position:  [104.1478, 30.67500], //åŸºç‚¹ä½ç½®
+       // offset: new AMap.Pixel(0, -32), //ç›¸å¯¹äºåŸºç‚¹çš„åç§»ä½ç½®
+        draggable: false,  //æ˜¯å¦å¯æ‹–åŠ¨
+        content: '<div class="marker-route marker-marker-bus-from  img width"><i class="fa fa-3x fa-map-marker"></i><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a><a href="http://localhost:8080/OurMarket/View/goodsDetails.jsp"><img class="" src="img/5900049bN90cf8936.jpg" style=""/></a></div>'   //è‡ªå®šä¹‰ç‚¹æ ‡è®°è¦†ç›–ç‰©å†…å®¹  
+    });
+    
     
   
-  //¸²¸ÇÔ²  
-mapObj.plugin(["AMap.CircleEditor"],function(){   
-        circleEditor = new AMap.CircleEditor(mapObj,circle);   //´´½¨Ô²ĞÎ±à¼­Æ÷¶ÔÏó
-        circleEditor.open();    //´ò¿ªÔ²ĞÎ±à¼­Æ÷
-       
-    }); 
+
     
-    
-    
-    
-    //¶¨Î»
-    
-   mapObj.plugin('AMap.Geolocation', function () {
+   map.plugin('AMap.Geolocation', function () {
         geolocation = new AMap.Geolocation({
-        enableHighAccuracy: true,//ÊÇ·ñÊ¹ÓÃ¸ß¾«¶È¶¨Î»£¬Ä¬ÈÏ:true
-        timeout: 10000,          //³¬¹ı10ÃëºóÍ£Ö¹¶¨Î»£¬Ä¬ÈÏ£ºÎŞÇî´ó
-        maximumAge: 0,           //¶¨Î»½á¹û»º´æ0ºÁÃë£¬Ä¬ÈÏ£º0
-        convert: true,           //×Ô¶¯Æ«ÒÆ×ø±ê£¬Æ«ÒÆºóµÄ×ø±êÎª¸ßµÂ×ø±ê£¬Ä¬ÈÏ£ºtrue
-        showButton: true,        //ÏÔÊ¾¶¨Î»°´Å¥£¬Ä¬ÈÏ£ºtrue
-        buttonPosition: 'LB',    //¶¨Î»°´Å¥Í£¿¿Î»ÖÃ£¬Ä¬ÈÏ£º'LB'£¬×óÏÂ½Ç
-        buttonOffset: new AMap.Pixel(10, 20),//¶¨Î»°´Å¥ÓëÉèÖÃµÄÍ£¿¿Î»ÖÃµÄÆ«ÒÆÁ¿£¬Ä¬ÈÏ£ºPixel(10, 20)
-        showMarker: true,        //¶¨Î»³É¹¦ºóÔÚ¶¨Î»µ½µÄÎ»ÖÃÏÔÊ¾µã±ê¼Ç£¬Ä¬ÈÏ£ºtrue
-        //showCircle: true,        //¶¨Î»³É¹¦ºóÓÃÔ²È¦±íÊ¾¶¨Î»¾«¶È·¶Î§£¬Ä¬ÈÏ£ºtrue
-        panToLocation: true,     //¶¨Î»³É¹¦ºó½«¶¨Î»µ½µÄÎ»ÖÃ×÷ÎªµØÍ¼ÖĞĞÄµã£¬Ä¬ÈÏ£ºtrue
-        zoomToAccuracy:true      //¶¨Î»³É¹¦ºóµ÷ÕûµØÍ¼ÊÓÒ°·¶Î§Ê¹¶¨Î»Î»ÖÃ¼°¾«¶È·¶Î§ÊÓÒ°ÄÚ¿É¼û£¬Ä¬ÈÏ£ºfalse
+        enableHighAccuracy: true,
+        timeout: 10000,         
+        maximumAge: 0,         
+        convert: true,           
+        showButton: true,       
+        buttonPosition: 'LB',    
+        buttonOffset: new AMap.Pixel(10, 20),
+        showMarker: true,        
+        //showCircle: true,       
+        panToLocation: true,    
+        zoomToAccuracy:true      
     });
-    mapObj.addControl(geolocation);
+    map.addControl(geolocation);
     geolocation.getCurrentPosition();
-    AMap.event.addListener(geolocation, 'complete', onComplete);//·µ»Ø¶¨Î»ĞÅÏ¢
-    AMap.event.addListener(geolocation, 'error', onError);      //·µ»Ø¶¨Î»³ö´íĞÅÏ¢
+    AMap.event.addListener(geolocation, 'complete', onComplete);
+    AMap.event.addListener(geolocation, 'error', onError);      
 });
         }

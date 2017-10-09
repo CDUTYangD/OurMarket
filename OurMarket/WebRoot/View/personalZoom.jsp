@@ -60,6 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	</nav>
       <!--主界面-->
+      <form id = "personalform" action="personalZoomUp" method="post">
       <div  class="container-fluid">
       	<div class="row">
       		<div id ="blank_left" class="col-xs-1 col-sm-2 col-md-2 col-lg-2 ">
@@ -69,19 +70,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       			<div class="col-sm-8 col-md-8 col-lg-8" style="background-color: ;text-align: left;">
       				
     			<label for="name">用户名：</label>
-    			<input type="text" class="form-control" id="name" placeholder="">
+    			<input type="text" class="form-control" id="name" placeholder="" name="username">
    					<p>&nbsp;</p>
-       			<label for="name">登陆账号：</label>
-    			<input type="text" class="form-control" id="name" placeholder="">
-    				<p>&nbsp;</p>
     		    <label for="name">电子邮箱：</label>
-  				<input type="text" class="form-control" id="name" placeholder="">
+  				<input type="text" class="form-control" id="name" placeholder="" name="email">
   					<p>&nbsp;</p>
   				<label for="name">QQ：</label>
-  				<input type="text" class="form-control" id="name" placeholder="">
+  				<input type="text" class="form-control" id="name" placeholder="" name="qq">
   					<p>&nbsp;</p>
   				<label for="name">联系电话：</label>
-  				<input type="text" class="form-control" id="name" placeholder="">
+  				<input type="text" class="form-control" id="name" placeholder="" name="phone">
   					<p>&nbsp;</p>
   						
   				<button type="submit" id ="submit" class="btn btn-default">提交</button>
@@ -96,13 +94,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       		</div>
       	</div>
       </div>
+      </form>
 </body>
 <script type="text/javascript">
 	var a=document.getElementById("submit");
 	a.onclick=function(){
 		if(confirm("是否提交？"))
 		{
-			location.href="personalZoom";
+			submit();
 		}
 		else{
 			
@@ -111,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	var b=document.getElementById("changepassword");
 	b.onclick=function(){
-		location.href="changepassword.html";
+		location.href="changepassword";
 	}
 	
 </script>

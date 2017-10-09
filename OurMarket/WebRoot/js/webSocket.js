@@ -5,15 +5,20 @@
  * Created by 16558 on 2017/4/22.
  */
 
-var websocket;
-var resiver='&{sessionScope.resiver}';
-var username='&{sessionScope.username}';
+
+
+
 //定义的一个使用者、接收者名称
 //具体使用是可以直接拿取登录账号
-username="b";
-resiver="a";
+var username=document.getElementById("to").value;//转换   
+var resiver=document.getElementById("from").value;//转换  原为发送者 现为接收者
+
+console.log(username);
+
+
+
 //确定服务器地址
-var wsUri='ws:60.205.205.32:8080/OurMarket/websocket?username='+username;
+var wsUri='ws:localhost:8080/OurMarket/websocket?username='+username;
 try{
     if ('WebSocket' in window) {
         websocket = new WebSocket(wsUri);
@@ -34,6 +39,43 @@ var maxChatlog=document.getElementById("chatlog");
 //var users=document.getElementById("users");
 //var chatlog=document.getElementById("chatlog");
 
+
+//模拟post发送
+
+function asPost(from,to,msg,time){
+	  var temp = document.createElement("form");
+	  
+	    temp.action ="http://localhost:8080/OurMarket/message";        
+	    temp.method = "post";        
+	    temp.style.display = "none";               
+	    var opt = document.createElement("textarea");        
+	    opt.name ="message" ;        
+	    opt.value = msg;               
+	    temp.appendChild(opt);        
+	    var input1=document.createElement("input");
+	    input1.name="from";
+	    input1.value=from;
+	    temp.appendChild(input1);
+	    var input2=document.createElement("input")
+	    input2.name="to";
+	    input2.value=to;
+	    temp.appendChild(input2);
+	    var input3=document.createElement("input");
+	    input3.name="time";
+	    input3.value=time;
+	    temp.appendChild(input3);
+	    document.body.appendChild(temp);  
+
+	    	temp.submit();     
+	   // return temp;  
+}
+
+
+
+
+
+
+
 websocket.onopen=function (evt) { onOpen(evt); };
 websocket.onmessage=function (evt) { onMessage(evt); };
 websocket.onerror=function (evt) { onError(evt); };
@@ -45,6 +87,7 @@ function send_message() {
     if(textField.value===""){}
     else
     {
+    	
         var Hmessage=textField.value;
         var Jmessage={to:resiver,message:Hmessage};
         var jsonText=JSON.stringify(Jmessage);
@@ -65,6 +108,7 @@ function send_message() {
         log.hidefocus="true";
         log.style.outline=0;
         maxChatlog.appendChild(log);
+        asPost(resiver,username,Hmessage,new Date().toLocaleString().toString());
     }
     textField.focus();
 

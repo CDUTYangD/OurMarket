@@ -28,4 +28,9 @@
 		<property name="prefix" value="/View/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	 <bean id="multipartResolver" 
+	 class="org.springframework.web.multipart.commons.CommonsMultipartResolver">    
+        
+        <property name="defaultEncoding" value="utf-8" />    
+    </bean> 
 </beans>

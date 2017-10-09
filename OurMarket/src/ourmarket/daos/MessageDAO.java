@@ -1,5 +1,6 @@
 package ourmarket.daos;
 
+import java.sql.Timestamp;
 import java.util.List;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
@@ -30,7 +31,9 @@ public class MessageDAO {
 	// property constants
 	public static final String UID1 = "uid1";
 	public static final String UID2 = "uid2";
-
+	public static final String MTIME = "mtime";
+	public static final String MCONTENT = "mcontent";
+	public static final String MSTATE="mstate";
 	private SessionFactory sessionFactory;
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
@@ -44,7 +47,7 @@ public class MessageDAO {
 	protected void initDao() {
 		// do nothing
 	}
-
+//保存
 	public void save(Message transientInstance) {
 		log.debug("saving Message instance");
 		try {
@@ -55,7 +58,8 @@ public class MessageDAO {
 			throw re;
 		}
 	}
-
+//删除
+	
 	public void delete(Message persistentInstance) {
 		log.debug("deleting Message instance");
 		try {
@@ -104,6 +108,32 @@ public class MessageDAO {
 		}
 	}
 
+	public List findByProperty(String propertyName, Object value,String propertyName2, Object value2){
+		log.debug("finding Message instance with property: " + propertyName + ", value: " + value);
+		try {
+			String querysString="from Message as model where model."+propertyName + "= ?"
+		+"and model."+propertyName2+"=?";
+			Query query=getCurrentSession().createQuery(querysString);
+			query.setParameter(0, value);
+			query.setParameter(1, value2);
+			return query.list();
+			
+		
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	
+	}
+	
+	
+	
+	
+	public List findByAllID(Object uid1,Object uid2) {
+		return findByProperty(UID1, uid1, UID2, uid2);
+	}
+	
+	
 	public List findByUid1(Object uid1) {
 		return findByProperty(UID1, uid1);
 	}
@@ -111,7 +141,18 @@ public class MessageDAO {
 	public List findByUid2(Object uid2) {
 		return findByProperty(UID2, uid2);
 	}
+	
+	public List findByTime(Object mtime) {
+		return findByProperty(MTIME, mtime);
+	}
 
+	public List findByMessage(Object mcontent) {
+		return findByProperty(MCONTENT, mcontent);
+	}
+	public List findByState(Object mstate) {
+		return findByProperty(MSTATE, mstate);
+	}
+	
 	public List findAll() {
 		log.debug("finding all Message instances");
 		try {

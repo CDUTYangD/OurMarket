@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -156,134 +157,16 @@ $(function() {
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach items="${propertyInfos}" var="propertyInfo">
 					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
+						<td>${propertyInfo.getGname() }</td>
+						<td>${propertyInfo.getOtime() }</td>
+						<td>${propertyInfo.getOno() }</td>
+						<td>${propertyInfo.getOmoney() }</td>
+						<td>${propertyInfo.getOstate() }</td>
 						<td><a href="">查看</a></td>
 					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-				</tbody>
-				<tbody>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-				</tbody>
-				<tbody>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-				</tbody>
-				<tbody>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-				</tbody>
-				<tbody>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
-					<tr class="active">
-						<td>华为手机</td>
-						<td>2016/10/10</td>
-						<td>15021548</td>
-						<td>1500.00</td>
-						<td>交易成功</td>
-						<td><a href="">查看</a></td>
-					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
 			</div>
