@@ -34,10 +34,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/metisMenu.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
-    <script language="javascript" src="http://webapi.amap.com/maps?v=1.3&key=168484ce0ca0e0fb381b1dd319ad121e"></script>
+    <script type="text/javascript"  src="http://webapi.amap.com/maps?v=1.4.0&key=168484ce0ca0e0fb381b1dd319ad121e"></script>
     <style href="../css/login.css"></style>
 </head>
-<body onload="init()">
+<body>
 <div id="wrapper">
     <!-- Navigation -->
     <nav class="top1 navbar navbar-default navbar-static-top form-inline" role="navigation" style="margin-bottom: 0">
@@ -153,11 +153,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			
 			
-<!--要在主界面加载完毕后执行地图加载以及定位-->
- <script type="text/javascript" src="js/loadMap.js"></script>
+
 <!-- /#wrapper -->
 <!-- Bootstrap Core JavaScript 
 <script src="js/bootstrap.min.js"></script>-->
 
 </body>
+<script type="text/javascript" src="js/loadMap.js"></script>
+<!--要在主界面加载完毕后执行地图加载以及定位-->
+  <script type="text/javascript">
+    document.body.onload=function(){
+    init();
+    loadCircle("104.1452","30.67100","#32CD32");//银杏
+	loadCircle("104.1488","30.67200","black");//珙桐
+	loadCircle("104.1425","30.67650","#F33");//芙蓉
+	loadCircle("104.1520","30.67285","#0000FF");//松林
+	loadCircle("104.1545","30.67684","#FFA500");//香樟
+	loadCircle("104.1478","30.67500","#00FFFF");//北苑
+	loadPoint(104.1452, 30.67100);
+	loadPoint(104.1488, 30.67200);
+	loadPoint(104.1425, 30.67650);
+	loadPoint(104.1520, 30.67285);
+	loadPoint(104.1545, 30.67684);
+	loadPoint(104.1478, 30.67500);
+    }
+  	
+  </script>
 </html>
