@@ -18,4 +18,5 @@ public interface ICircleService {
 	void updateCircle(CircleInfo circleInfo);
 	//查
 	List<CircleInfo>findAllCircles();
+	CircleInfo findCircleById(Short id);
 }

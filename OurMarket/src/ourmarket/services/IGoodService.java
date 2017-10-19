@@ -19,5 +19,6 @@ public interface IGoodService {
 	//查
 	List<Goods> findAllGoods();
 	Goods findGoodByGid(int gid);
+	List<Goods>findGoodsByLocation(Short localtion);
 	List<Goods> findGoodByUid(int uid);
 }

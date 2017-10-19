@@ -32,7 +32,7 @@ public class CircleInfoDAO {
 	// property constants
 	public static final String CIRCLE_X = "circleX";
 	public static final String CIRCLE_Y = "circleY";
-	public static final String CIRCLE_R = "circleR";
+	public static final String CIRCLE_NAME = "circleName";
 	public static final String CIRCLE_DES = "circleDes";
 
 	private SessionFactory sessionFactory;
@@ -127,8 +127,8 @@ public class CircleInfoDAO {
 		return findByProperty(CIRCLE_Y, circleY);
 	}
 
-	public List findByCircleR(Object circleR) {
-		return findByProperty(CIRCLE_R, circleR);
+	public List findByCircleName(Object circleName) {
+		return findByProperty(CIRCLE_NAME, circleName);
 	}
 
 	public List findByCircleDes(Object circleDes) {

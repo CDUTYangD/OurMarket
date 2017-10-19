@@ -57,7 +57,7 @@ public class RefundManageController {
 					Orders order = orderService.findOrderById(returnGood.getOid());
 					Goods good = goodService.findGoodByGid(order.getGid());
 					ImageList imageList = imageListService.findImageLists(good.getImageListId());
-					ImageLibrary imageLibrary = imageLibraryService.findImageList(imageList.getImageListId());
+					ImageLibrary imageLibrary = imageLibraryService.findImageId(imageList.getImageListId());
 					
 					returnInfo.setRid(returnGood.getRid());
 					returnInfo.setGname(good.getGname());

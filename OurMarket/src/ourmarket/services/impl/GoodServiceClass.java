@@ -59,4 +59,11 @@ public class GoodServiceClass implements IGoodService{
 		return goodsDAO.findByUid(uid);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Goods> findGoodsByLocation(Short localtion) {
+		// TODO Auto-generated method stub
+		return goodsDAO.findByLocation(localtion);
+	}
+
 }

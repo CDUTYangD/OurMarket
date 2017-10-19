@@ -49,5 +49,14 @@ public class CommentServiceClass implements ICommentService{
 		// TODO Auto-generated method stub
 		return commentDAO.findByUid(uid);
 	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Comments> findCommmentsByGid(int gid) {
+		// TODO Auto-generated method stub
+		return commentDAO.findByGid(gid);
+	}
+
+	
 	
 }

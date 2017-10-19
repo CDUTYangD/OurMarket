@@ -67,7 +67,7 @@ public class GoodsPutaway {
 				if (!imgFile1.isEmpty()) {
 					// 获取前端传来的文件名
 					String fileName = imgFile1.getOriginalFilename();
-					String SQLBasePath = "goodsImg";
+					String SQLBasePath = "img";
 					// 拿到本地服务器会话位置---可以是绝对地址
 					String realPath = request.getSession().getServletContext().getRealPath("/") + "\\" + SQLBasePath;
 					Date date = new Date();
@@ -83,8 +83,7 @@ public class GoodsPutaway {
 
 					}
 					String imgLisetID = "" + date.getYear() + "" + date.getMonth() + "" + date.getDay() + ""
-							+ date.getHours() + "" + date.getMinutes() + "" + date.getSeconds() + ""
-							+ Math.round(Math.random() * 100);
+							+ date.getHours() + "" + date.getMinutes() + "" + date.getSeconds() ;
 					imgID = Long.valueOf(imgLisetID);
 					String imgSRC = SQLBasePath + "/" + trueFileName;
 					ImageLibrary imageLibrary = new ImageLibrary(imgID, imgSRC);

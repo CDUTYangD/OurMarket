@@ -72,8 +72,8 @@ public class PriMessageContoller {
 				}
 				priInfo.setFromID(uu);//拿到uid
 				priInfo.setFromName(iUserServices.findUserById(uu).getUnickName());//拿到名字
-				long headLis=iUserServices.findUserById(uu).getImageListId();//拿到储存的头像序列
-				priInfo.setHeadImgSRC(imageLirary.findImageList(headLis).getImageSrc());//拿取头像储存地址
+				Long headLis=iUserServices.findUserById(uu).getImageListId();//拿到储存的头像序列
+				priInfo.setHeadImgSRC(imageLirary.findImageId(headLis).getImageSrc());//拿取头像储存地址
 			
 				priInfos.add(priInfo);
 			}

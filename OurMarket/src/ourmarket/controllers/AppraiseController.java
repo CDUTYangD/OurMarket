@@ -54,7 +54,7 @@ public class AppraiseController {
 				Orders orders=orderService.findOrderById(comment.getOid());
 				Goods good=goodService.findGoodByGid(orders.getGid());
 				ImageList imageList=imageListService.findImageLists(good.getImageListId());
-				ImageLibrary imageLibrary=imageLibraryService.findImageList(imageList.getImageListId());
+				ImageLibrary imageLibrary=imageLibraryService.findImageId(imageList.getImageListId());
 				
 				comentsInfo.setCommentState(comment.getCommentState());
 				comentsInfo.setCommentTime(comment.getCommentTime());

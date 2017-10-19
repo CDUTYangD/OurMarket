@@ -36,8 +36,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/custom.js"></script>
     <script type="text/javascript"  src="http://webapi.amap.com/maps?v=1.4.0&key=168484ce0ca0e0fb381b1dd319ad121e"></script>
     <style href="../css/login.css"></style>
+    <style>
+			.img img{ display:none;}
+			.img:hover img{display:inline;}
+			.width{	width:300px;
+			}
+	</style>
 </head>
 <body>
+	
 <div id="wrapper">
     <!-- Navigation -->
     <nav class="top1 navbar navbar-default navbar-static-top form-inline" role="navigation" style="margin-bottom: 0">
@@ -112,6 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                        data-slide="next">&rsaquo;</a>
                 </div>
             </center>
+            
             <!-- 地图 -->
             <div style="width: 100%;padding: 5px 0;"> 
                 <div id="iCenter" style="height:100% "></div>
@@ -162,21 +170,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/loadMap.js"></script>
 <!--要在主界面加载完毕后执行地图加载以及定位-->
   <script type="text/javascript">
+    var ss=location.href; 
+    ss=ss.substring(ss.indexOf("str=")+4);
+    ss=reJs(ss);
+    var jsonArray=eval("("+ss+")");
     document.body.onload=function(){
     init();
-    loadCircle("104.1452","30.67100","#32CD32");//银杏
-	loadCircle("104.1488","30.67200","black");//珙桐
-	loadCircle("104.1425","30.67650","#F33");//芙蓉
-	loadCircle("104.1520","30.67285","#0000FF");//松林
-	loadCircle("104.1545","30.67684","#FFA500");//香樟
-	loadCircle("104.1478","30.67500","#00FFFF");//北苑
-	loadPoint(104.1452, 30.67100);
-	loadPoint(104.1488, 30.67200);
-	loadPoint(104.1425, 30.67650);
-	loadPoint(104.1520, 30.67285);
-	loadPoint(104.1545, 30.67684);
-	loadPoint(104.1478, 30.67500);
+   		for(var i in jsonArray){
+   			loadCircle(jsonArray[i].circleX,jsonArray[i].circleY,jsonArray[i].circleColor);
+   			loadPoint(jsonArray[i].circleX,jsonArray[i].circleY,jsonArray[i].allLable);
+   		}
     }
-  	
   </script>
+
 </html>

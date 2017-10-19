@@ -83,7 +83,7 @@ public class GoodsPutoffController {
 				goodsPutoff.setDescription(good.getGtitle());
 				goodsPutoff.setPrice(good.getGprice());
 				goodsPutoff.setGoodsName(good.getGname());
-				goodsPutoff.setImgSrc(imageLibraryService.findImageList(good.getImageListId()).getImageSrc());
+				goodsPutoff.setImgSrc(imageLibraryService.findImageId(good.getImageListId()).getImageSrc());
 				goodsPutoffs.add(goodsPutoff);
 			}
 			model.addAttribute("goodsPutoffs",goodsPutoffs);

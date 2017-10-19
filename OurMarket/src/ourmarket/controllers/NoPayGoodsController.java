@@ -53,7 +53,7 @@ SessionInfo sessionInfo=SessionUtils.getSessionInfo(request);
 					Goods good = goodService.findGoodByGid(order.getGid());
 					//User buyUser = userService.findUserById(1);
 					ImageList imageList = imageListService.findImageLists(good.getImageListId());
-					ImageLibrary imageLibrary = imageLibraryService.findImageList(imageList.getImageListId());					
+					ImageLibrary imageLibrary = imageLibraryService.findImageId(imageList.getImageListId());					
 					uncollectedInfo.setOid(order.getOid());
 					uncollectedInfo.setGname(good.getGname());
 					uncollectedInfo.setGprice(good.getGprice());

@@ -36,4 +36,10 @@ public class CircleServiceClass implements ICircleService{
 		return circleInfoDAO.findAll();
 	}
 
+	@Override
+	public CircleInfo findCircleById(Short id) {
+		// TODO Auto-generated method stub
+		return circleInfoDAO.findById(id);
+	}
+
 }

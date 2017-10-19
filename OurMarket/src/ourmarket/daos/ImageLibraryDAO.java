@@ -1,6 +1,8 @@
 package ourmarket.daos;
 
 import java.util.List;
+
+import org.apache.naming.java.javaURLContextFactory;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -12,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import ourmarket.models.ImageLibrary;
+import sun.misc.JavaLangAccess;
 
 /**
  * A data access object (DAO) providing persistence and search support for

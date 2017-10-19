@@ -13,16 +13,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/Logout.js"></script>
+<script src="<%= basePath %>/js/jquery.min.js"></script>
+<script src="<%= basePath %>/js/bootstrap.min.js"></script>
+<script src="<%= basePath %>/js/Logout.js"></script>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
-<link rel="stylesheet" type="text/css" href="../css/carousel.css" />
-<link rel="stylesheet" type="text/css" href="../css/Message.css" />
-<link rel="stylesheet" type="text/css" href="../css/bought.css"/>
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+<link rel="stylesheet" href="<%= basePath %>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/carousel.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/Message.css" />
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/bought.css"/>
+<link rel="stylesheet" type="text/css" href="<%= basePath %>/css/font-awesome.css" />
 <script type="text/javascript">
 $(function() {
 	$("#button_show_right,#button_show_left").click(function() {
@@ -92,30 +92,30 @@ $(function() {
 	<div class="content" style="height: 550px;margin:30px ;margin-bottom: 0px;">
 		<!--商品图片-->
 		<div class="col-md-8" style="height: 500px;border:1px solid  #E0E0E0;">
-				<img src="../img/huaweip10.jpg" class="img" style="width: 400px;height: 494px;margin-left: 200px;display: inline;" />
+				<img src="${goodsDetailPojo.getgImgSrc()}" class="img" style="width: 400px;height: 494px;margin-left: 200px;display: inline;" />
 		</div>
 		<!--商品信息-->
 		<div class="col-md-4 "style="height: 550px;font-size: 18px;">
-			<h2><strong>华为P10全网通4G官方正品</strong></h2>
+			<h2><strong>${goodsDetailPojo.getgName()}</strong></h2>
 			<ul class="list-unstyled">
 				<li>
 					<span >价格：</span>
-					<span class="price" ><i class="fa fa-rmb">&nbsp;</i>2999.9</span>
+					<span class="price" ><i class="fa fa-rmb">&nbsp;</i>${goodsDetailPojo.getgPrice()}</span>
 				</li>
 			</ul>
 			<hr />
 			<ul class="list-unstyled"style="color: black;">
 				<li>
 					<span >商品成色：</span>
-					<span >全新</span>
+					<span >${goodsDetailPojo.getgTitle()}</span>
 				</li>
 				<li>
 					<span >所在圈子：</span>
-					<span >银杏</span>
+					<span >${goodsDetailPojo.getgLocation()}</span>
 				</li>
 				<li>
 					<span >联系电话：</span>
-					<span >18482052803</span>
+					<span >${goodsDetailPojo.getgPhone()}</span>
 				</li>
 				<li>
 					<span >交易方式：</span>
@@ -140,44 +140,25 @@ $(function() {
 	
 		<div id="myTabContent" class="tab-content">
 			<div class="tab-pane fade in active" id="introduction">
-				<p>华为P10/玫瑰金/运行内存4G/机身内存128G/全网通4G/1200万像素。国行正品，全国联保，非诚勿扰.</p>
-				<img src="../img/p10.jpg" / style="height: 400px;">
+				<p>${goodsDetailPojo.getgName()}</p>
+				<img src="${goodsDetailPojo.getgImgSrc()}" style="height: 400px;">
 			</div>
 			<div class="tab-pane fade" id="apparise">
 				<table class="table">
+					<c:forEach items="${aGoodsComments}" var="aComments">
 					<tr>
 						<td>
-							东西很棒，卖家人也很好。
+							${aComments.getcString()}
 						</td>
 						<td>
-							2017.9.30
+							${aComments.getcTime()}
 						</td>
 						<td>
-							路***丁(匿名)
-						</td>
-					</tr>
-					<tr>
-						<td>
-							超喜欢这里面的。
-						</td>
-						<td>
-							2017.10.01
-						</td>
-						<td>
-							路***甲(匿名)
+							${aComments.getcUName()}
 						</td>
 					</tr>
-					<tr>
-						<td>
-							东西很棒，卖家人也很好。
-						</td>
-						<td>
-							2017.10.02
-						</td>						
-						<td>
-							路***丁(匿名)
-						</td>
-					</tr>
+					
+					</c:forEach>
 				</table>
 			</div>
 		</div>
@@ -187,57 +168,15 @@ $(function() {
 		<p style="font-size: 25px;color: black;margin-top: 10px;">卖家的其他物品
 			<a href="#" style="float: right;color: gold;font-size: 15px;">更多</a>
 		</p>
-		
+		<c:forEach items="${moreGoodsPojos}" var="moreGoodsPojo">
 		<div class="col-md-6" style="padding-bottom:15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
+			<img src="${moreGoodsPojo.getImgSrc()}" height="100px" width="100px"style="float: left;"/>
 			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
+				<p><a href="#" style="color: black;">${moreGoodsPojo.getgName()}</a></p>
+				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">${moreGoodsPojo.getgPrice()}</span></p>
 			</div>
 		</div>
-		
-		<div class="col-md-6" style="padding-bottom: 15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
-			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
-			</div>
-		</div>
-		
-		<div class="col-md-6" style="padding-bottom: 15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
-			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
-			</div>
-		</div>
-		
-		<div class="col-md-6" style="padding-bottom: 15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
-			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
-			</div>
-		</div>
-
-		<div class="col-md-6" style="padding-bottom: 15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
-			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
-			</div>
-		</div>
-		
-		<div class="col-md-6" style="padding-bottom: 15px;">
-			<img src="../img/5900049bN90cf8936.jpg" height="100px" width="100px"style="float: left;"/>
-			<div style="float: right;width: 76px;">
-				<p><a href="#" style="color: black;">Xiaomi/小米手机6全网通</a></p>
-				<p ><i class="fa fa-rmb">&nbsp;</i><span style="color: orangered;">2999.9</span></p>
-			</div>
-		</div>
-
-
-
+		</c:forEach>
 	</div>
 </body>
 

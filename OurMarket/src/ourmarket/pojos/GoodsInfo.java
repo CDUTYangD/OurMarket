@@ -6,17 +6,37 @@ public class GoodsInfo {
 	float price;
 	String name;
 	Integer number;
-	
-	
+	Integer gLocaltion;
+	Integer gMasterID;
+	String  gMasterName;
+	public Integer getgMasterID() {
+		return gMasterID;
+	}
+	public void setgMasterID(Integer gMasterID) {
+		this.gMasterID = gMasterID;
+	}
+	public String getgMasterName() {
+		return gMasterName;
+	}
+	public void setgMasterName(String gMasterName) {
+		this.gMasterName = gMasterName;
+	}
+	public Integer getgLocaltion() {
+		return gLocaltion;
+	}
+	public void setgLocaltion(Integer gLocaltion) {
+		this.gLocaltion = gLocaltion;
+	}
 	public GoodsInfo() {
 		super();
 	}
-	public GoodsInfo(String imagesrc, float price, String name, Integer number) {
+	public GoodsInfo(String imagesrc, float price, String name, Integer number,Integer gLocaltion) {
 		super();
 		this.imagesrc = imagesrc;
 		this.price = price;
 		this.name = name;
 		this.number = number;
+		this.gLocaltion=gLocaltion;
 	}
 	public String getImagesrc() {
 		return imagesrc;

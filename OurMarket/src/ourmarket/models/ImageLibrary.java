@@ -24,8 +24,9 @@ public class ImageLibrary implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public ImageLibrary(Long imageListId, String imageSrc) {
-		this.imageListId = imageListId;
+	public ImageLibrary(Long imageId, String imageSrc) {
+		//this.imageListId = imageListId;
+		this.imageId=imageId;
 		this.imageSrc = imageSrc;
 	}
 

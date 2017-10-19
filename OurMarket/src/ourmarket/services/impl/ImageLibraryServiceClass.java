@@ -23,9 +23,9 @@ public class ImageLibraryServiceClass  implements IImageLibraryService{
 		imageLibraryDAO.delete(imageList);
 	}
 	@Override
-	public ImageLibrary findImageList(long imageListId) {
+	public ImageLibrary findImageId(Long imageId) {
 		// TODO Auto-generated method stub
-		return imageLibraryDAO.findById(imageListId);
+		return imageLibraryDAO.findById(imageId);
 	}
 
 	

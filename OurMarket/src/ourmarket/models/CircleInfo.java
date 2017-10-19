@@ -13,7 +13,7 @@ public class CircleInfo implements java.io.Serializable {
 	private Short circleId;
 	private Double circleX;
 	private Double circleY;
-	private Double circleR;
+	private String circleName;
 	private String circleDes;
 	private Timestamp circleTime;
 
@@ -24,18 +24,18 @@ public class CircleInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public CircleInfo(Double circleX, Double circleY, Double circleR, Timestamp circleTime) {
+	public CircleInfo(Double circleX, Double circleY, String circleName, Timestamp circleTime) {
 		this.circleX = circleX;
 		this.circleY = circleY;
-		this.circleR = circleR;
+		this.circleName = circleName;
 		this.circleTime = circleTime;
 	}
 
 	/** full constructor */
-	public CircleInfo(Double circleX, Double circleY, Double circleR, String circleDes, Timestamp circleTime) {
+	public CircleInfo(Double circleX, Double circleY, String circleName, String circleDes, Timestamp circleTime) {
 		this.circleX = circleX;
 		this.circleY = circleY;
-		this.circleR = circleR;
+		this.circleName = circleName;
 		this.circleDes = circleDes;
 		this.circleTime = circleTime;
 	}
@@ -66,12 +66,13 @@ public class CircleInfo implements java.io.Serializable {
 		this.circleY = circleY;
 	}
 
-	public Double getCircleR() {
-		return this.circleR;
+
+	public String getCircleName() {
+		return circleName;
 	}
 
-	public void setCircleR(Double circleR) {
-		this.circleR = circleR;
+	public void setCircleName(String circleName) {
+		this.circleName = circleName;
 	}
 
 	public String getCircleDes() {

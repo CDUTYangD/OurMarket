@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>OurMarket</display-name>
   <welcome-file-list>
-    <welcome-file>home.jsp</welcome-file>
+    <welcome-file>home</welcome-file>
   </welcome-file-list>
   <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -90,6 +90,7 @@
     <servlet-name>springRest</servlet-name>
     <url-pattern>/API/*</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>springMVC</servlet-name>
     <servlet-class>
@@ -97,6 +98,12 @@
         </servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+  <servlet-mapping>  
+  <servlet-name>springMVC</servlet-name>  
+  <url-pattern>/home</url-pattern>  
+</servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>springMVC</servlet-name>
     <url-pattern>/</url-pattern>

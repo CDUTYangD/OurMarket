@@ -59,7 +59,7 @@ public class OrderManageController {
 					User buyUser = userService.findUserById(order.getUid());
 					//User buyUser = userService.findUserById(1);
 					ImageList imageList = imageListService.findImageLists(good.getImageListId());
-					ImageLibrary imageLibrary = imageLibraryService.findImageList(imageList.getImageListId());
+					ImageLibrary imageLibrary = imageLibraryService.findImageId(imageList.getImageListId());
 
 					
 					orderInfo.setOid(order.getOid());

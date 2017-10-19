@@ -50,7 +50,7 @@ public class ShelvedGoodsController {
 				// }else{
 				ImageList imageList = imageListService.findImageLists(good.getImageListId());
 				// }
-				ImageLibrary imageLibrary = imageLibraryService.findImageList(imageList.getImageListId());
+				ImageLibrary imageLibrary = imageLibraryService.findImageId(imageList.getImageListId());
 
 				goodinfo.setImagesrc(imageLibrary.getImageSrc());
 				goodinfo.setName(good.getGname());

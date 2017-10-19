@@ -16,8 +16,8 @@
         <property name="circleY" type="java.lang.Double">
             <column name="circleY" precision="12" scale="0" not-null="true" />
         </property>
-        <property name="circleR" type="java.lang.Double">
-            <column name="circleR" precision="22" scale="0" not-null="true" />
+        <property name="circleName" type="java.lang.String">
+            <column name="circleName" not-null="true" />
         </property>
         <property name="circleDes" type="java.lang.String">
             <column name="circleDes" />

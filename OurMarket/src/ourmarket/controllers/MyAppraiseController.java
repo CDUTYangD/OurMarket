@@ -57,7 +57,7 @@ public class MyAppraiseController {
 					ComentsInfo comment = new ComentsInfo();
 					Goods good = goodService.findGoodByGid(order.getGid());
 					ImageList imageList = imageListService.findImageLists(good.getImageListId());
-					ImageLibrary imageLibrary = imageLibraryService.findImageList(imageList.getImageListId());
+					ImageLibrary imageLibrary = imageLibraryService.findImageId(imageList.getImageListId());
 					
 					comment.setGoodImg(imageLibrary.getImageSrc());
 					comment.setGoodName(good.getGname());
