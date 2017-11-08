@@ -73,11 +73,11 @@ var reJs = function(str1) {
 function sendGood(goodId){
 	 var temp = document.createElement("form");
 	  
-	    temp.action ="http://localhost:8080/OurMarket/goodsDetails";        
+	    temp.action ="http://localhost:8080/OurMarket/goodsDetail";        
 	    temp.method = "post";        
 	    temp.style.display = "none";               
 	    var input3=document.createElement("input");
-	    input3.name="goodId";
+	    input3.name="Gid";
 	    input3.value=goodId;
 	    temp.appendChild(input3);                   
 	    document.body.appendChild(temp);

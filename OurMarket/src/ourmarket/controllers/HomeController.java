@@ -105,61 +105,61 @@ public class HomeController {
 		return "redirect:/home.jsp";
 	}
 	
-	@RequestMapping("goodsDetails")
-	public String index(HttpServletRequest request,Model model,String goodId){
-		if(goodId==null){return "goodsDetails";}
-		int gid=Integer.valueOf(goodId);
-		Goods good=goodService.findGoodByGid(gid);//用户点击的商品
-		int uId=userService.findUserById(good.getUid()).getUid();
-		List<Comments>comments=commentService.findCommmentsByGid(gid);
-		List<AGoodsComments>aGoodsComments=new ArrayList<AGoodsComments>();
-		List<MoreGoodsPojo>moreGoodsPojos=new ArrayList<MoreGoodsPojo>();
-		List<Goods>goods=goodService.findGoodByUid(uId);
-		
-		for (Goods go : goods) {
-			if(gid!=go.getGid()){
-				MoreGoodsPojo moreGoodsPojo=new MoreGoodsPojo();
-				moreGoodsPojo.setgId(go.getGid());
-				moreGoodsPojo.setgName(go.getGname());
-				moreGoodsPojo.setgPrice(go.getGprice());
-				moreGoodsPojo.setImgSrc(imgservice.findImageId(go.getImageListId()).getImageSrc());
-				moreGoodsPojos.add(moreGoodsPojo);
-			}
-		}
-		model.addAttribute("moreGoodsPojos", moreGoodsPojos);
-		
-		
-		
-		
-		//对象评论  涉及评论超限问题
-		for(Comments comment:comments){
-			AGoodsComments aComments=new AGoodsComments();
-			aComments.setcString(comment.getComments());
-			aComments.setcTime(comment.getCommentTime());
-			aComments.setcUId(comment.getUid());
-			aComments.setcUName(userService.findUserById(comment.getUid()).getUnickName());//涉及匿名问题
-			aGoodsComments.add(aComments);
-		}
-		model.addAttribute("aGoodsComments", aGoodsComments);
-		
-		//对象商品
-		GoodsDetailPojo goodsDetailPojo=new GoodsDetailPojo();
-		goodsDetailPojo.setgName(good.getGname());
-		goodsDetailPojo.setgPrice(good.getGprice());
-		goodsDetailPojo.setgTitle(good.getGtitle());
-		if(imgservice.findImageId(good.getImageListId())!=null){
-			goodsDetailPojo.setgImgSrc(imgservice.findImageId(good.getImageListId()).getImageSrc());
-		}
-		goodsDetailPojo.setgLocation(circleService.findCircleById(good.getGlocation()).getCircleName());
-		goodsDetailPojo.setgPhone(userService.findUserById(good.getUid()).getUphone());
-		model.addAttribute("goodsDetailPojo", goodsDetailPojo);
-		
-		
-		
-		
-		
-		return "goodsDetails";
-	}
+//	@RequestMapping("goodsDetails")
+//	public String index(HttpServletRequest request,Model model,String goodId){
+//		if(goodId==null){return "goodsDetails";}
+//		int gid=Integer.valueOf(goodId);
+//		Goods good=goodService.findGoodByGid(gid);//用户点击的商品
+//		int uId=userService.findUserById(good.getUid()).getUid();
+//		List<Comments>comments=commentService.findCommmentsByGid(gid);
+//		List<AGoodsComments>aGoodsComments=new ArrayList<AGoodsComments>();
+//		List<MoreGoodsPojo>moreGoodsPojos=new ArrayList<MoreGoodsPojo>();
+//		List<Goods>goods=goodService.findGoodByUid(uId);
+//		
+//		for (Goods go : goods) {
+//			if(gid!=go.getGid()){
+//				MoreGoodsPojo moreGoodsPojo=new MoreGoodsPojo();
+//				moreGoodsPojo.setgId(go.getGid());
+//				moreGoodsPojo.setgName(go.getGname());
+//				moreGoodsPojo.setgPrice(go.getGprice());
+//				moreGoodsPojo.setImgSrc(imgservice.findImageId(go.getImageListId()).getImageSrc());
+//				moreGoodsPojos.add(moreGoodsPojo);
+//			}
+//		}
+//		model.addAttribute("moreGoodsPojos", moreGoodsPojos);
+//		
+//		
+//		
+//		
+//		//对象评论  涉及评论超限问题
+//		for(Comments comment:comments){
+//			AGoodsComments aComments=new AGoodsComments();
+//			aComments.setcString(comment.getComments());
+//			aComments.setcTime(comment.getCommentTime());
+//			aComments.setcUId(comment.getUid());
+//			aComments.setcUName(userService.findUserById(comment.getUid()).getUnickName());//涉及匿名问题
+//			aGoodsComments.add(aComments);
+//		}
+//		model.addAttribute("aGoodsComments", aGoodsComments);
+//		
+//		//对象商品
+//		GoodsDetailPojo goodsDetailPojo=new GoodsDetailPojo();
+//		goodsDetailPojo.setgName(good.getGname());
+//		goodsDetailPojo.setgPrice(good.getGprice());
+//		goodsDetailPojo.setgTitle(good.getGtitle());
+//		if(imgservice.findImageId(good.getImageListId())!=null){
+//			goodsDetailPojo.setgImgSrc(imgservice.findImageId(good.getImageListId()).getImageSrc());
+//		}
+//		goodsDetailPojo.setgLocation(circleService.findCircleById(good.getGlocation()).getCircleName());
+//		goodsDetailPojo.setgPhone(userService.findUserById(good.getUid()).getUphone());
+//		model.addAttribute("goodsDetailPojo", goodsDetailPojo);
+//		
+//		
+//		
+//		
+//		
+//		return "goodsDetails";
+//	}
 
 	@RequestMapping("log")
 	public String index(HttpServletRequest request,Model model,String phone,String password) {

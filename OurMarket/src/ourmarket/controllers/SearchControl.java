@@ -3,6 +3,8 @@ package ourmarket.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -24,8 +26,8 @@ public class SearchControl {
 	@Autowired
 	IUserService iUserService=null;
 	
-	@RequestMapping("/search")
-	public String search(HttpRequest httpRequest,Model model,String searchInfo){
+	@RequestMapping("searchGoods")
+	public String search(HttpServletRequest request,Model model,String searchInfo){
 		int circleInfo=tryNmae(searchInfo);
 		List<Goods>goods=iGoodService.findAllGoods();
 		List<GoodsInfo>goodsInfos=new ArrayList<GoodsInfo>();
@@ -37,10 +39,10 @@ public class SearchControl {
 					goodsInfo.setImagesrc(imgLibraryService.findImageId(good.getImageListId()).getImageSrc());
 					goodsInfo.setPrice(good.getGprice());
 					goodsInfo.setgMasterID(good.getUid());
+					goodsInfo.setGid(good.getGid());
 					goodsInfo.setgMasterName(iUserService.findUserById(good.getUid()).getUnickName());
 					goodsInfos.add(goodsInfo);
 					model.addAttribute("goodsInfos", goodsInfos);
-					return null;
 				}
 			}else{//匹配物品信息
 				if(good.getGname().contains(searchInfo)||good.getGtitle().contains(searchInfo)){
@@ -52,14 +54,24 @@ public class SearchControl {
 					goodsInfo.setgMasterName(iUserService.findUserById(good.getUid()).getUnickName());
 					goodsInfos.add(goodsInfo);
 					model.addAttribute("goodsInfos", goodsInfos);
-					return null;
 				}
+			}
+		}
+		if(goodsInfos.size()<1){
+			for (int i = 0; i < 15; i++) {
+				GoodsInfo goodsInfo=new GoodsInfo();
+				goodsInfo.setName(goods.get(i).getGname());
+				goodsInfo.setImagesrc(imgLibraryService.findImageId(goods.get(i).getImageListId()).getImageSrc());
+				goodsInfo.setPrice(goods.get(i).getGprice());
+				goodsInfo.setgMasterID(goods.get(i).getUid());
+				goodsInfo.setgMasterName(iUserService.findUserById(goods.get(i).getUid()).getUnickName());
+				goodsInfos.add(goodsInfo);
+				model.addAttribute("goodsInfos", goodsInfos);
 			}
 		}
 		
 		
-		
-		return null;
+		return "searchGoods";
 	}
 	
 	/**
@@ -69,8 +81,8 @@ public class SearchControl {
 	public int tryNmae(String str) {
 		int circle;
 		switch (str) {
-		case "银杏":circle=1;break;
-		case "珙桐":circle=2;break;
+		case"银杏":circle=1;break;
+		case"珙桐":circle=2;break;
 		case"芙蓉":circle=3;break;
 		case"松林":circle=4;break;
 		case"香樟":circle=5;break;

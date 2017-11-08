@@ -9,6 +9,29 @@ public class GoodsInfo {
 	Integer gLocaltion;
 	Integer gMasterID;
 	String  gMasterName;
+	Integer gid;
+	
+	public GoodsInfo() {
+		super();
+	}
+	public GoodsInfo(String imagesrc, float price, String name, Integer number, Integer gLocaltion, Integer gMasterID,
+			String gMasterName, Integer gid) {
+		super();
+		this.imagesrc = imagesrc;
+		this.price = price;
+		this.name = name;
+		this.number = number;
+		this.gLocaltion = gLocaltion;
+		this.gMasterID = gMasterID;
+		this.gMasterName = gMasterName;
+		this.gid = gid;
+	}
+	public Integer getGid() {
+		return gid;
+	}
+	public void setGid(Integer gid) {
+		this.gid = gid;
+	}
 	public Integer getgMasterID() {
 		return gMasterID;
 	}
@@ -26,17 +49,6 @@ public class GoodsInfo {
 	}
 	public void setgLocaltion(Integer gLocaltion) {
 		this.gLocaltion = gLocaltion;
-	}
-	public GoodsInfo() {
-		super();
-	}
-	public GoodsInfo(String imagesrc, float price, String name, Integer number,Integer gLocaltion) {
-		super();
-		this.imagesrc = imagesrc;
-		this.price = price;
-		this.name = name;
-		this.number = number;
-		this.gLocaltion=gLocaltion;
 	}
 	public String getImagesrc() {
 		return imagesrc;

@@ -15,14 +15,17 @@ public class ComentsInfo {
 	float goodPrice;//价格
 	short commentState;//评论状态
 	Timestamp commentTime;//评论时间
+	String commentString;
+	String commenterNameString;
 	int oid;
 	int gid;
+	
 	
 	public ComentsInfo() {
 		super();
 	}
 	public ComentsInfo(String goodName, int goodNum, String goodImg, float goodPrice, short commentState,
-			Timestamp commentTime, int oid, int gid) {
+			Timestamp commentTime, String commentString, String commenterNameString, int oid, int gid) {
 		super();
 		this.goodName = goodName;
 		this.goodNum = goodNum;
@@ -30,8 +33,22 @@ public class ComentsInfo {
 		this.goodPrice = goodPrice;
 		this.commentState = commentState;
 		this.commentTime = commentTime;
+		this.commentString = commentString;
+		this.commenterNameString = commenterNameString;
 		this.oid = oid;
 		this.gid = gid;
+	}
+	public String getCommentString() {
+		return commentString;
+	}
+	public void setCommentString(String commentString) {
+		this.commentString = commentString;
+	}
+	public String getCommenterNameString() {
+		return commenterNameString;
+	}
+	public void setCommenterNameString(String commenterNameString) {
+		this.commenterNameString = commenterNameString;
 	}
 	public int getOid() {
 		return oid;

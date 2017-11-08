@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -45,7 +46,6 @@
 
 	function pp() {
 		var pic = document.getElementById("xiangXi");
-
 		pic.style.display = "block";
 
 
@@ -53,7 +53,6 @@
 
 	function pp1() {
 		var pic = document.getElementById("xiangXi");
-
 		pic.style.display = "none";
 
 	}
@@ -142,19 +141,14 @@
    					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">银杏圈子</h3>
 				<div>
 					<div style="float:left">
-						<img alt=""
-							src="http://localhost:8080/OurMarket/img/5900049bN90cf8936.jpg"
-							style="width:100px; height:100px;margin-left: 80px;"> <label
-							style="float:center">手机</label>
+						<c:forEach items="${yxCircleGoodsInfo}" var="yxGoodsInfo">
+							<img alt="" src="${yxGoodsInfo.getImagesrc() }"
+								style="width:100px; height:100px;margin-left: 80px;">
+								<a href="goodsDetail?Gid=${yxGoodsInfo.getGid() }">
+							<label style="float:center">${yxGoodsInfo.getName() }</label>
+							</a>
+						</c:forEach>
 					</div>
-					<div style="float:left">
-						<img alt="" src="http://localhost:8080/OurMarket/img/goods2.jpg"
-							style="width:100px; height:100px;margin-left:  80px;"> <label
-							style="float:center">手机</label>
-					</div>
-					<img alt="" src="http://localhost:8080/OurMarket/img/huaweip10.jpg"
-						style="width:100px; height:100px;margin-left: 80px;"> <label
-						style="float:center">手机</label>
 				</div>
 				<button onclick="pp()" type="button" class="btn btn-default"
 					style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
@@ -165,19 +159,14 @@
    					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">芙蓉圈子</h3>
 				<div>
 					<div style="float:left">
-						<img alt=""
-							src="http://localhost:8080/OurMarket/img/5900049bN90cf8936.jpg"
-							style="width:100px; height:100px;margin-left:  80px;"> <label
-							style="float:center">手机</label>
+						<c:forEach items="${frCircleGoodsInfo}" var="frGoodsInfo">
+							<img alt="" src="${frGoodsInfo.getImagesrc() }"
+								style="width:100px; height:100px;margin-left:  80px;">
+								<a href="goodsDetail?Gid=${frGoodsInfo.getGid() }">
+							<label style="float:center">${frGoodsInfo.getName() }</label>
+							</a>
+						</c:forEach>
 					</div>
-					<div style="float:left">
-						<img alt="" src="http://localhost:8080/OurMarket/img/goods2.jpg"
-							style="width:100px; height:100px;margin-left:  80px;"> <label
-							style="float:center">手机</label>
-					</div>
-					<img alt="" src="http://localhost:8080/OurMarket/img/huaweip10.jpg"
-						style="width:100px; height:100px;margin-left:  80px;"> <label
-						style="float:center">手机</label>
 				</div>
 				<button onclick="pp()" type="button" class="btn btn-default"
 					style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
@@ -189,23 +178,75 @@
    					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">松林圈子</h3>
 				<div>
 					<div style="float:left">
-						<img alt=""
-							src="http://localhost:8080/OurMarket/img/5900049bN90cf8936.jpg"
-							style="width:100px; height:100px;margin-left:  80px;"> <label
-							style="float:center">手机</label>
+						<c:forEach items="${slCircleGoodsInfo}" var="slGoodsInfo">
+							<img alt="" src="${slGoodsInfo.getImagesrc() }"
+								style="width:100px; height:100px;margin-left:  80px;">
+								<a href="goodsDetail?Gid=${slGoodsInfo.getGid() }">
+							<label style="float:center">${slGoodsInfo.getName() }</label>
+							</a>
+						</c:forEach>
 					</div>
-					<div style="float:left">
-						<img alt="" src="http://localhost:8080/OurMarket/img/goods2.jpg"
-							style="width:100px; height:100px;margin-left:  80px;"> <label
-							style="float:center">手机</label>
-					</div>
-					<img alt="" src="http://localhost:8080/OurMarket/img/huaweip10.jpg"
-						style="width:100px; height:100px;margin-left: 80px;"> <label
-						style="float:center">手机</label>
 				</div>
 				<button onclick="pp()" type="button" class="btn btn-default"
 					style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
 			</div>
+		</div>
+
+		<div id="orderbox1" style="background-color: ;overflow: hidden;">
+			<h3 class="page-header"
+				style="padding-bottom: 9px;margin: 10px 0 20px;margin-top: 30px;
+   					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">珙桐圈子</h3>
+			<div>
+				<div style="float:left">
+					<c:forEach items="${gtCircleGoodsInfo}" var="gtGoodsInfo">
+						<img alt="" src="${gtGoodsInfo.getImagesrc() }"
+							style="width:100px; height:100px;margin-left:  80px;">
+							<a href="goodsDetail?Gid=${gtGoodsInfo.getGid() }">
+						<label style="float:center">${gtGoodsInfo.getName() }</label>
+						</a>
+					</c:forEach>
+				</div>
+			</div>
+			<button onclick="pp()" type="button" class="btn btn-default"
+				style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
+		</div>
+
+		<div id="orderbox1" style="background-color: ;overflow: hidden;">
+			<h3 class="page-header"
+				style="padding-bottom: 9px;margin: 10px 0 20px;margin-top: 30px;
+   					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">香樟圈子</h3>
+			<div>
+				<div style="float:left">
+					<c:forEach items="${xzCircleGoodsInfo}" var="xzGoodsInfo">
+						<img alt="" src="${xzGoodsInfo.getImagesrc() }"
+							style="width:100px; height:100px;margin-left:  80px;">
+							<a href="goodsDetail?Gid=${xzGoodsInfo.getGid() }">
+						<label style="float:center">${xzGoodsInfo.getName() }</label>
+						</a>
+					</c:forEach>
+				</div>
+			</div>
+			<button onclick="pp()" type="button" class="btn btn-default"
+				style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
+		</div>
+
+		<div id="orderbox1" style="background-color: ;overflow: hidden;">
+			<h3 class="page-header"
+				style="padding-bottom: 9px;margin: 10px 0 20px;margin-top: 30px;
+   					 margin-right: 0px;margin-bottom: 10px;margin-left: 0px;border-bottom: 1px solid #eee">北苑圈子</h3>
+			<div>
+				<div style="float:left">
+					<c:forEach items="${byCircleGoodsInfo}" var="byGoodsInfo">
+						<img alt="" src="${byGoodsInfo.getImagesrc() }"
+							style="width:100px; height:100px;margin-left:  80px;">
+						<a href="goodsDetail?Gid=${byGoodsInfo.getGid() }">
+						<label style="float:center">${byGoodsInfo.getName() }</label>
+						</a>
+					</c:forEach>
+				</div>
+			</div>
+			<button onclick="pp()" type="button" class="btn btn-default"
+				style="width:300px;margin-top: 10px; margin-left:200px;">查看更多</button>
 		</div>
 
 	</div>
