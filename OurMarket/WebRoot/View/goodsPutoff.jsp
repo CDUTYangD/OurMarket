@@ -52,8 +52,8 @@
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="home.jsp">首页</a></li>
-				<li><a href="Message">消息</a></li>
+				<li><a href="home">首页</a></li>
+				<li><a href="privateMessage">消息</a></li>
 				<li><a href="personalZoom">个人中心</a></li>
 				<li><a href="service">客服</a></li>
 				<li><a onclick="Logout()">登出</a></li>

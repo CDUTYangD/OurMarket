@@ -84,12 +84,12 @@ public class MessageController {
 				
 				//根据时间排序
 				msg.sort(Comparator.comparing(Message::getMtime));
+				Collections.reverse(msg);
 				
 				
 				
 				
-				
-				for (int i = 0; i < mseeageLongs+1; i++) {
+				for (int i = 0; i < mseeageLongs; i++) {
 					// Message msaMessage=new Message();
 					
 					MessagesInfo messagesInfo = new MessagesInfo();
@@ -120,6 +120,7 @@ public class MessageController {
 				// System.out.println(msgs.get(i).getMcontent());
 				// }
 				// model.addAttribute("msgs", msgs);
+				Collections.reverse(messages);
 				model.addAttribute("messages", messages);
 			} catch (Exception e) {
 				// TODO: handle exception

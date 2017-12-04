@@ -85,11 +85,11 @@ li {
 		<div id="navbar-right" class="navbar-collapse collapse">
 			<!--这是一个汉堡按钮-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="http://localhost:8080/OurMarket/home.jsp">首页</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/Message.jsp">消息</a></li>
+				<li><a href="http://localhost:8080/OurMarket/home">首页</a></li>
+				<li><a href="http://localhost:8080/OurMarket/privateMessage">消息</a></li>
 				<li><a
-					href="http://localhost:8080/OurMarket/View/personalZoom.jsp">个人中心</a></li>
-				<li><a href="http://localhost:8080/OurMarket/View/service.jsp">客服</a></li>
+					href="http://localhost:8080/OurMarket/View/personalZoom">个人中心</a></li>
+				<li><a href="http://localhost:8080/OurMarket/View/service">客服</a></li>
 				<li><a onclick="Logout()">登出</a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
